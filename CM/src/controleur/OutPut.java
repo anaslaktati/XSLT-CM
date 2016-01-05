@@ -7,6 +7,7 @@ import static java.io.FileDescriptor.in;
 import static java.lang.System.in;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 
 
 
@@ -21,8 +22,12 @@ public class OutPut {
     public void save() throws FileNotFoundException, IOException{
         
     
+        JFileChooser chooser=new JFileChooser();
+        chooser.setCurrentDirectory(new File("/home/me/Documents"));
+        int retrival = chooser.showSaveDialog(null);
+    
         String mes ="";
-        File file=new File("C:\\Games\\new.xsl");
+        File file=new File(chooser.getSelectedFile()+".xsl");
         DataOutputStream fos = null;
 
         // On instancie nos objets :

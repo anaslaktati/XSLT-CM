@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -18,8 +19,12 @@ public class Main {
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
         
+        JFileChooser chooser=new JFileChooser();
+        chooser.setCurrentDirectory(new File("/home/me/Documents"));
+        int retrival = chooser.showSaveDialog(null);
+    
         String mes ="";
-        File file=new File("C:\\Games\\new.xsl");
+        File file=new File(chooser.getSelectedFile()+".xsl");
         DataOutputStream fos = null;
 
         // On instancie nos objets :
