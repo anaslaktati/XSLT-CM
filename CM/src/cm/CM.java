@@ -1,10 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cm;
 
+import Vue.Menu;
+import controleur.controleur;
+import javax.swing.JOptionPane;
 /**
  *
  * @author anas
@@ -15,7 +13,12 @@ public class CM {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+    Menu Menu = new Menu();
+    controleur ctrl = new controleur(Menu);
+    Menu.setControleur(ctrl);
+    ctrl.AfficherMenu();
+    
     }
     
 }
