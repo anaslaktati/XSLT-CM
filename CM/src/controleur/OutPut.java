@@ -19,7 +19,7 @@ public class OutPut {
  
     
     
-    public void save() throws FileNotFoundException, IOException{
+    public static void save() throws FileNotFoundException, IOException{
         
     
         JFileChooser chooser=new JFileChooser();

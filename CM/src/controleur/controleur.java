@@ -2,6 +2,13 @@ package controleur;
 
 
 import Vue.Menu;
+import java.io.BufferedOutputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,10 +26,12 @@ public class controleur {
         
     }
     
+    //Affiche l'interface
     public void AfficherMenu(){
         getVue().setVisible(true);
     }
     
+    //Quitter l'application
     public void quitter() {
         // Confirmer avant de quitter
         int rep = JOptionPane.showConfirmDialog(getVue(), "Quitter l'application\nEtes-vous sûr(e) ?", "XSLT-CM", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -41,5 +50,27 @@ public class controleur {
         this.vue = vue;
     }
     
+    //methode pour sauvegarder le fichier xsl
+    public static void save() throws FileNotFoundException, IOException{
+        
+    
+        JFileChooser chooser=new JFileChooser();
+        chooser.setCurrentDirectory(new File("/home/me/Documents"));
+        int retrival = chooser.showSaveDialog(null);
+    
+        String mes ="";
+        File file=new File(chooser.getSelectedFile()+".xsl");
+        DataOutputStream fos = null;
+
+        // On instancie nos objets :
+        // fos va écrire dans le nouveau !
+       
+        fos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
+        fos.writeBytes(mes);
+        file.createNewFile();
+        
+        fos.close();
+
+    }
     
 }
