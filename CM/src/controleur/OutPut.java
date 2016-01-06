@@ -8,6 +8,8 @@ import static java.lang.System.in;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import controleur.Message;
+import static controleur.Message.*;
 
 
 
@@ -26,7 +28,8 @@ public class OutPut {
         chooser.setCurrentDirectory(new File("/home/me/Documents"));
         int retrival = chooser.showSaveDialog(null);
     
-        String mes ="";
+        String mes;
+        mes=Message.getMessage();
         File file=new File(chooser.getSelectedFile()+".xsl");
         DataOutputStream fos = null;
 

@@ -9,7 +9,8 @@ public class Message {
     private String message;
     
     //cree le message
-    public void message(){
+    public static String message(){
+        String message;
         message="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
 "<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"\n" +
 "		xmlns:fo=\"http://www.w3.org/1999/XSL/Format\"\n" +
@@ -17,7 +18,7 @@ public class Message {
 "		exclude-result-prefixes=\"d\"\n" +
 "		version=\"1.0\">\n";
         //logo.png
-        message+="<?calenco-dep "+Logo()+".png?>\n";
+     //   message+="<?calenco-dep "+Logo()+".png?>\n";
         //les icones
         message+="<?calenco-dep fleche.png?>\n" +
 "\n" +
@@ -27,7 +28,7 @@ public class Message {
 "<?calenco-dep warning.png?>\n" +
 "<?calenco-dep caution.png?>\n";
         //xxx.xml
-        message+="<?calenco-dep "+l10n()+".xml?>\n";
+ //       message+="<?calenco-dep "+l10n()+".xml?>\n";
         //
         message+="<xsl:import href=\"http://docbook.sourceforge.net/release/xsl-ns/current/fo/profile-docbook.xsl\" />\n" +
 "<xsl:import href=\"fo-tricks.xsl\" />\n" +
@@ -398,11 +399,11 @@ public class Message {
         
         
         
-        
+        return message;
     }
     
     //recupere le logo inserer dans le Menu
-    public String Logo(){
+    public static String Logo(){
         String logo=null;
         
         
@@ -412,12 +413,14 @@ public class Message {
     
     
     //recupere le message
-    public String getMessage(){
+    public static String getMessage(){
+        String message ="";
+        message=message();
         return message;
     }
 
     //le fichier .xml
-    private String l10n() {
+    private static String l10n() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

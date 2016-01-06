@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import controleur.Message;
 
 /**
  *
@@ -58,7 +59,8 @@ public class controleur {
         chooser.setCurrentDirectory(new File("/home/me/Documents"));
         int retrival = chooser.showSaveDialog(null);
     
-        String mes ="";
+        String mes ;
+        mes=Message.getMessage();
         File file=new File(chooser.getSelectedFile()+".xsl");
         DataOutputStream fos = null;
 
