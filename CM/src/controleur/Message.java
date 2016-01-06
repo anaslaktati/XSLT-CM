@@ -18,7 +18,7 @@ public class Message {
 "		exclude-result-prefixes=\"d\"\n" +
 "		version=\"1.0\">\n";
         //logo.png
-     //   message+="<?calenco-dep "+Logo()+".png?>\n";
+        message+="<?calenco-dep logo-"+Logo()+".png?>\n";//modifiable code
         //les icones
         message+="<?calenco-dep fleche.png?>\n" +
 "\n" +
@@ -28,7 +28,7 @@ public class Message {
 "<?calenco-dep warning.png?>\n" +
 "<?calenco-dep caution.png?>\n";
         //xxx.xml
- //       message+="<?calenco-dep "+l10n()+".xml?>\n";
+        message+="<?calenco-dep l10n-"+l10n()+".xml?>\n";//modifiable code
         //
         message+="<xsl:import href=\"http://docbook.sourceforge.net/release/xsl-ns/current/fo/profile-docbook.xsl\" />\n" +
 "<xsl:import href=\"fo-tricks.xsl\" />\n" +
@@ -395,7 +395,15 @@ public class Message {
 "    <xsl:copy-of select=\".\"/>\n" +
 "  </xsl:if>\n" +
 "</xsl:template>\n";
-        message+="";
+        message+="<!-- ==== Title Pages ====-->\n" +
+"<xsl:template name=\"book.titlepage\">\n" +
+"  <fo:block-container position=\"fixed\" top=\"0mm\" left=\"0mm\" width=\"{$page.width}\" height=\"{$page.height}\">\n" +
+"    <fo:table table-layout=\"fixed\" height=\"{$page.height}\" width=\"100%\" text-align=\"left\" display-align=\"center\">\n"+
+"      <fo:table-column column-width=\"proportional-column-width(50)\"/>\n" +//modifiable
+"      <fo:table-column column-width=\"proportional-column-width(116)\"/>\n" +//modifiable
+"      <fo:table-column column-width=\"proportional-column-width(43)\"/>\n" +//modifiable
+"      \n" +
+"      <fo:table-body start-indent=\"0pt\">	";
         
         
         
