@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
  */
 public class controleur {
     
+    
     private static Menu vue;
     
     public controleur(Menu vue) {
@@ -57,6 +58,31 @@ public class controleur {
         return nom;
     }
     
+    public static String Pdf(){
+        String pdf;
+        pdf="";
+        pdf+="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+"<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"\n" +
+"		xmlns:fo=\"http://www.w3.org/1999/XSL/Format\"\n" +
+"		xmlns:d=\"http://docbook.org/ns/docbook\"\n" +
+"		exclude-result-prefixes=\"d\"\n" +
+"		version=\"1.0\">\n" +
+"\n" +
+"<xsl:import href=\"pdf-"+Entreprise()+"-base.xsl\"/>\n" +
+"\n" +
+"<xsl:include href=\"page-layout-anywhere.xsl\"/>\n" +
+"\n" +
+"<xsl:template name=\"user.add.pagemasters\">\n" +
+"  <!--\n" +
+"      \"user.pagemasters\" is already used in page-layout-anywhere.xsl\n" +
+"      \n" +
+"      Use this one to add more pagemasters.\n" +
+"  -->\n" +
+"</xsl:template>\n" +
+"\n" +
+"</xsl:stylesheet>";
+        return pdf;
+    }
     
     public static String PdfBase(){
         String message;
@@ -91,7 +117,7 @@ public class controleur {
 "\n" +
 "<xsl:param name=\"fop1.extensions\" select=\"1\"></xsl:param>\n" +
 "\n" +
-"<xsl:param name=\"local.l10n.xml\" select=\"document('l10n-bonnet.xml')\"/>\n" +
+"<xsl:param name=\"local.l10n.xml\" select=\"document('l10n-"+Entreprise()+".xml')\"/>\n" +
 "\n" +
 "<xsl:param name=\"footers.on.blank.pages\" select=\"0\"></xsl:param>\n" +
 "\n" +
@@ -1948,9 +1974,15 @@ message+="<!-- Specific Level Properties -->\n" +
     }
     
     public static String getPdfbase(){
-        String message ="";
+        String message;
         message=PdfBase();
         return message;
+    }
+    
+    public static String getPdf(){
+        String pdf;
+        pdf=Pdf();
+        return pdf;
     }
     
     //methode pour sauvegarder le fichier xsl
@@ -1964,18 +1996,29 @@ message+="<!-- Specific Level Properties -->\n" +
     
         String path = chooser.getSelectedFile().getAbsolutePath() ;
        
-        String mes ;
-        mes=getPdfbase();
+        String pdf;
+        String pdfbase ;
+        
+        pdf=getPdf();
+        pdfbase=getPdfbase();
+        
+        File fil=new File(path+"\\pdf-"+Entreprise()+".xsl");
         File file=new File(path+"\\pdf-"+Entreprise()+"-base.xsl");
+        
         DataOutputStream fos = null;
+        DataOutputStream fros = null;
 
         // On instancie nos objets :
-        // fos va écrire dans le nouveau !
+        // fos va écrire dans le nouveau fichier !
        
         fos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
-        fos.writeBytes(mes);
+        fros = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(fil)));
+        fros.writeBytes(pdf);
+        fos.writeBytes(pdfbase);
+        fil.createNewFile();
         file.createNewFile();
         
+        fros.close();
         fos.close();
 
     }
