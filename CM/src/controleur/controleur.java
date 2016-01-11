@@ -53,6 +53,8 @@ public class controleur {
     }
     
 
+    //fichier xsl
+    
     public static String Config(){
         String conf;
         conf="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -627,9 +629,9 @@ public class controleur {
 "<xsl:template name=\"book.titlepage\">\n" +
 "  <fo:block-container position=\"fixed\" top=\"0mm\" left=\"0mm\" width=\"{$page.width}\" height=\"{$page.height}\">\n" +
 "    <fo:table table-layout=\"fixed\" height=\"{$page.height}\" width=\"100%\" text-align=\"left\" display-align=\"center\">\n"+
-"      <fo:table-column column-width=\"proportional-column-width(50)\"/>\n" +//modifiable
-"      <fo:table-column column-width=\"proportional-column-width(116)\"/>\n" +//modifiable
-"      <fo:table-column column-width=\"proportional-column-width(43)\"/>\n" +//modifiable
+"      <fo:table-column column-width=\"proportional-column-width("+Column1()+")\"/>\n" +//modifiable
+"      <fo:table-column column-width=\"proportional-column-width("+Column2()+")\"/>\n" +//modifiable
+"      <fo:table-column column-width=\"proportional-column-width("+Column3()+")\"/>\n" +//modifiable
 "      \n" +
 "      <fo:table-body start-indent=\"0pt\">	\n"+
                 
@@ -3305,6 +3307,8 @@ message+="<!-- Specific Level Properties -->\n" +
         return tricks;
     }
     
+    //Getters xsl
+    
     public static String getLayout(){
         String layout;
         layout=layoutWhere();
@@ -3336,6 +3340,7 @@ message+="<!-- Specific Level Properties -->\n" +
     }
     
     //methode pour sauvegarder le fichier xsl
+    
     public static void save() throws FileNotFoundException, IOException{
 
         JFileChooser chooser=new JFileChooser();
@@ -3402,7 +3407,9 @@ message+="<!-- Specific Level Properties -->\n" +
 
     }
     
-        public static String Entreprise(){
+    //Getters Menu
+    
+    public static String Entreprise(){
         String nom;
         nom=getVue().getjTextField1();
         return nom;
@@ -3418,6 +3425,24 @@ message+="<!-- Specific Level Properties -->\n" +
         String page;
         page=getVue().getPageO().getSelectedItem().toString();
         return page;
+    }
+    
+    public static String Column1(){
+        String column;
+        column=getVue().getjSpinner1().getValue().toString();
+        return column;
+    }
+    
+    public static String Column2(){
+        String column;
+        column=getVue().getjSpinner2().getValue().toString();
+        return column;
+    }
+    
+    public static String Column3(){
+        String column;
+        column=getVue().getjSpinner3().getValue().toString();
+        return column;
     }
     
     
