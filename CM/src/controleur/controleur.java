@@ -52,24 +52,7 @@ public class controleur {
         this.vue = vue;
     }
     
-    public static String Entreprise(){
-        String nom;
-        nom=getVue().getjTextField1();
-        return nom;
-    }
-    
-    public static String Papier(){
-        String pap;
-        pap=getVue().getPapier().getSelectedItem().toString();
-        return pap;
-    }
-    
-    public static String Page(){
-        String page;
-        page=getVue().getPageO().getSelectedItem().toString();
-        return page;
-    }
-    
+
     public static String Config(){
         String conf;
         conf="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -3418,5 +3401,24 @@ message+="<!-- Specific Level Properties -->\n" +
         fos.close();
 
     }
+    
+        public static String Entreprise(){
+        String nom;
+        nom=getVue().getjTextField1();
+        return nom;
+    }
+    
+    public static String Papier(){
+        String pap;
+        pap=getVue().getPapier().getSelectedItem().toString();
+        return pap;
+    }
+    
+    public static String Page(){
+        String page;
+        page=getVue().getPageO().getSelectedItem().toString();
+        return page;
+    }
+    
     
 }
