@@ -1,6 +1,5 @@
 package Vue;
 
-import controleur.OutPut;
 import controleur.controleur;
 import java.awt.GraphicsEnvironment;
 import java.awt.event.WindowEvent;

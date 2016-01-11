@@ -58,7 +58,7 @@ public class controleur {
     }
     
     
-    public static String message(){
+    public static String PdfBase(){
         String message;
         message="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
 "<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"\n" +
@@ -1947,9 +1947,9 @@ message+="<!-- Specific Level Properties -->\n" +
         return message;
     }
     
-    public static String getMessage(){
+    public static String getPdfbase(){
         String message ="";
-        message=message();
+        message=PdfBase();
         return message;
     }
     
@@ -1959,11 +1959,14 @@ message+="<!-- Specific Level Properties -->\n" +
     
         JFileChooser chooser=new JFileChooser();
         chooser.setCurrentDirectory(new File("/home/me/Documents"));
+        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int retrival = chooser.showSaveDialog(null);
     
+        String path = chooser.getSelectedFile().getAbsolutePath() ;
+       
         String mes ;
-        mes=getMessage();
-        File file=new File(chooser.getSelectedFile()+".xsl");
+        mes=getPdfbase();
+        File file=new File(path+"\\pdf-"+Entreprise()+"-base.xsl");
         DataOutputStream fos = null;
 
         // On instancie nos objets :
