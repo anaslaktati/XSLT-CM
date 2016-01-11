@@ -58,6 +58,167 @@ public class controleur {
         return nom;
     }
     
+    public static String Papier(){
+        String pap;
+        pap=getVue().getPapier().getSelectedItem().toString();
+        return pap;
+    }
+    
+    public static String Page(){
+        String page;
+        page=getVue().getPageO().getSelectedItem().toString();
+        return page;
+    }
+    
+    public static String Config(){
+        String conf;
+        conf="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+"<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"\n" +
+"                xmlns:fo=\"http://www.w3.org/1999/XSL/Format\"\n" +
+"                xmlns:d=\"http://docbook.org/ns/docbook\"\n" +
+"                xmlns:c=\"http://www.calenco.com/ns/configurator\"\n" +
+"                exclude-result-prefixes=\"d\"\n" +
+"                version='1.0'>\n" +
+"    <xsl:import href=\"pdf-"+Entreprise()+".xsl\" />\n" +
+"\n" +
+"    <c:configurator>\n" +
+"        <c:xsl role=\"instance\">../../../res/db5xslconf/XSL-Instance.xsl</c:xsl>\n" +
+"        <c:xsl role=\"form\">XSL-Form.xsl</c:xsl><!-- Remove the \"BETA\" tag -->\n" +
+"        <c:xsl role=\"inject\">../../../res/db5xslconf/XSL-Inject.xsl</c:xsl>\n" +
+"    </c:configurator>\n" +
+"\n" +
+"    <?cco_xsltype addon=\"DocBook5.0\" toolchain=\"DocBook_to_PDF_FOP\"?>\n" +
+"\n" +
+"    <!-- DocBook XSL Parameters -->\n" +
+"\n" +
+"    <c:title>Paramètres XSL DocBook</c:title>\n" +
+"\n" +
+"    <c:a>Styles généraux</c:a>\n" +
+"    <c:subtitle>Pagination et styles généraux</c:subtitle>\n" +
+"\n" +
+"    <xsl:param name=\"paper.type\"\n" +
+"               c:values=\"USletter;4A0;2A0;A0;A1;A2;A3;A4;A5;A6;A7;A8;A9;A10;B0;B1;B2;B3;B4;B5;B6;B7;B8;B9;B10;C0;C1;C2;C3;C4;C5;C6;C7;C8;C9;C10\"\n" +
+"               c:type=\"select-down\" c:desc=\"Format de papier\">"+Papier()+"</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"page.orientation\" c:desc=\"Orientation\"\n" +
+"               c:type=\"select-down\" c:values=\"portrait;landscape\">"+Page()+"</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"page.margin.top\" c:type=\"length\"\n" +
+"               c:desc=\"Marge haute\">0.5in</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"page.margin.inner\" c:type=\"length\"\n" +
+"               c:desc=\"Marge intérieure\">30mm</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"page.margin.outer\" c:type=\"length\"\n" +
+"               c:desc=\"Marge extérieure\">30mm</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"page.margin.bottom\" c:type=\"length\"\n" +
+"               c:desc=\"Marge basse\">0.5in</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"body.margin.top\" c:desc=\"Marge haute du corps de la page\"\n" +
+"               c:type=\"length\">20mm</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"body.margin.bottom\" c:desc=\"Marge basse du corps de la page\"\n" +
+"               c:type=\"length\">0.5in</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"region.before.extent\" c:desc=\"Hauteur de l'en-tête\"\n" +
+"               c:type=\"length\">18mm</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"region.after.extent\" c:desc=\"Hauteur du pied de page\"\n" +
+"               c:type=\"length\">0.4in</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"title.font.family\" c:type=\"font\"\n" +
+"               c:desc=\"Police de caractère pour les titres\">sans-serif</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"title.margin.left\" c:type=\"length\"\n" +
+"               c:desc=\"Marge à gauche des titres\">0pt</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"main.title.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur du titre principal\">#000000</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"chapter.title.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur des titres de chapitre\">#808080</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"section.title.l1.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur des titres de section - niveau 1\">#000000</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"section.title.l2.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur des titres de section - niveau 2\">#000000</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"section.title.l3.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur des titres de section - niveau 3\">#007ac2</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"section.title.l4.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur des titres de section - niveau 4\">#000000</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"section.title.l5.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur des titres de section - niveau 5\">#000000</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"section.title.l6.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur des titres de section - niveau 6\">#000000</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"body.font.family\" c:type=\"font\"\n" +
+"               c:desc=\"Police de caractère pour le texte\">sans-serif</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"body.font.master\" c:type=\"number\"\n" +
+"               c:desc=\"Taille de police pour le texte\">9</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"alignment\" c:desc=\"Alignement du texte\" c:type=\"select-down\"\n" +
+"               c:values=\"left;right;start;end;center;justify\">justify</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"hyphenate\" c:type=\"checkbox\"\n" +
+"               c:desc=\"Autoriser les césures\">false</xsl:param>\n" +
+"\n" +
+"    <!--\n" +
+"    <xsl:param name=\"body.start.indent\" c:type=\"length\"\n" +
+"               c:desc=\"Début tiret du corps\">4pc</xsl:param>\n" +
+"    -->\n" +
+"\n" +
+"	<!--\n" +
+"    <xsl:param name=\"body.end.indent\" c:desc=\"Fin tiret du corps\"\n" +
+"               c:type=\"length\" >0pt</xsl:param>\n" +
+"    -->\n" +
+"\n" +
+"    <xsl:param name=\"monospace.font.family\" c:desc=\"Police de caractère à chasse fixe\"\n" +
+"               c:type=\"font\">monospace</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"logo\" c:type=\"text\"\n" +
+"               c:desc=\"Logo\">logo-"+Entreprise()+".png</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"header.rule\" c:desc=\"Règle d'en-tête\"\n" +
+"               c:type=\"check\">0</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"footer.rule\" c:desc=\"Règle de pied de page\"\n" +
+"               c:type=\"check\">0</xsl:param>\n" +
+"\n" +
+"    <c:a>Tableaux</c:a>\n" +
+"    <c:subtitle>Tableaux</c:subtitle>\n" +
+"\n" +
+"    <xsl:param name=\"default.table.frame\" c:values=\"all;bottom;none;sides;top;topbot\"\n" +
+"               c:type=\"select-down\" c:desc=\"Bordure extérieure\">all</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"table.frame.border.thickness\" c:type=\"length\"\n" +
+"               c:desc=\"Epaisseur de la bordure extérieure\">0.5pt</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"table.frame.border.style\" c:values=\"none;hidden;dotted;dashed;solid;double;groove;ridge;inset;outset\"\n" +
+"               c:type=\"select-down\" c:desc=\"Style de bordure extérieure\">solid</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"table.frame.border.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur de bordure extérieure\">#000000</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"table.cell.border.thickness\" c:type=\"length\"\n" +
+"               c:desc=\"Epaisseur de bordure intérieure\">0.5pt</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"table.cell.border.style\" c:values=\"none;hidden;dotted;dashed;solid;double;groove;ridge;inset;outset\"\n" +
+"               c:type=\"select-down\" c:desc=\"Style de bordure intérieure\" >solid</xsl:param>\n" +
+"\n" +
+"    <xsl:param name=\"table.cell.border.color\" c:type=\"color\"\n" +
+"               c:desc=\"Couleur de bordure intérieure\">#000000</xsl:param>\n" +
+"\n" +
+"</xsl:stylesheet>";
+        return conf;
+    }
+    
     public static String Pdf(){
         String pdf;
         pdf="";
@@ -3185,7 +3346,11 @@ message+="<!-- Specific Level Properties -->\n" +
         return pdf;
     }
     
-    
+    public static String getConfig(){
+        String conf;
+        conf=Config();
+        return conf;
+    }
     
     //methode pour sauvegarder le fichier xsl
     public static void save() throws FileNotFoundException, IOException{
@@ -3201,41 +3366,52 @@ message+="<!-- Specific Level Properties -->\n" +
         String pdfbase ;
         String layout;
         String tricks;
+        String config;
        
         
         layout=getLayout();
         pdf=getPdf();
         pdfbase=getPdfbase();
         tricks=getTricks();
+        config=getConfig();
         
+        //nom et chemin des fichier
         File fil=new File(path+"\\pdf-"+Entreprise()+".xsl");
         File file=new File(path+"\\pdf-"+Entreprise()+"-base.xsl");
         File lay=new File(path+"\\page-layout-anywhere.xsl");
         File trk=new File(path+"\\fo-tricks.xsl");
+        File conf=new File(path+"\\pdf-"+Entreprise()+"-config.xsl");
         
+        // On instancie nos objets :
         DataOutputStream fos = null;
         DataOutputStream fros = null;
         DataOutputStream frosh=null;
         DataOutputStream furosh=null;
+        DataOutputStream furoshu=null;
 
-        // On instancie nos objets :
-        // fos va écrire dans le nouveau fichier !
+        
+        // on va écrire dans les nouveaux fichiers !
        
         fos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
         fros = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(fil)));
         frosh = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(lay)));
         furosh= new DataOutputStream(new BufferedOutputStream(new FileOutputStream(trk)));
+        furoshu=new DataOutputStream(new BufferedOutputStream(new FileOutputStream(conf)));
         
         fos.writeBytes(pdfbase);
         fros.writeBytes(pdf);
         frosh.writeBytes(layout);
         furosh.writeBytes(tricks);
+        furoshu.writeBytes(config);
         
+        //crée nos fichier
         fil.createNewFile();
         file.createNewFile();
         lay.createNewFile();
         trk.createNewFile();
+        conf.createNewFile();
         
+        furoshu.close();
         furosh.close();
         frosh.close();
         fros.close();
