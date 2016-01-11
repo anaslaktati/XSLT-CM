@@ -1973,6 +1973,1206 @@ message+="<!-- Specific Level Properties -->\n" +
         return message;
     }
     
+    public static String layoutWhere(){
+        String lay;
+        lay = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+"<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"\n" +
+"		xmlns:fo=\"http://www.w3.org/1999/XSL/Format\"\n" +
+"		xmlns:fox=\"http://xmlgraphics.apache.org/fop/extensions\"\n" +
+"		xmlns:d=\"http://docbook.org/ns/docbook\"\n" +
+"		xmlns:psmi=\"http://www.CraneSoftwrights.com/resources/psmi\"\n" +
+"		xmlns:exsl=\"http://exslt.org/common\"\n" +
+"		xmlns:saxon=\"http://icl.com/saxon\"\n" +
+"		exclude-result-prefixes=\"d psmi exsl saxon\"\n" +
+"		version=\"1.0\">\n" +
+"\n" +
+"<xsl:param name=\"activate.psmi\" select=\"0\"/>\n" +
+"\n" +
+"<xsl:template match=\"/\">\n" +
+"  <xsl:choose>\n" +
+"    <xsl:when test=\"$activate.psmi != 0\">\n" +
+"      <xsl:variable name=\"base\">\n" +
+"	<xsl:apply-imports/>\n" +
+"      </xsl:variable>\n" +
+"\n" +
+"      <xsl:apply-templates select=\"exsl:node-set($base)\" mode=\"psmi\"/>\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise>\n" +
+"      <xsl:apply-imports/>\n" +
+"    </xsl:otherwise>\n" +
+"  </xsl:choose>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!--\n" +
+"    Remove wrapper to allow in-flow page sequences.\n" +
+"-->\n" +
+"<xsl:template match=\"d:section\" name=\"section.nowrap\">\n" +
+"  <xsl:choose>\n" +
+"    <xsl:when test=\"$rootid = @id or $rootid = @xml:id\">\n" +
+"      <xsl:call-template name=\"section.page.sequence\"/>\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise>\n" +
+"\n" +
+"      <xsl:variable name=\"id\">\n" +
+"        <xsl:call-template name=\"object.id\"/>\n" +
+"      </xsl:variable>\n" +
+"\n" +
+"      <fo:block id=\"{$id}\" keep-with-next.within-column=\"always\"/>\n" +
+"\n" +
+"      <xsl:call-template name=\"section.content\"/>\n" +
+"    </xsl:otherwise>\n" +
+"  </xsl:choose>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template match=\"d:*[(parent::d:chapter or parent::d:appendix or\n" +
+"		     parent::d:preface or parent::d:section)\n" +
+"		     and not(self::d:title or self::d:info or self::d:subtitle or self::d:titleabbrev)\n" +
+"		     and (@remap = 'landscape'\n" +
+"		     or @remap = 'a4;portrait' or @remap = 'a4;landscape'\n" +
+"		     or @remap = 'a3;portrait' or @remap = 'a3;landscape')]\"\n" +
+"	      priority=\"1\">\n" +
+"  \n" +
+"  <xsl:variable name=\"master-reference\">\n" +
+"    <xsl:choose>\n" +
+"      <xsl:when test=\"@remap = 'landscape'\">\n" +
+"	<xsl:value-of select=\"'body-default-landscape'\" />\n" +
+"      </xsl:when>\n" +
+"      <xsl:when test=\"@remap = 'a4;portrait'\">\n" +
+"	<xsl:value-of select=\"'body-A4-portrait'\" />\n" +
+"      </xsl:when>\n" +
+"      <xsl:when test=\"@remap = 'a4;landscape'\">\n" +
+"	<xsl:value-of select=\"'body-A4-landscape'\" />\n" +
+"      </xsl:when>\n" +
+"      <xsl:when test=\"@remap = 'a3;portrait'\">\n" +
+"	<xsl:value-of select=\"'body-A3-portrait'\" />\n" +
+"      </xsl:when>\n" +
+"      <xsl:when test=\"@remap = 'a3;landscape'\">\n" +
+"	<xsl:value-of select=\"'body-A3-landscape'\" />\n" +
+"      </xsl:when>\n" +
+"    </xsl:choose>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <psmi:page-sequence master-reference=\"{$master-reference}\">\n" +
+"    <xsl:apply-templates select=\".\" mode=\"running.head.mode\">\n" +
+"      <xsl:with-param name=\"master-reference\" select=\"$master-reference\"/>\n" +
+"    </xsl:apply-templates>\n" +
+"\n" +
+"    <xsl:apply-templates select=\".\" mode=\"running.foot.mode\">\n" +
+"      <xsl:with-param name=\"master-reference\" select=\"$master-reference\"/>\n" +
+"    </xsl:apply-templates>\n" +
+"\n" +
+"    <fo:flow flow-name=\"xsl-region-body\">\n" +
+"      <xsl:call-template name=\"set.flow.properties\">\n" +
+"        <xsl:with-param name=\"element\" select=\"local-name(.)\"/>\n" +
+"        <xsl:with-param name=\"master-reference\" select=\"$master-reference\"/>\n" +
+"      </xsl:call-template>\n" +
+"\n" +
+"      <xsl:choose>\n" +
+"	<xsl:when test=\"self::d:section\">\n" +
+"	  <xsl:call-template name=\"section.nowrap\"/>\n" +
+"	</xsl:when>\n" +
+"	<xsl:otherwise>\n" +
+"	  <xsl:apply-imports/>\n" +
+"	</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </fo:flow>\n" +
+"  </psmi:page-sequence>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template name=\"user.pagemasters\">\n" +
+"  <xsl:call-template name=\"user.add.pagemasters\"/>\n" +
+"\n" +
+"  <fo:simple-page-master master-name=\"body-default-landscape\"\n" +
+"                         page-width=\"{$page.height}\"\n" +
+"                         page-height=\"{$page.width}\"\n" +
+"                         margin-top=\"{$page.margin.top}\"\n" +
+"                         margin-bottom=\"{$page.margin.bottom}\">\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.start}\">\n" +
+"      <xsl:value-of select=\"$page.margin.inner\"/>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.end}\">\n" +
+"      <xsl:value-of select=\"$page.margin.outer\"/>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:if test=\"$axf.extensions != 0\">\n" +
+"      <xsl:call-template name=\"axf-page-master-properties\">\n" +
+"        <xsl:with-param name=\"page.master\">body-first</xsl:with-param>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:if>\n" +
+"    <fo:region-body margin-bottom=\"{$body.margin.bottom}\"\n" +
+"                    margin-top=\"{$body.margin.top}\"\n" +
+"                    column-gap=\"{$column.gap.body}\"\n" +
+"                    column-count=\"{$column.count.body}\">\n" +
+"    </fo:region-body>\n" +
+"    <fo:region-before region-name=\"xsl-region-before-odd\"\n" +
+"                      extent=\"{$region.before.extent}\"\n" +
+"                      display-align=\"before\"/>\n" +
+"    <fo:region-after region-name=\"xsl-region-after-odd\"\n" +
+"                     extent=\"{$region.after.extent}\"\n" +
+"                     display-align=\"after\"/>\n" +
+"  </fo:simple-page-master>\n" +
+"\n" +
+"  <fo:simple-page-master master-name=\"body-A4-portrait\"\n" +
+"                         page-width=\"210mm\"\n" +
+"                         page-height=\"297mm\"\n" +
+"                         margin-top=\"{$page.margin.top}\"\n" +
+"                         margin-bottom=\"{$page.margin.bottom}\">\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.start}\">\n" +
+"      <xsl:value-of select=\"$page.margin.inner\"/>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.end}\">\n" +
+"      <xsl:value-of select=\"$page.margin.outer\"/>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:if test=\"$axf.extensions != 0\">\n" +
+"      <xsl:call-template name=\"axf-page-master-properties\">\n" +
+"        <xsl:with-param name=\"page.master\">body-first</xsl:with-param>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:if>\n" +
+"    <fo:region-body margin-bottom=\"{$body.margin.bottom}\"\n" +
+"                    margin-top=\"{$body.margin.top}\"\n" +
+"                    column-gap=\"{$column.gap.body}\"\n" +
+"                    column-count=\"{$column.count.body}\">\n" +
+"    </fo:region-body>\n" +
+"    <fo:region-before region-name=\"xsl-region-before-odd\"\n" +
+"                      extent=\"{$region.before.extent}\"\n" +
+"                      display-align=\"before\"/>\n" +
+"    <fo:region-after region-name=\"xsl-region-after-odd\"\n" +
+"                     extent=\"{$region.after.extent}\"\n" +
+"                     display-align=\"after\"/>\n" +
+"  </fo:simple-page-master>\n" +
+"\n" +
+"  <fo:simple-page-master master-name=\"body-A4-landscape\"\n" +
+"                         page-width=\"297mm\"\n" +
+"                         page-height=\"210mm\"\n" +
+"                         margin-top=\"{$page.margin.top}\"\n" +
+"                         margin-bottom=\"{$page.margin.bottom}\">\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.start}\">\n" +
+"      <xsl:value-of select=\"$page.margin.inner\"/>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.end}\">\n" +
+"      <xsl:value-of select=\"$page.margin.outer\"/>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:if test=\"$axf.extensions != 0\">\n" +
+"      <xsl:call-template name=\"axf-page-master-properties\">\n" +
+"        <xsl:with-param name=\"page.master\">body-first</xsl:with-param>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:if>\n" +
+"    <fo:region-body margin-bottom=\"{$body.margin.bottom}\"\n" +
+"                    margin-top=\"{$body.margin.top}\"\n" +
+"                    column-gap=\"{$column.gap.body}\"\n" +
+"                    column-count=\"{$column.count.body}\">\n" +
+"    </fo:region-body>\n" +
+"    <fo:region-before region-name=\"xsl-region-before-odd\"\n" +
+"                      extent=\"{$region.before.extent}\"\n" +
+"                      display-align=\"before\"/>\n" +
+"    <fo:region-after region-name=\"xsl-region-after-odd\"\n" +
+"                     extent=\"{$region.after.extent}\"\n" +
+"                     display-align=\"after\"/>\n" +
+"  </fo:simple-page-master>\n" +
+"\n" +
+"  <fo:simple-page-master master-name=\"body-A3-portrait\"\n" +
+"                         page-width=\"297mm\"\n" +
+"                         page-height=\"420mm\"\n" +
+"                         margin-top=\"{$page.margin.top}\"\n" +
+"                         margin-bottom=\"{$page.margin.bottom}\">\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.start}\">\n" +
+"      <xsl:value-of select=\"$page.margin.inner\"/>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.end}\">\n" +
+"      <xsl:value-of select=\"$page.margin.outer\"/>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:if test=\"$axf.extensions != 0\">\n" +
+"      <xsl:call-template name=\"axf-page-master-properties\">\n" +
+"        <xsl:with-param name=\"page.master\">body-first</xsl:with-param>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:if>\n" +
+"    <fo:region-body margin-bottom=\"{$body.margin.bottom}\"\n" +
+"                    margin-top=\"{$body.margin.top}\"\n" +
+"                    column-gap=\"{$column.gap.body}\"\n" +
+"                    column-count=\"{$column.count.body}\">\n" +
+"    </fo:region-body>\n" +
+"    <fo:region-before region-name=\"xsl-region-before-odd\"\n" +
+"                      extent=\"{$region.before.extent}\"\n" +
+"                      display-align=\"before\"/>\n" +
+"    <fo:region-after region-name=\"xsl-region-after-odd\"\n" +
+"                     extent=\"{$region.after.extent}\"\n" +
+"                     display-align=\"after\"/>\n" +
+"  </fo:simple-page-master>\n" +
+"\n" +
+"  <fo:simple-page-master master-name=\"body-A3-landscape\"\n" +
+"                         page-width=\"420mm\"\n" +
+"                         page-height=\"297mm\"\n" +
+"                         margin-top=\"{$page.margin.top}\"\n" +
+"                         margin-bottom=\"{$page.margin.bottom}\">\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.start}\">\n" +
+"      <xsl:value-of select=\"$page.margin.inner\"/>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"      <xsl:if test=\"$fop.extensions != 0\">\n" +
+"	<xsl:value-of select=\"concat(' - (',$title.margin.left,')')\"/>\n" +
+"      </xsl:if>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:attribute name=\"margin-{$direction.align.end}\">\n" +
+"      <xsl:value-of select=\"$page.margin.outer\"/>\n" +
+"    </xsl:attribute>\n" +
+"    <xsl:if test=\"$axf.extensions != 0\">\n" +
+"      <xsl:call-template name=\"axf-page-master-properties\">\n" +
+"        <xsl:with-param name=\"page.master\">body-first</xsl:with-param>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:if>\n" +
+"    <fo:region-body margin-bottom=\"{$body.margin.bottom}\"\n" +
+"                    margin-top=\"{$body.margin.top}\"\n" +
+"                    column-gap=\"{$column.gap.body}\"\n" +
+"                    column-count=\"{$column.count.body}\">\n" +
+"    </fo:region-body>\n" +
+"    <fo:region-before region-name=\"xsl-region-before-odd\"\n" +
+"                      extent=\"{$region.before.extent}\"\n" +
+"                      display-align=\"before\"/>\n" +
+"    <fo:region-after region-name=\"xsl-region-after-odd\"\n" +
+"                     extent=\"{$region.after.extent}\"\n" +
+"                     display-align=\"after\"/>\n" +
+"  </fo:simple-page-master>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!--==========================================================================\n" +
+"  Handle a sequence of pages, only if it has the expected psmi:page-sequence\n" +
+"  children in the flow.\n" +
+"-->\n" +
+"<xsl:template match=\"fo:page-sequence\" mode=\"psmi\">\n" +
+"  <xsl:choose>\n" +
+"    <xsl:when test=\"fo:flow/psmi:page-sequence\"><!--accommodate new semantic-->\n" +
+"      <xsl:if test=\"@force-page-count = 'even' or\n" +
+"                    @force-page-count = 'odd'\">\n" +
+"        <xsl:message>\n" +
+"          <xsl:text>Unable to support a 'force-page-count=' </xsl:text>\n" +
+"          <xsl:text>value of: </xsl:text>\n" +
+"          <xsl:value-of select=\"@force-page-count\"/>\n" +
+"        </xsl:message>\n" +
+"      </xsl:if>\n" +
+"      <xsl:apply-templates select=\"fo:flow/*[1]\" mode=\"psmi:do-flow-children\"/>\n" +
+"    </xsl:when>\n" +
+"    <xsl:when test=\"descendant::psmi:*\"><!--unexpected location for semantic-->\n" +
+"      <xsl:call-template name=\"psmi:preserve\"/><!-- this will catch each-->\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise><!--no need to do special processing; faster to just copy-->\n" +
+"      <xsl:copy-of select=\".\"/>\n" +
+"    </xsl:otherwise>\n" +
+"  </xsl:choose>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!--==========================================================================\n" +
+"  Create a page sequence from the flow.\n" +
+"-->\n" +
+"\n" +
+"<xsl:template match=\"*\" mode=\"psmi:do-flow-children\">\n" +
+"  <fo:page-sequence>\n" +
+"                                                <!--page-sequence attributes-->\n" +
+"    <xsl:copy-of select=\"../../@*[not(name(.)='initial-page-number')]\"/>\n" +
+"    <xsl:if test=\"self::psmi:page-sequence\">\n" +
+"      <xsl:copy-of select=\"@master-reference\"/>\n" +
+"      <xsl:if test=\"@*[name(.)!='master-reference']\">\n" +
+"        <xsl:message>\n" +
+"          <xsl:text>Only the 'master-reference=' attribute is </xsl:text>\n" +
+"          <xsl:text>allowed for </xsl:text>\n" +
+"          <xsl:call-template name=\"psmi:name-this\"/>\n" +
+"        </xsl:message>\n" +
+"      </xsl:if>\n" +
+"    </xsl:if>\n" +
+"\n" +
+"     <!--only preserve specified initial-page-number= on first page sequence-->\n" +
+"    <xsl:if test=\"not(preceding-sibling::*)\">\n" +
+"      <xsl:copy-of select=\"../../@initial-page-number\"/>      \n" +
+"    </xsl:if>\n" +
+"\n" +
+"        <!--only preserve specified force-page-count= on last page sequence-->\n" +
+"    <xsl:if test=\"following-sibling::psmi:page-sequence or\n" +
+"                 self::psmi:page-sequence/following-sibling::*\"><!--not last-->\n" +
+"      <xsl:attribute name=\"force-page-count\">no-force</xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"\n" +
+"    <xsl:choose>\n" +
+"      <xsl:when test=\"self::psmi:page-sequence\">\n" +
+"                                 <!--psmi:page-sequence title has precedence-->\n" +
+"        <xsl:copy-of select=\"(../../fo:title|fo:title)[last()]\"/>\n" +
+"                        <!--psmi:page-sequence static-content has precedence-->\n" +
+"        <xsl:copy-of select=\"fo:static-content\"/>\n" +
+"              <!--get other static-content not already in psmi:page-sequence-->\n" +
+"        <xsl:variable name=\"static-content-flow-names\"\n" +
+"                      select=\"fo:static-content/@flow-name\"/>\n" +
+"        <xsl:for-each select=\"../../fo:static-content\">\n" +
+"          <xsl:if test=\"not( @flow-name = $static-content-flow-names )\">\n" +
+"            <xsl:copy-of select=\".\"/>\n" +
+"          </xsl:if>\n" +
+"        </xsl:for-each>\n" +
+"                                          <!--do the psmi:page-sequence flow-->\n" +
+"        <fo:flow>\n" +
+"          <xsl:if test=\"not(fo:flow)\">\n" +
+"            <xsl:message>\n" +
+"              <xsl:call-template name=\"psmi:name-this\"/>\n" +
+"              <xsl:text> requires a </xsl:text>\n" +
+"           <xsl:text>&lt;{http://www.w3.org/1999/XSL/Format}flow&gt;</xsl:text>\n" +
+"              <xsl:text> child</xsl:text>\n" +
+"            </xsl:message>\n" +
+"          </xsl:if>\n" +
+"          <xsl:for-each select=\"fo:flow\">\n" +
+"            <xsl:copy-of select=\"@*\"/>\n" +
+"            <xsl:if test=\"not(@flow-name)\">\n" +
+"              <xsl:message>\n" +
+"           <xsl:text>&lt;{http://www.w3.org/1999/XSL/Format}flow&gt;</xsl:text>\n" +
+"              <xsl:text> requires the \"flow-name=\" attribute.</xsl:text>\n" +
+"              </xsl:message>\n" +
+"            </xsl:if>\n" +
+"                                    <!--all flow contents belong in sequence-->\n" +
+"            <xsl:apply-templates select=\"*\" mode=\"psmi\"/>\n" +
+"          </xsl:for-each>\n" +
+"        </fo:flow>\n" +
+"      </xsl:when>\n" +
+"      <xsl:otherwise><!--only following siblings up to psmi:page-sequence-->\n" +
+"                     <!--use all of the fo:page-sequence's non-flow children-->\n" +
+"        <xsl:copy-of select=\"../../fo:title|../../fo:static-content\"/>\n" +
+"                       <!--use all of the fo:page-sequence's flow attributes-->\n" +
+"        <fo:flow>\n" +
+"          <xsl:copy-of select=\"../@*\"/>\n" +
+"              <!--only use as much flow as up to the next psmi:page-sequence-->\n" +
+"          <xsl:call-template name=\"copy-until-psmi\"/>\n" +
+"        </fo:flow>\n" +
+"      </xsl:otherwise>\n" +
+"    </xsl:choose>\n" +
+"  </fo:page-sequence>\n" +
+"                               <!--move to the next need for a page sequence-->\n" +
+"  <xsl:choose>\n" +
+"    <xsl:when test=\"self::psmi:page-sequence\">\n" +
+"      <xsl:apply-templates select=\"following-sibling::*[1]\"\n" +
+"                           mode=\"psmi:do-flow-children\"/>\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise>\n" +
+"      <xsl:apply-templates select=\"following-sibling::psmi:page-sequence[1]\"\n" +
+"                           mode=\"psmi:do-flow-children\"/>\n" +
+"    </xsl:otherwise>\n" +
+"  </xsl:choose>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template name=\"copy-until-psmi\" mode=\"copy-until-psmi\" match=\"*\">\n" +
+"  <xsl:if test=\"not(self::psmi:page-sequence)\">\n" +
+"    <xsl:call-template name=\"psmi:preserve\"/><!--copy this element-->\n" +
+"    <xsl:apply-templates select=\"following-sibling::*[1]\" \n" +
+"                         mode=\"copy-until-psmi\"/>\n" +
+"  </xsl:if>\n" +
+"</xsl:template>\n" +
+"\n" +
+"\n" +
+"<!--==========================================================================\n" +
+"  Handle the new semantic when found in the wrong context by reporting error.\n" +
+"-->\n" +
+"\n" +
+"<xsl:template match=\"psmi:page-sequence\" name=\"unexpected-psmi\" mode=\"psmi\">\n" +
+"  <xsl:message terminate=\"yes\">\n" +
+"    <xsl:text>Unexpected parent </xsl:text>\n" +
+"    <xsl:for-each select=\"..\">\n" +
+"      <xsl:call-template name=\"psmi:name-this\"/>\n" +
+"    </xsl:for-each>\n" +
+"    <xsl:text> for </xsl:text>\n" +
+"    <xsl:call-template name=\"psmi:name-this\"/>\n" +
+"    <xsl:value-of select=\".\"/>\n" +
+"  </xsl:message>\n" +
+"  <xsl:apply-templates select=\"*\" mode=\"psmi\"/>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!--==========================================================================\n" +
+"  Default handlers for other constructs.\n" +
+"-->\n" +
+"\n" +
+"<xsl:template match=\"psmi:*\" mode=\"psmi\"><!--no other PSMI construct is defined-->\n" +
+"  <xsl:message>\n" +
+"    <xsl:text>Unrecognized construct ignored: </xsl:text>\n" +
+"    <xsl:call-template name=\"psmi:name-this\"/>\n" +
+"  </xsl:message>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template match=\"*\" name=\"psmi:preserve\" mode=\"psmi\"><!--other constructs preserved-->\n" +
+"  <xsl:copy>\n" +
+"    <xsl:copy-of select=\"@*\"/>\n" +
+"    <xsl:apply-templates mode=\"psmi\"/>\n" +
+"  </xsl:copy>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template name=\"psmi:name-this\">\n" +
+"  <xsl:value-of disable-output-escaping=\"yes\"\n" +
+"             select=\"concat('&lt;{',namespace-uri(),'}',local-name(),'&gt;')\"/>\n" +
+"</xsl:template>\n" +
+"\n" +
+"</xsl:stylesheet>";
+   
+        return lay;
+    }
+    
+    public static String Tricks(){
+        String tricks;
+        tricks="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+"<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" \n" +
+"		xmlns:fo=\"http://www.w3.org/1999/XSL/Format\" \n" +
+"		xmlns:d=\"http://docbook.org/ns/docbook\"\n" +
+"		exclude-result-prefixes=\"d\" \n" +
+"		version=\"1.0\">\n" +
+"\n" +
+"<!-- ==== Center Mediaobjects ==== -->\n" +
+"<!--\n" +
+"<xsl:template match=\"d:mediaobject\">\n" +
+"  <fo:block text-align=\"center\">\n" +
+"    <xsl:apply-imports />\n" +
+"  </fo:block>\n" +
+"</xsl:template>\n" +
+"-->\n" +
+"\n" +
+"<!--\n" +
+"    When all list items are filtered, an FO publication fails.\n" +
+"-->\n" +
+"<xsl:template match=\"d:itemizedlist[not(d:listitem)]\"/>\n" +
+"<xsl:template match=\"d:orderedlist[not(d:listitem)]\"/>\n" +
+"\n" +
+"<!--\n" +
+"    When an imagedata is filtered, the publication fails, just remove\n" +
+"    the image.\n" +
+"-->\n" +
+"<xsl:template match=\"d:mediaobject[d:imageobject[not(*)]]\"/>\n" +
+"\n" +
+"<!-- ==== Text Color ==== -->\n" +
+"<xsl:template match=\"d:emphasis[@role = 'color']\">\n" +
+"  <xsl:choose>\n" +
+"    <xsl:when test=\"@remap\">\n" +
+"      <fo:inline color=\"{@remap}\">\n" +
+"	<xsl:apply-templates />\n" +
+"      </fo:inline>\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise>\n" +
+"      <xsl:apply-imports />\n" +
+"    </xsl:otherwise>\n" +
+"  </xsl:choose>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!-- ==== Hard Page Breaks -->\n" +
+"<xsl:template match=\"processing-instruction('hard-pagebreak')\">\n" +
+"  <fo:block break-after=\"page\"/>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template match=\"d:procedure/processing-instruction('hard-pagebreak') |\n" +
+"		     d:orderedlist/processing-instruction('hard-pagebreak') |\n" +
+"		     d:itemizedlist/processing-instruction('hard-pagebreak')\">\n" +
+"  <fo:list-item break-after=\"page\">\n" +
+"    <fo:list-item-label>\n" +
+"      <fo:block/>\n" +
+"    </fo:list-item-label>\n" +
+"    <fo:list-item-body>\n" +
+"      <fo:block/>\n" +
+"    </fo:list-item-body>\n" +
+"  </fo:list-item>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!-- ==== Hyphenation in Verbatim Text ==== -->\n" +
+"<!--\n" +
+"    Allow hyphenation in verbatim text such as program listings, screens, etc...\n" +
+"-->\n" +
+"<xsl:attribute-set name=\"monospace.verbatim.properties\">\n" +
+"  <xsl:attribute name=\"wrap-option\">wrap</xsl:attribute>\n" +
+"</xsl:attribute-set>\n" +
+"\n" +
+"<!--\n" +
+"    In this template, the 'SOFT HYPHEN' character is replaced by a zero-width space\n" +
+"    character to prevent the soft hyphen char to be displayed.\n" +
+"-->\n" +
+"<xsl:template name=\"hyphenate.verbatim\">\n" +
+"  <xsl:param name=\"content\" />\n" +
+"  <xsl:variable name=\"head\" select=\"substring($content, 1, 1)\"/>\n" +
+"  <xsl:variable name=\"tail\" select=\"substring($content, 2)\"/>\n" +
+"  <xsl:choose>\n" +
+"    <xsl:when test=\"$head = ' ' or $head = '&#160;'\">\n" +
+"      <xsl:text>&#160;</xsl:text>\n" +
+"      <xsl:text>&#x200B;</xsl:text>\n" +
+"    </xsl:when>\n" +
+"    <xsl:when test=\"$hyphenate.verbatim.characters != '' and\n" +
+"                    translate($head, $hyphenate.verbatim.characters, '') = '' and not($tail = '')\">\n" +
+"      <xsl:value-of select=\"$head\"/>\n" +
+"      <xsl:text>&#x200B;</xsl:text>\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise>\n" +
+"      <xsl:value-of select=\"$head\"/>\n" +
+"    </xsl:otherwise>\n" +
+"  </xsl:choose>\n" +
+"  <xsl:if test=\"$tail\">\n" +
+"    <xsl:call-template name=\"hyphenate.verbatim\">\n" +
+"      <xsl:with-param name=\"content\" select=\"$tail\"/>\n" +
+"    </xsl:call-template>\n" +
+"  </xsl:if>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!-- ==== Scale Down Images ==== -->\n" +
+"<!--\n" +
+"    Trick to scale down images only if it doesn't fit the viewport.\n" +
+"    Downside: maybe this is not always desirable.\n" +
+"    \n" +
+"    IMPORTANT: this overrides the same template as in the \n" +
+"    \"Workaround for List Labels Vertical Shifting\" trick, the two templates\n" +
+"    have to be merged if the two tricks are to be used.\n" +
+"-->\n" +
+"<xsl:template name=\"process.image\">\n" +
+"  <!-- When this template is called, the current node should be  -->\n" +
+"  <!-- a graphic, inlinegraphic, imagedata, or videodata. All    -->\n" +
+"  <!-- those elements have the same set of attributes, so we can -->\n" +
+"  <!-- handle them all in one place.                             -->\n" +
+"\n" +
+"  <xsl:variable name=\"scalefit\">\n" +
+"    <xsl:choose>\n" +
+"      <xsl:when test=\"$ignore.image.scaling != 0\">0</xsl:when>\n" +
+"      <xsl:when test=\"@contentwidth\">0</xsl:when>\n" +
+"      <xsl:when test=\"@contentdepth and \n" +
+"                      @contentdepth != '100%'\">0</xsl:when>\n" +
+"      <xsl:when test=\"@scale\">0</xsl:when>\n" +
+"      <xsl:when test=\"@scalefit\"><xsl:value-of select=\"@scalefit\"/></xsl:when>\n" +
+"      <xsl:when test=\"@width or @depth\">1</xsl:when>\n" +
+"      <xsl:when test=\"$default.image.width != ''\">1</xsl:when>\n" +
+"      <xsl:otherwise>0</xsl:otherwise>\n" +
+"    </xsl:choose>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"scale\">\n" +
+"    <xsl:choose>\n" +
+"      <xsl:when test=\"$ignore.image.scaling != 0\">0</xsl:when>\n" +
+"      <xsl:when test=\"@contentwidth or @contentdepth\">1.0</xsl:when>\n" +
+"      <xsl:when test=\"@scale\">\n" +
+"        <xsl:value-of select=\"@scale div 100.0\"/>\n" +
+"      </xsl:when>\n" +
+"      <xsl:otherwise>1.0</xsl:otherwise>\n" +
+"    </xsl:choose>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"filename\">\n" +
+"    <xsl:choose>\n" +
+"      <xsl:when test=\"local-name(.) = 'graphic'\n" +
+"                      or local-name(.) = 'inlinegraphic'\">\n" +
+"        <!-- handle legacy graphic and inlinegraphic by new template --> \n" +
+"        <xsl:call-template name=\"mediaobject.filename\">\n" +
+"          <xsl:with-param name=\"object\" select=\".\"/>\n" +
+"        </xsl:call-template>\n" +
+"      </xsl:when>\n" +
+"      <xsl:otherwise>\n" +
+"        <!-- imagedata, videodata, audiodata -->\n" +
+"        <xsl:call-template name=\"mediaobject.filename\">\n" +
+"          <xsl:with-param name=\"object\" select=\"..\"/>\n" +
+"        </xsl:call-template>\n" +
+"      </xsl:otherwise>\n" +
+"    </xsl:choose>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"content-type\">\n" +
+"    <xsl:if test=\"@format\">\n" +
+"      <xsl:call-template name=\"graphic.format.content-type\">\n" +
+"        <xsl:with-param name=\"format\" select=\"@format\"/>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:if>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"bgcolor\">\n" +
+"    <xsl:call-template name=\"pi.dbfo_background-color\">\n" +
+"      <xsl:with-param name=\"node\" select=\"..\"/>\n" +
+"    </xsl:call-template>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <fo:external-graphic>\n" +
+"    <xsl:attribute name=\"src\">\n" +
+"      <xsl:call-template name=\"fo-external-image\">\n" +
+"        <xsl:with-param name=\"filename\">\n" +
+"          <xsl:if test=\"$img.src.path != '' and\n" +
+"                        not(starts-with($filename, '/')) and\n" +
+"                        not(contains($filename, '://'))\">\n" +
+"            <xsl:value-of select=\"$img.src.path\"/>\n" +
+"          </xsl:if>\n" +
+"          <xsl:value-of select=\"$filename\"/>\n" +
+"        </xsl:with-param>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:attribute name=\"width\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
+"        <xsl:when test=\"contains(@width,'%')\">\n" +
+"          <xsl:value-of select=\"@width\"/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"@width and not(@width = '')\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"@width\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"not(@depth) and $default.image.width != ''\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"$default.image.width\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:otherwise>\n" +
+"	  <xsl:choose>\n" +
+"	    <xsl:when test=\"ancestor-or-self::d:inlinemediaobject\">auto</xsl:when>\n" +
+"	    <xsl:otherwise>100%</xsl:otherwise>\n" +
+"	  </xsl:choose>\n" +
+"	</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:attribute name=\"height\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
+"        <xsl:when test=\"contains(@depth,'%')\">\n" +
+"          <xsl:value-of select=\"@depth\"/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"@depth\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"@depth\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:otherwise>auto</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:attribute name=\"content-width\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
+"        <xsl:when test=\"contains(@contentwidth,'%')\">\n" +
+"          <xsl:value-of select=\"@contentwidth\"/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"@contentwidth\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"@contentwidth\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"number($scale) != 1.0\">\n" +
+"          <xsl:value-of select=\"$scale * 100\"/>\n" +
+"          <xsl:text>%</xsl:text>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"$scalefit = 1\">scale-to-fit</xsl:when>\n" +
+"        <xsl:otherwise>scale-down-to-fit</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:attribute name=\"content-height\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
+"        <xsl:when test=\"contains(@contentdepth,'%')\">\n" +
+"          <xsl:value-of select=\"@contentdepth\"/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"@contentdepth\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"@contentdepth\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"number($scale) != 1.0\">\n" +
+"          <xsl:value-of select=\"$scale * 100\"/>\n" +
+"          <xsl:text>%</xsl:text>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"$scalefit = 1\">scale-to-fit</xsl:when>\n" +
+"        <xsl:otherwise>auto</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:if test=\"$content-type != ''\">\n" +
+"      <xsl:attribute name=\"content-type\">\n" +
+"        <xsl:value-of select=\"concat('content-type:',$content-type)\"/>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"\n" +
+"    <xsl:if test=\"$bgcolor != ''\">\n" +
+"      <xsl:attribute name=\"background-color\">\n" +
+"        <xsl:value-of select=\"$bgcolor\"/>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"\n" +
+"    <xsl:if test=\"@align\">\n" +
+"      <xsl:attribute name=\"text-align\">\n" +
+"        <xsl:value-of select=\"@align\"/>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"\n" +
+"    <xsl:if test=\"@valign\">\n" +
+"      <xsl:attribute name=\"display-align\">\n" +
+"        <xsl:choose>\n" +
+"          <xsl:when test=\"@valign = 'top'\">before</xsl:when>\n" +
+"          <xsl:when test=\"@valign = 'middle'\">center</xsl:when>\n" +
+"          <xsl:when test=\"@valign = 'bottom'\">after</xsl:when>\n" +
+"          <xsl:otherwise>auto</xsl:otherwise>\n" +
+"        </xsl:choose>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"  </fo:external-graphic>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!-- ==== Available Body Height ==== -->\n" +
+"<!-- \n" +
+"     Computes the height of the body area.\n" +
+"     Result is a number in 'pt' unit.\n" +
+"     \n" +
+"     Can be useful sometimes, when using (a) block-container(s)\n" +
+"     that occupy the entire vertical available space\n" +
+"     (i.e. to vertically center the content of the titlepage).\n" +
+"-->\n" +
+"<xsl:variable name=\"body.height\">\n" +
+"  <xsl:variable name=\"ph\">\n" +
+"    <!-- page height in pt -->\n" +
+"    <xsl:call-template name=\"length-in-points\">\n" +
+"      <xsl:with-param select=\"$page.height\" name=\"length\"></xsl:with-param>\n" +
+"    </xsl:call-template>\n" +
+"  </xsl:variable>\n" +
+"  <xsl:variable name=\"pmt\">\n" +
+"    <!-- page.margin.top in pt -->\n" +
+"    <xsl:call-template name=\"length-in-points\">\n" +
+"      <xsl:with-param select=\"$page.margin.top\" name=\"length\"></xsl:with-param>\n" +
+"    </xsl:call-template>\n" +
+"  </xsl:variable>\n" +
+"  <xsl:variable name=\"bmt\">\n" +
+"    <!-- body.margin.top in pt -->\n" +
+"    <xsl:call-template name=\"length-in-points\">\n" +
+"      <xsl:with-param select=\"$body.margin.top\" name=\"length\"></xsl:with-param>\n" +
+"    </xsl:call-template>\n" +
+"  </xsl:variable>\n" +
+"  <xsl:variable name=\"bmb\">\n" +
+"    <!-- body.margin.bottom in pt -->\n" +
+"    <xsl:call-template name=\"length-in-points\">\n" +
+"      <xsl:with-param select=\"$body.margin.bottom\" name=\"length\"></xsl:with-param>\n" +
+"    </xsl:call-template>\n" +
+"  </xsl:variable>\n" +
+"  <xsl:variable name=\"pmb\">\n" +
+"    <!-- page.margin.bottom in pt -->\n" +
+"    <xsl:call-template name=\"length-in-points\">\n" +
+"      <xsl:with-param select=\"$page.margin.bottom\" name=\"length\"></xsl:with-param>\n" +
+"    </xsl:call-template>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable select=\"$ph - $pmt - $bmt - $bmb - $pmb\" name=\"result\"></xsl:variable>\n" +
+"  <xsl:message>\n" +
+"    <xsl:text>Body height : </xsl:text>\n" +
+"    <xsl:value-of select=\"$result\"></xsl:value-of>\n" +
+"    <xsl:text>pt.</xsl:text>\n" +
+"  </xsl:message>\n" +
+"  <xsl:value-of select=\"$result\"></xsl:value-of>\n" +
+"</xsl:variable>\n" +
+"\n" +
+"\n" +
+"<!-- ==== Workaround for List Labels Vertical Shifting ==== -->\n" +
+"<!--\n" +
+"    This trick only works when the first element of a listitem or step\n" +
+"    is a para element.\n" +
+"    \n" +
+"    It was originally done for very demanding clients so it is commented \n" +
+"    by default, use with care...\n" +
+"\n" +
+"    IMPORTANT: this overrides the same template as in the \n" +
+"    \"Scale Down Images\" trick, the two templates\n" +
+"    have to be merged if the two tricks are to be used.\n" +
+"-->\n" +
+"<!--\n" +
+"<xsl:template match=\"d:para[parent::d:listitem and not(preceding-sibling::*) and descendant::d:inlinemediaobject] |\n" +
+"		     d:para[parent::d:step and not(preceding-sibling::*) and descendant::d:inlinemediaobject]\">\n" +
+"  <xsl:variable name=\"keep.together\">\n" +
+"    <xsl:call-template name=\"pi.dbfo_keep-together\"/>\n" +
+"  </xsl:variable>\n" +
+"  <fo:block xsl:use-attribute-sets=\"normal.para.spacing\">\n" +
+"    <xsl:if test=\"$keep.together != ''\">\n" +
+"      <xsl:attribute name=\"keep-together.within-column\">\n" +
+"	<xsl:value-of select=\"$keep.together\"/>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"    <xsl:call-template name=\"anchor\"/>\n" +
+"    <fo:inline baseline-shift=\"-4pt\">\n" +
+"      <xsl:apply-templates/>\n" +
+"    </fo:inline>\n" +
+"  </fo:block>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template match=\"d:itemizedlist/d:listitem\">\n" +
+"  <xsl:variable name=\"id\"><xsl:call-template name=\"object.id\"/></xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"keep.together\">\n" +
+"    <xsl:call-template name=\"pi.dbfo_keep-together\"/>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"item.contents\">\n" +
+"    <fo:list-item-label end-indent=\"label-end()\" xsl:use-attribute-sets=\"itemizedlist.label.properties\">\n" +
+"      <fo:block>\n" +
+"	  <fo:inline>\n" +
+"	    <xsl:if test=\"d:para[descendant::d:inlinemediaobject and not(preceding-sibling::*)]\">\n" +
+"	      <xsl:attribute name=\"baseline-shift\">-4pt</xsl:attribute>\n" +
+"	    </xsl:if>\n" +
+"	    <xsl:call-template name=\"itemizedlist.label.markup\">\n" +
+"	      <xsl:with-param name=\"itemsymbol\">\n" +
+"		<xsl:call-template name=\"list.itemsymbol\">\n" +
+"		  <xsl:with-param name=\"node\" select=\"parent::d:itemizedlist\"/>\n" +
+"		</xsl:call-template>\n" +
+"	      </xsl:with-param>\n" +
+"	    </xsl:call-template>\n" +
+"	  </fo:inline>\n" +
+"      </fo:block>\n" +
+"    </fo:list-item-label>\n" +
+"    <fo:list-item-body start-indent=\"body-start()\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$passivetex.extensions = '1'\">\n" +
+"          <xsl:apply-templates/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:otherwise>\n" +
+"          <fo:block>\n" +
+"            <xsl:apply-templates/>\n" +
+"          </fo:block>\n" +
+"        </xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </fo:list-item-body>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:choose>\n" +
+"    <xsl:when test=\"parent::*/@spacing = 'compact'\">\n" +
+"      <fo:list-item id=\"{$id}\" xsl:use-attribute-sets=\"compact.list.item.spacing\">\n" +
+"        <xsl:if test=\"$keep.together != ''\">\n" +
+"          <xsl:attribute name=\"keep-together.within-column\"><xsl:value-of\n" +
+"                          select=\"$keep.together\"/></xsl:attribute>\n" +
+"        </xsl:if>\n" +
+"        <xsl:copy-of select=\"$item.contents\"/>\n" +
+"      </fo:list-item>\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise>\n" +
+"      <fo:list-item id=\"{$id}\" xsl:use-attribute-sets=\"list.item.spacing\">\n" +
+"        <xsl:if test=\"$keep.together != ''\">\n" +
+"          <xsl:attribute name=\"keep-together.within-column\"><xsl:value-of\n" +
+"                          select=\"$keep.together\"/></xsl:attribute>\n" +
+"        </xsl:if>\n" +
+"        <xsl:copy-of select=\"$item.contents\"/>\n" +
+"      </fo:list-item>\n" +
+"    </xsl:otherwise>\n" +
+"  </xsl:choose>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template match=\"d:orderedlist/d:listitem\">\n" +
+"  <xsl:variable name=\"id\"><xsl:call-template name=\"object.id\"/></xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"keep.together\">\n" +
+"    <xsl:call-template name=\"pi.dbfo_keep-together\"/>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"item.contents\">\n" +
+"    <fo:list-item-label end-indent=\"label-end()\" xsl:use-attribute-sets=\"orderedlist.label.properties\">\n" +
+"      <fo:block>\n" +
+"	<fo:inline>\n" +
+"	  <xsl:if test=\"d:para[descendant::d:inlinemediaobject and not(preceding-sibling::*)]\">\n" +
+"	    <xsl:attribute name=\"baseline-shift\">-4pt</xsl:attribute>\n" +
+"	  </xsl:if>\n" +
+"	  <xsl:apply-templates select=\".\" mode=\"item-number\"/>\n" +
+"	</fo:inline>\n" +
+"      </fo:block>\n" +
+"    </fo:list-item-label>\n" +
+"    <fo:list-item-body start-indent=\"body-start()\">\n" +
+"      <fo:block>\n" +
+"        <xsl:apply-templates/>\n" +
+"      </fo:block>\n" +
+"    </fo:list-item-body>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:choose>\n" +
+"    <xsl:when test=\"parent::*/@spacing = 'compact'\">\n" +
+"      <fo:list-item id=\"{$id}\" xsl:use-attribute-sets=\"compact.list.item.spacing\">\n" +
+"        <xsl:if test=\"$keep.together != ''\">\n" +
+"          <xsl:attribute name=\"keep-together.within-column\"><xsl:value-of\n" +
+"                          select=\"$keep.together\"/></xsl:attribute>\n" +
+"        </xsl:if>\n" +
+"        <xsl:copy-of select=\"$item.contents\"/>\n" +
+"      </fo:list-item>\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise>\n" +
+"      <fo:list-item id=\"{$id}\" xsl:use-attribute-sets=\"list.item.spacing\">\n" +
+"        <xsl:if test=\"$keep.together != ''\">\n" +
+"          <xsl:attribute name=\"keep-together.within-column\"><xsl:value-of\n" +
+"                          select=\"$keep.together\"/></xsl:attribute>\n" +
+"        </xsl:if>\n" +
+"        <xsl:copy-of select=\"$item.contents\"/>\n" +
+"      </fo:list-item>\n" +
+"    </xsl:otherwise>\n" +
+"  </xsl:choose>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template match=\"d:procedure/d:step|d:substeps/d:step\">\n" +
+"  <xsl:variable name=\"id\">\n" +
+"    <xsl:call-template name=\"object.id\"/>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"keep.together\">\n" +
+"    <xsl:call-template name=\"pi.dbfo_keep-together\"/>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <fo:list-item xsl:use-attribute-sets=\"list.item.spacing\">\n" +
+"    <xsl:if test=\"$keep.together != ''\">\n" +
+"      <xsl:attribute name=\"keep-together.within-column\"><xsl:value-of\n" +
+"                      select=\"$keep.together\"/></xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"    <fo:list-item-label end-indent=\"label-end()\">\n" +
+"      <fo:block id=\"{$id}\">\n" +
+"	<fo:inline>\n" +
+"	  <xsl:if test=\"d:para[descendant::d:inlinemediaobject and not(preceding-sibling::*)]\">\n" +
+"	    <xsl:attribute name=\"baseline-shift\">-4pt</xsl:attribute>\n" +
+"	  </xsl:if>\n" +
+"	  <xsl:choose>\n" +
+"	    <xsl:when test=\"count(../d:step) = 1\">\n" +
+"	      <xsl:text>&#x2022;</xsl:text>\n" +
+"	    </xsl:when>\n" +
+"	    <xsl:otherwise>\n" +
+"	      <xsl:apply-templates select=\".\" mode=\"number\">\n" +
+"		<xsl:with-param name=\"recursive\" select=\"0\"/>\n" +
+"		</xsl:apply-templates>.\n" +
+"	    </xsl:otherwise>\n" +
+"	  </xsl:choose>\n" +
+"	</fo:inline>\n" +
+"      </fo:block>\n" +
+"    </fo:list-item-label>\n" +
+"    <fo:list-item-body start-indent=\"body-start()\">\n" +
+"      <fo:block>\n" +
+"        <xsl:apply-templates/>\n" +
+"      </fo:block>\n" +
+"    </fo:list-item-body>\n" +
+"  </fo:list-item>\n" +
+"</xsl:template>\n" +
+"\n" +
+"<xsl:template name=\"process.image\">\n" +
+"  <xsl:variable name=\"scalefit\">\n" +
+"    <xsl:choose>\n" +
+"      <xsl:when test=\"$ignore.image.scaling != 0\">0</xsl:when>\n" +
+"      <xsl:when test=\"@contentwidth\">0</xsl:when>\n" +
+"      <xsl:when test=\"@contentdepth and \n" +
+"                      @contentdepth != '100%'\">0</xsl:when>\n" +
+"      <xsl:when test=\"@scale\">0</xsl:when>\n" +
+"      <xsl:when test=\"@scalefit\"><xsl:value-of select=\"@scalefit\"/></xsl:when>\n" +
+"      <xsl:when test=\"@width or @depth\">1</xsl:when>\n" +
+"      <xsl:when test=\"$default.image.width != ''\">1</xsl:when>\n" +
+"      <xsl:otherwise>0</xsl:otherwise>\n" +
+"    </xsl:choose>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"scale\">\n" +
+"    <xsl:choose>\n" +
+"      <xsl:when test=\"$ignore.image.scaling != 0\">0</xsl:when>\n" +
+"      <xsl:when test=\"@contentwidth or @contentdepth\">1.0</xsl:when>\n" +
+"      <xsl:when test=\"@scale\">\n" +
+"        <xsl:value-of select=\"@scale div 100.0\"/>\n" +
+"      </xsl:when>\n" +
+"      <xsl:otherwise>1.0</xsl:otherwise>\n" +
+"    </xsl:choose>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"filename\">\n" +
+"    <xsl:choose>\n" +
+"      <xsl:when test=\"local-name(.) = 'graphic'\n" +
+"                      or local-name(.) = 'inlinegraphic'\">\n" +
+"        <xsl:call-template name=\"mediaobject.filename\">\n" +
+"          <xsl:with-param name=\"object\" select=\".\"/>\n" +
+"        </xsl:call-template>\n" +
+"      </xsl:when>\n" +
+"      <xsl:otherwise>\n" +
+"        <xsl:call-template name=\"mediaobject.filename\">\n" +
+"          <xsl:with-param name=\"object\" select=\"..\"/>\n" +
+"        </xsl:call-template>\n" +
+"      </xsl:otherwise>\n" +
+"    </xsl:choose>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"content-type\">\n" +
+"    <xsl:if test=\"@format\">\n" +
+"      <xsl:call-template name=\"graphic.format.content-type\">\n" +
+"        <xsl:with-param name=\"format\" select=\"@format\"/>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:if>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <xsl:variable name=\"bgcolor\">\n" +
+"    <xsl:call-template name=\"pi.dbfo_background-color\">\n" +
+"      <xsl:with-param name=\"node\" select=\"..\"/>\n" +
+"    </xsl:call-template>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"  <fo:external-graphic>\n" +
+"\n" +
+"    <xsl:if test=\"ancestor-or-self::d:inlinemediaobject\">\n" +
+"      <xsl:choose>\n" +
+"	<xsl:when test=\"ancestor::d:step/d:para[not(preceding-sibling::*)] or\n" +
+"			ancestor::d:listitem/d:para[not(preceding-sibling::*)]\">\n" +
+"	  <xsl:attribute name=\"alignment-baseline\">text-before-edge</xsl:attribute>\n" +
+"	  <xsl:attribute name=\"baseline-shift\">4pt</xsl:attribute>\n" +
+"	</xsl:when>\n" +
+"	<xsl:otherwise>\n" +
+"	  <xsl:attribute name=\"alignment-baseline\">middle</xsl:attribute>\n" +
+"	</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:if>\n" +
+"      \n" +
+"    <xsl:attribute name=\"src\">\n" +
+"      <xsl:call-template name=\"fo-external-image\">\n" +
+"        <xsl:with-param name=\"filename\">\n" +
+"          <xsl:if test=\"$img.src.path != '' and\n" +
+"                        not(starts-with($filename, '/')) and\n" +
+"                        not(contains($filename, '://'))\">\n" +
+"            <xsl:value-of select=\"$img.src.path\"/>\n" +
+"          </xsl:if>\n" +
+"          <xsl:value-of select=\"$filename\"/>\n" +
+"        </xsl:with-param>\n" +
+"      </xsl:call-template>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:attribute name=\"width\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
+"        <xsl:when test=\"contains(@width,'%')\">\n" +
+"          <xsl:value-of select=\"@width\"/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"@width and not(@width = '')\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"@width\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"not(@depth) and $default.image.width != ''\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"$default.image.width\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:otherwise>auto</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:attribute name=\"height\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
+"        <xsl:when test=\"contains(@depth,'%')\">\n" +
+"          <xsl:value-of select=\"@depth\"/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"@depth\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"@depth\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:otherwise>auto</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:attribute name=\"content-width\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
+"        <xsl:when test=\"contains(@contentwidth,'%')\">\n" +
+"          <xsl:value-of select=\"@contentwidth\"/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"@contentwidth\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"@contentwidth\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"number($scale) != 1.0\">\n" +
+"          <xsl:value-of select=\"$scale * 100\"/>\n" +
+"          <xsl:text>%</xsl:text>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"$scalefit = 1\">scale-to-fit</xsl:when>\n" +
+"        <xsl:otherwise>auto</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:attribute name=\"content-height\">\n" +
+"      <xsl:choose>\n" +
+"        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
+"        <xsl:when test=\"contains(@contentdepth,'%')\">\n" +
+"          <xsl:value-of select=\"@contentdepth\"/>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"@contentdepth\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
+"            <xsl:with-param name=\"length\" select=\"@contentdepth\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"          </xsl:call-template>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"number($scale) != 1.0\">\n" +
+"          <xsl:value-of select=\"$scale * 100\"/>\n" +
+"          <xsl:text>%</xsl:text>\n" +
+"        </xsl:when>\n" +
+"        <xsl:when test=\"$scalefit = 1\">scale-to-fit</xsl:when>\n" +
+"        <xsl:otherwise>auto</xsl:otherwise>\n" +
+"      </xsl:choose>\n" +
+"    </xsl:attribute>\n" +
+"\n" +
+"    <xsl:if test=\"$content-type != ''\">\n" +
+"      <xsl:attribute name=\"content-type\">\n" +
+"        <xsl:value-of select=\"concat('content-type:',$content-type)\"/>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"\n" +
+"    <xsl:if test=\"$bgcolor != ''\">\n" +
+"      <xsl:attribute name=\"background-color\">\n" +
+"        <xsl:value-of select=\"$bgcolor\"/>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"\n" +
+"    <xsl:if test=\"@align\">\n" +
+"      <xsl:attribute name=\"text-align\">\n" +
+"        <xsl:value-of select=\"@align\"/>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"\n" +
+"    <xsl:if test=\"@valign\">\n" +
+"      <xsl:attribute name=\"display-align\">\n" +
+"        <xsl:choose>\n" +
+"          <xsl:when test=\"@valign = 'top'\">before</xsl:when>\n" +
+"          <xsl:when test=\"@valign = 'middle'\">center</xsl:when>\n" +
+"          <xsl:when test=\"@valign = 'bottom'\">after</xsl:when>\n" +
+"          <xsl:otherwise>auto</xsl:otherwise>\n" +
+"        </xsl:choose>\n" +
+"      </xsl:attribute>\n" +
+"    </xsl:if>\n" +
+"  </fo:external-graphic>\n" +
+"</xsl:template>\n" +
+"-->\n" +
+"\n" +
+"</xsl:stylesheet>";
+        return tricks;
+    }
+    
+    public static String getLayout(){
+        String layout;
+        layout=layoutWhere();
+        return layout;
+    }
+    
+    public static String getTricks(){
+        String tricks;
+        tricks=Tricks();
+        return tricks;
+    }
+    
     public static String getPdfbase(){
         String message;
         message=PdfBase();
@@ -1985,39 +3185,59 @@ message+="<!-- Specific Level Properties -->\n" +
         return pdf;
     }
     
+    
+    
     //methode pour sauvegarder le fichier xsl
     public static void save() throws FileNotFoundException, IOException{
-        
-    
+
         JFileChooser chooser=new JFileChooser();
         chooser.setCurrentDirectory(new File("/home/me/Documents"));
         chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int retrival = chooser.showSaveDialog(null);
     
         String path = chooser.getSelectedFile().getAbsolutePath() ;
-       
+        
         String pdf;
         String pdfbase ;
+        String layout;
+        String tricks;
+       
         
+        layout=getLayout();
         pdf=getPdf();
         pdfbase=getPdfbase();
+        tricks=getTricks();
         
         File fil=new File(path+"\\pdf-"+Entreprise()+".xsl");
         File file=new File(path+"\\pdf-"+Entreprise()+"-base.xsl");
+        File lay=new File(path+"\\page-layout-anywhere.xsl");
+        File trk=new File(path+"\\fo-tricks.xsl");
         
         DataOutputStream fos = null;
         DataOutputStream fros = null;
+        DataOutputStream frosh=null;
+        DataOutputStream furosh=null;
 
         // On instancie nos objets :
         // fos va écrire dans le nouveau fichier !
        
         fos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
         fros = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(fil)));
-        fros.writeBytes(pdf);
+        frosh = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(lay)));
+        furosh= new DataOutputStream(new BufferedOutputStream(new FileOutputStream(trk)));
+        
         fos.writeBytes(pdfbase);
+        fros.writeBytes(pdf);
+        frosh.writeBytes(layout);
+        furosh.writeBytes(tricks);
+        
         fil.createNewFile();
         file.createNewFile();
+        lay.createNewFile();
+        trk.createNewFile();
         
+        furosh.close();
+        frosh.close();
         fros.close();
         fos.close();
 
