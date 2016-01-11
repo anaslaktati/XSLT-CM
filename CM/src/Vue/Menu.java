@@ -10,6 +10,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.lang.model.type.ArrayType;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
 
 /**
  *
@@ -26,9 +29,29 @@ public class Menu extends javax.swing.JFrame {
         
     }
 
-  
+    public JSpinner getjSpinner1() {
+        return jSpinner1;
+    }
+
+    public JSpinner getjSpinner2() {
+        return jSpinner2;
+    }
+
+    public JSpinner getjSpinner3() {
+        return jSpinner3;
+    }
+
+    public static String getjTextField1() {
+        String j=jTextField1.getText();
+        return j;
+    }
+
     public controleur getControleur() {
         return controleur;
+    }
+
+    public JPanel getjPanel7() {
+        return jPanel7;
     }
     
     
@@ -58,8 +81,6 @@ public void setControleur(controleur controleur) {
         jButton14 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jSpinner1 = new javax.swing.JSpinner();
         jSpinner2 = new javax.swing.JSpinner();
@@ -67,6 +88,7 @@ public void setControleur(controleur controleur) {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -191,9 +213,7 @@ public void setControleur(controleur controleur) {
                 .addGap(6, 6, 6))
         );
 
-        jLabel13.setText("Logo :");
-
-        jLabel14.setText("XML :");
+        jLabel13.setText("Entreprise :");
 
         jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel7.setName("Colomn"); // NOI18N
@@ -247,37 +267,42 @@ public void setControleur(controleur controleur) {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel13))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1))
+                            .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
+                .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 279, Short.MAX_VALUE))
+                .addGap(0, 320, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("PAcceuil", jPanel1);
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 936, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 569, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Sommaire", jPanel8);
 
         jLabel9.setText("Police :");
 
@@ -328,7 +353,7 @@ public void setControleur(controleur controleur) {
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton12)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -412,7 +437,7 @@ public void setControleur(controleur controleur) {
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton8)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -491,7 +516,7 @@ public void setControleur(controleur controleur) {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -582,7 +607,6 @@ public void setControleur(controleur controleur) {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -608,11 +632,223 @@ public void setControleur(controleur controleur) {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private static javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JButton getjButton1() {
+        return jButton1;
+    }
+
+    public javax.swing.JButton getjButton10() {
+        return jButton10;
+    }
+
+    public javax.swing.JButton getjButton11() {
+        return jButton11;
+    }
+
+    public javax.swing.JButton getjButton12() {
+        return jButton12;
+    }
+
+    public javax.swing.JButton getjButton13() {
+        return jButton13;
+    }
+
+    public javax.swing.JButton getjButton14() {
+        return jButton14;
+    }
+
+    public javax.swing.JButton getjButton2() {
+        return jButton2;
+    }
+
+    public javax.swing.JButton getjButton3() {
+        return jButton3;
+    }
+
+    public javax.swing.JButton getjButton4() {
+        return jButton4;
+    }
+
+    public javax.swing.JButton getjButton5() {
+        return jButton5;
+    }
+
+    public javax.swing.JButton getjButton6() {
+        return jButton6;
+    }
+
+    public javax.swing.JButton getjButton7() {
+        return jButton7;
+    }
+
+    public javax.swing.JButton getjButton8() {
+        return jButton8;
+    }
+
+    public javax.swing.JButton getjButton9() {
+        return jButton9;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox2() {
+        return jComboBox2;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox3() {
+        return jComboBox3;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox4() {
+        return jComboBox4;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox5() {
+        return jComboBox5;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox6() {
+        return jComboBox6;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox7() {
+        return jComboBox7;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox8() {
+        return jComboBox8;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox9() {
+        return jComboBox9;
+    }
+
+    public javax.swing.JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public javax.swing.JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public javax.swing.JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public javax.swing.JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public javax.swing.JLabel getjLabel13() {
+        return jLabel13;
+    }
+
+    public javax.swing.JLabel getjLabel15() {
+        return jLabel15;
+    }
+
+    public javax.swing.JLabel getjLabel16() {
+        return jLabel16;
+    }
+
+    public javax.swing.JLabel getjLabel17() {
+        return jLabel17;
+    }
+
+    public javax.swing.JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public javax.swing.JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public javax.swing.JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public javax.swing.JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public javax.swing.JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public javax.swing.JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public javax.swing.JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public javax.swing.JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public javax.swing.JMenu getjMenu1() {
+        return jMenu1;
+    }
+
+    public javax.swing.JMenu getjMenu2() {
+        return jMenu2;
+    }
+
+    public javax.swing.JMenuBar getjMenuBar1() {
+        return jMenuBar1;
+    }
+
+    public javax.swing.JMenuItem getjMenuItem1() {
+        return jMenuItem1;
+    }
+
+    public javax.swing.JMenuItem getjMenuItem10() {
+        return jMenuItem10;
+    }
+
+    public javax.swing.JMenuItem getjMenuItem5() {
+        return jMenuItem5;
+    }
+
+    public javax.swing.JMenuItem getjMenuItem9() {
+        return jMenuItem9;
+    }
+
+    public javax.swing.JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public javax.swing.JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public javax.swing.JPanel getjPanel3() {
+        return jPanel3;
+    }
+
+    public javax.swing.JPanel getjPanel4() {
+        return jPanel4;
+    }
+
+    public javax.swing.JPanel getjPanel5() {
+        return jPanel5;
+    }
+
+    public javax.swing.JPanel getjPanel6() {
+        return jPanel6;
+    }
+
+    public javax.swing.JTabbedPane getjTabbedPane1() {
+        return jTabbedPane1;
+    }
 }

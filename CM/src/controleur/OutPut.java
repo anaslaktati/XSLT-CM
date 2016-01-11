@@ -8,8 +8,7 @@ import static java.lang.System.in;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
-import controleur.Message;
-import static controleur.Message.*;
+
 
 
 
@@ -45,10 +44,6 @@ public class OutPut {
     }   
     public String getMessage(){
         String message = null;
-        
-        
-        
-        
         return message;
     }
 }
