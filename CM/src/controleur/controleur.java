@@ -2,12 +2,14 @@ package controleur;
 
 
 import Vue.Menu;
+import java.awt.Color;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import javax.swing.JColorChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -76,7 +78,7 @@ public class controleur {
 "\n" +
 "    <!-- DocBook XSL Parameters -->\n" +
 "\n" +
-"    <c:title>Paramètres XSL DocBook</c:title>\n" +
+"    <c:title>Parametres XSL DocBook</c:title>\n" +
 "\n" +
 "    <c:a>Styles généraux</c:a>\n" +
 "    <c:subtitle>Pagination et styles généraux</c:subtitle>\n" +
@@ -895,7 +897,7 @@ message+="<xsl:template name=\"header.table\">\n" +
 "    </xsl:when>\n" +
 "  </xsl:choose>\n" +
 "\n" +    
-"  <!-- Définition variable -->\n" +
+"  <!-- Definition variable -->\n" +
 "  <xsl:variable name=\"column1\">\n" +
 "    <xsl:choose>\n" +
 "      <xsl:when test=\"$double.sided = 0\">1</xsl:when>\n" +
@@ -1022,7 +1024,7 @@ message+="<xsl:template name=\"header.table\">\n" +
 "  </xsl:choose>\n" +
 "</xsl:template>\n" +
 "\n" ;
-message+="<!-- Paramètres pied de page -->\n" +
+message+="<!-- Parametres pied de page -->\n" +
 "<xsl:template name=\"footer.content\">\n" +
 "  <xsl:param name=\"pageclass\" select=\"''\"/>\n" +
 "  <xsl:param name=\"sequence\" select=\"''\"/>\n" +
@@ -1080,7 +1082,7 @@ message+="<!-- Paramètres pied de page -->\n" +
 "  </xsl:attribute>\n" +
 "</xsl:attribute-set>\n" +
 "\n" +
-"<!-- Définition variables -->\n" +
+"<!-- Definition variables -->\n" +
 "<xsl:template match=\"d:itemizedlist/d:listitem\">\n" +
 "  <xsl:variable name=\"id\"><xsl:call-template name=\"object.id\"/></xsl:variable>\n" +
 "\n" +
@@ -1142,7 +1144,7 @@ message+="<!-- Paramètres pied de page -->\n" +
 "<xsl:param name=\"header.rule\" select=\"0\"/>\n" +
 "<xsl:param name=\"footer.rule\" select=\"0\"/>\n" +
 "\n" +
-"<!-- Paramètres sommaire -->\n" +
+"<!-- Parametres sommaire -->\n" +
 "<!-- ==== TOC ==== -->\n" +
 "<xsl:param name=\"generate.toc\">\n" +
 "  /appendix toc,title\n" +
@@ -3445,5 +3447,9 @@ message+="<!-- Specific Level Properties -->\n" +
         return column;
     }
     
+    //Creation panel couleur
+    public void color() throws FileNotFoundException, IOException {
+        Color newColor = JColorChooser.showDialog(null, "Choisissez une couleur", Color.BLACK);
+    }
     
 }

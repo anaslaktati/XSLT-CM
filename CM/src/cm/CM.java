@@ -2,7 +2,7 @@ package cm;
 
 import Vue.Menu;
 import controleur.controleur;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 /**
  *
  * @author anas
