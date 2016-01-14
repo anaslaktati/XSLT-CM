@@ -78,17 +78,17 @@ public class controleur {
 "\n" +
 "    <!-- DocBook XSL Parameters -->\n" +
 "\n" +
-"    <c:title>Parametres XSL DocBook</c:title>\n" +
+"    <c:title>Paramètres XSL DocBook</c:title>\n" +
 "\n" +
 "    <c:a>Styles généraux</c:a>\n" +
 "    <c:subtitle>Pagination et styles généraux</c:subtitle>\n" +
 "\n" +
 "    <xsl:param name=\"paper.type\"\n" +
 "               c:values=\"USletter;4A0;2A0;A0;A1;A2;A3;A4;A5;A6;A7;A8;A9;A10;B0;B1;B2;B3;B4;B5;B6;B7;B8;B9;B10;C0;C1;C2;C3;C4;C5;C6;C7;C8;C9;C10\"\n" +
-"               c:type=\"select-down\" c:desc=\"Format de papier\">"+Papier()+"</xsl:param>\n" +
+"               c:type=\"select-down\" c:desc=\"Format de papier\">A4</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"page.orientation\" c:desc=\"Orientation\"\n" +
-"               c:type=\"select-down\" c:values=\"portrait;landscape\">"+Page()+"</xsl:param>\n" +
+"               c:type=\"select-down\" c:values=\"portrait;landscape\">portrait</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"page.margin.top\" c:type=\"length\"\n" +
 "               c:desc=\"Marge haute\">0.5in</xsl:param>\n" +
@@ -239,28 +239,20 @@ public class controleur {
 "		xmlns:fo=\"http://www.w3.org/1999/XSL/Format\"\n" +
 "		xmlns:d=\"http://docbook.org/ns/docbook\"\n" +
 "		exclude-result-prefixes=\"d\"\n" +
-"		version=\"1.0\">\n";
-        
-//logo.png
-        
-        message+="<?calenco-dep logo-"+Entreprise()+".png?>\n";//modifiable code
-        
-//les icones
-        
-        message+="<?calenco-dep fleche.png?>\n" +
+"		version=\"1.0\">\n" +
+"  \n" +
+"<?calenco-dep logo-"+Entreprise()+".png?>\n" +
+"<?calenco-dep fleche.png?>\n" +
 "\n" +
 "<?calenco-dep note.png?>\n" +
 "<?calenco-dep tip.png?>\n" +
 "<?calenco-dep important.png?>\n" +
 "<?calenco-dep warning.png?>\n" +
-"<?calenco-dep caution.png?>\n";
-        
-//xxx.xml
-        
-       message+="<?calenco-dep l10n-"+Entreprise()+".xml?>\n"+
-               "\n";//modifiable code
-//
-        message+="<xsl:import href=\"http://docbook.sourceforge.net/release/xsl-ns/current/fo/profile-docbook.xsl\" />\n" +
+"<?calenco-dep caution.png?>\n" +
+"    \n" +
+"<?calenco-dep l10n-"+Entreprise()+".xml?>\n" +
+"\n" +
+"<xsl:import href=\"http://docbook.sourceforge.net/release/xsl-ns/current/fo/profile-docbook.xsl\" />\n" +
 "<xsl:import href=\"fo-tricks.xsl\" />\n" +
 "\n" +
 "<xsl:param name=\"fop1.extensions\" select=\"1\"></xsl:param>\n" +
@@ -277,11 +269,9 @@ public class controleur {
 "\n" +
 "<xsl:param name=\"insert.xref.page.number\">yes</xsl:param>\n" +
 "\n" +
-"<xsl:param name=\"orderedlist.label.width\">1.6em</xsl:param>\n";
-        
-//page setup et blank pages removal
-        
-        message+="<!-- ==== Page Setup ==== -->\n" +
+"<xsl:param name=\"orderedlist.label.width\">1.6em</xsl:param>\n" +
+"\n" +
+"<!-- ==== Page Setup ==== -->\n" +
 "<xsl:param name=\"body.start.indent\">25pt</xsl:param>\n" +
 "\n" +
 "<!-- Remove blank pages -->\n" +
@@ -328,8 +318,9 @@ public class controleur {
 "\n" +
 "  <xsl:call-template name=\"back.cover\"/>\n" +
 "\n" +
-"</xsl:template>\n";
-        message+="<!-- Sequence of chapters are wrapped into a single page sequence. -->\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!-- Sequence of chapters are wrapped into a single page sequence. -->\n" +
 "<xsl:template match=\"d:chapter[preceding-sibling::*[1][self::d:chapter]]\"/>\n" +
 "\n" +
 "<xsl:template match=\"d:chapter[not(preceding-sibling::*[1][self::d:chapter])]\">\n" +
@@ -626,19 +617,17 @@ public class controleur {
 "  <xsl:if test=\"not(preceding::*[@xml:id=$id])\">\n" +
 "    <xsl:copy-of select=\".\"/>\n" +
 "  </xsl:if>\n" +
-"</xsl:template>\n";
-        message+="<!-- ==== Title Pages ====-->\n" +
+"</xsl:template>\n" +
+"\n" +
+"<!-- ==== Title Pages ====-->\n" +
 "<xsl:template name=\"book.titlepage\">\n" +
 "  <fo:block-container position=\"fixed\" top=\"0mm\" left=\"0mm\" width=\"{$page.width}\" height=\"{$page.height}\">\n" +
-"    <fo:table table-layout=\"fixed\" height=\"{$page.height}\" width=\"100%\" text-align=\"left\" display-align=\"center\">\n"+
-"      <fo:table-column column-width=\"proportional-column-width("+Column1()+")\"/>\n" +//modifiable
-"      <fo:table-column column-width=\"proportional-column-width("+Column2()+")\"/>\n" +//modifiable
-"      <fo:table-column column-width=\"proportional-column-width("+Column3()+")\"/>\n" +//modifiable
+"    <fo:table table-layout=\"fixed\" height=\"{$page.height}\" width=\"100%\" text-align=\"left\" display-align=\"center\">\n" +
+"      <fo:table-column column-width=\"proportional-column-width("+Column1()+")\"/>\n" +
+"      <fo:table-column column-width=\"proportional-column-width("+Column2()+")\"/>\n" +
+"      <fo:table-column column-width=\"proportional-column-width("+Column3()+")\"/>\n" +
 "      \n" +
-"      <fo:table-body start-indent=\"0pt\">	\n"+
-                
-//permet d’insérer les informations productname et productnumber
-                
+"      <fo:table-body start-indent=\"0pt\">	\n" +
 "	<fo:table-row block-progression-dimension=\"10mm\">	  \n" +
 "          <fo:table-cell background-color=\"#007ac2\" border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\">\n" +
 "	    <fo:block/>\n" +
@@ -653,10 +642,8 @@ public class controleur {
 "            </fo:block>\n" +
 "          </fo:table-cell>	  \n" +
 "	</fo:table-row>	\n" +
-"\n	"+
-                
-//l’information keyword [1]
-                
+"	\n" +
+"\n" +
 "        <fo:table-row block-progression-dimension=\"15mm\">          \n" +
 "          <fo:table-cell text-align=\"center\" border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n" +
 "	    <fo:block font-size=\"13\" margin-top=\"1mm\">\n" +
@@ -664,21 +651,16 @@ public class controleur {
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
-"\n	"+
-                
-//l'information keyword [2]
-                
+"	\n" +
+"\n" +
 "        <fo:table-row block-progression-dimension=\"15mm\">          \n" +
 "          <fo:table-cell text-align=\"center\"  border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n" +
 "	    <fo:block space-before=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n" +
 "	      <xsl:value-of select =\"/*/d:info/d:keywordset/d:keyword[2]\"/>\n" +
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
-"	</fo:table-row>"+
-"\n"+
-                
-//permet d’insérer l’imageobjetet les informations title et releaseinfo
-                
+"	</fo:table-row>\n" +
+"	\n" +
 "        <fo:table-row block-progression-dimension=\"175mm\">          \n" +
 "          <fo:table-cell  border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\">\n" +
 "	    <fo:block/>\n" +
@@ -716,10 +698,8 @@ public class controleur {
 "	    </fo:block>\n" +
 "	  </fo:table-cell> \n" +
 "	</fo:table-row>\n" +
-"\n	"+
-                
-//permet d’insérer les informations coveret annotation
-                
+"	\n" +
+"\n" +
 "        <fo:table-row block-progression-dimension=\"75mm\">         \n" +
 "          <fo:table-cell text-align=\"center\" border-top=\"13pt solid #007ac2\" border-right=\"1pt solid #007ac2\" number-columns-spanned=\"2\">\n" +
 "	    <fo:block>\n" +
@@ -738,29 +718,19 @@ public class controleur {
 "  </fo:block-container>\n" +
 "\n" +
 "</xsl:template>\n" +
-"\n "+
-                
-//Formatage
-
-//Cover
+"\n" +
 "<xsl:template match=\"d:cover\">\n" +
 "  <fo:block text-align=\"center\">\n" +
 "    <xsl:apply-templates/>\n" +
 "  </fo:block>\n" +
 "</xsl:template>\n" +
 "\n" +
-
-//Cover / mediaobject
-
 "<xsl:template match=\"d:mediaobject[ancestor::d:cover]\">\n" +
 "  <fo:block>\n" +
 "    <xsl:apply-templates/> \n" +
 "  </fo:block>\n" +
 "</xsl:template>\n" +
 "\n" +
-                
-//Cover / adresse
-                
 "<xsl:template match=\"d:cover/d:address\">\n" +
 "  <xsl:param name=\"suppress-numbers\" select=\"'0'\"/>\n" +
 "  \n" +
@@ -786,8 +756,8 @@ public class controleur {
 "	    text-align=\"center\">\n" +
 "    <xsl:copy-of select=\"$content\"/>\n" +
 "  </fo:block>\n" +
-"</xsl:template>\n"+
-"\n"+
+"</xsl:template>\n" +
+"\n" +
 "<xsl:template match=\"*[@role='italic']\">\n" +
 "<fo:inline font-weight=\"bold\" font-style=\"italic\">\n" +
 "<xsl:apply-templates/>\n" +
@@ -795,10 +765,8 @@ public class controleur {
 "</xsl:template>\n" +
 "<xsl:template name=\"chapter.titlepage\">\n" +
 "  \n" +
-"</xsl:template>\n"+
-                
-//Header Footer
-                
+"</xsl:template>\n" +
+"\n" +
 "<!-- ==== Header, Footer ==== -->\n" +
 "<xsl:param name=\"header.column.widths\">1 2 1</xsl:param>\n" +
 "<xsl:param name=\"footer.column.widths\">1 1 1</xsl:param>\n" +
@@ -880,24 +848,20 @@ public class controleur {
 "  <xsl:param name=\"pageclass\" select=\"''\"/>\n" +
 "  <xsl:param name=\"sequence\" select=\"''\"/>\n" +
 "  <xsl:param name=\"gentext-key\" select=\"''\"/>\n" +
-"\n  ";
-                              //PARTIE DE KILIAN
-//Entête table 
-message+="<xsl:template name=\"header.table\">\n" +
-"  <xsl:param name=\"pageclass\" select=\"''\"/>\n" +
-"  <xsl:param name=\"sequence\" select=\"''\"/>\n" +
-"  <xsl:param name=\"gentext-key\" select=\"''\"/>\n" +
-"\n" +  
+"  \n" +
+"\n" +
 "  <!-- default is a single table style for all headers -->\n" +
 "  <!-- Customize it for different page classes or sequence location -->\n" +
-"  <!-- Test si c'est un index -->\n" +
+"  \n" +
+"\n" +
 "  <xsl:choose>\n" +
 "    <xsl:when test=\"$pageclass = 'index'\">\n" +
 "      <xsl:attribute name=\"margin-{$direction.align.start}\">0pt</xsl:attribute>\n" +
 "    </xsl:when>\n" +
 "  </xsl:choose>\n" +
-"\n" +    
-"  <!-- Definition variable -->\n" +
+"  \n" +
+"\n" +
+"\n" +
 "  <xsl:variable name=\"column1\">\n" +
 "    <xsl:choose>\n" +
 "      <xsl:when test=\"$double.sided = 0\">1</xsl:when>\n" +
@@ -905,7 +869,7 @@ message+="<xsl:template name=\"header.table\">\n" +
 "      <xsl:otherwise>3</xsl:otherwise>\n" +
 "    </xsl:choose>\n" +
 "  </xsl:variable>\n" +
-  
+"  \n" +
 "  <xsl:variable name=\"column3\">\n" +
 "    <xsl:choose>\n" +
 "      <xsl:when test=\"$double.sided = 0\">3</xsl:when>\n" +
@@ -913,7 +877,7 @@ message+="<xsl:template name=\"header.table\">\n" +
 "      <xsl:otherwise>1</xsl:otherwise>\n" +
 "    </xsl:choose>\n" +
 "  </xsl:variable>\n" +
-
+"\n" +
 "  <xsl:variable name=\"candidate\">\n" +
 "    <fo:table xsl:use-attribute-sets=\"header.table.properties\">\n" +
 "      <xsl:call-template name=\"head.sep.rule\">\n" +
@@ -921,7 +885,8 @@ message+="<xsl:template name=\"header.table\">\n" +
 "        <xsl:with-param name=\"sequence\" select=\"$sequence\"/>\n" +
 "        <xsl:with-param name=\"gentext-key\" select=\"$gentext-key\"/>\n" +
 "      </xsl:call-template>\n" +
-"\n" +      
+"      \n" +
+"\n" +
 "      <fo:table-column column-number=\"1\">\n" +
 "        <xsl:attribute name=\"column-width\">\n" +
 "          <xsl:text>proportional-column-width(</xsl:text>\n" +
@@ -952,13 +917,12 @@ message+="<xsl:template name=\"header.table\">\n" +
 "          <xsl:text>)</xsl:text>\n" +
 "        </xsl:attribute>\n" +
 "      </fo:table-column>\n" +
-      
+"      \n" +
 "      <fo:table-body>\n" +
 "        <fo:table-row>\n" +
 "          <xsl:attribute name=\"block-progression-dimension.minimum\">\n" +
 "            <xsl:value-of select=\"$header.table.height\"/>\n" +
 "          </xsl:attribute>\n" +
-        //MODIFIABLE
 "          <fo:table-cell text-align=\"start\"\n" +
 "                         display-align=\"center\">\n" +
 "            <xsl:if test=\"$fop.extensions = 0\">\n" +
@@ -973,9 +937,8 @@ message+="<xsl:template name=\"header.table\">\n" +
 "              </xsl:call-template>\n" +
 "            </fo:block>\n" +
 "          </fo:table-cell>\n" +
-        //MODIFIABLE
-//"          <fo:table-cell text-align=\"center\"\n" +
-//"                         display-align=\"center\">\n" +
+"          <fo:table-cell text-align=\"center\"\n" +
+"                         display-align=\"center\">\n" +
 "            <xsl:if test=\"$fop.extensions = 0\">\n" +
 "              <xsl:attribute name=\"relative-align\">baseline</xsl:attribute>\n" +
 "            </xsl:if>\n" +
@@ -988,9 +951,8 @@ message+="<xsl:template name=\"header.table\">\n" +
 "              </xsl:call-template>\n" +
 "            </fo:block>\n" +
 "          </fo:table-cell>\n" +
-        //MODIFIABLE
-//"          <fo:table-cell text-align=\"right\"\n" +
-//"                         display-align=\"center\">\n" +
+"          <fo:table-cell text-align=\"right\"\n" +
+"                         display-align=\"center\">\n" +
 "            <xsl:if test=\"$fop.extensions = 0\">\n" +
 "              <xsl:attribute name=\"relative-align\">baseline</xsl:attribute>\n" +
 "            </xsl:if>\n" +
@@ -1007,12 +969,13 @@ message+="<xsl:template name=\"header.table\">\n" +
 "      </fo:table-body>\n" +
 "    </fo:table>\n" +
 "  </xsl:variable>\n" +
-"\n" +  
+"  \n" +
+"\n" +
 "  <!-- Really output a header? -->\n" +
-"  <!-- Mise en page -->\n" +
+"\n" +
 "  <xsl:choose>\n" +
-"    <xsl:when test=\"$pageclass = 'titlepage' and $gentext-key = 'book'\"\n" +
-"                    and $sequence='first'\">\"\n" +
+"    <xsl:when test=\"$pageclass = 'titlepage' and $gentext-key = 'book'\n" +
+"                    and $sequence='first'\">\n" +
 "      <!-- no, book titlepages have no headers at all -->\n" +
 "    </xsl:when>\n" +
 "    <xsl:when test=\"$sequence = 'blank' and $headers.on.blank.pages = 0\">\n" +
@@ -1023,14 +986,15 @@ message+="<xsl:template name=\"header.table\">\n" +
 "    </xsl:otherwise>\n" +
 "  </xsl:choose>\n" +
 "</xsl:template>\n" +
-"\n" ;
-message+="<!-- Parametres pied de page -->\n" +
+"\n" +
+"\n" +
 "<xsl:template name=\"footer.content\">\n" +
 "  <xsl:param name=\"pageclass\" select=\"''\"/>\n" +
 "  <xsl:param name=\"sequence\" select=\"''\"/>\n" +
 "  <xsl:param name=\"position\" select=\"''\"/>\n" +
 "  <xsl:param name=\"gentext-key\" select=\"''\"/>\n" +
-"\n" +  
+"  \n" +
+"\n" +
 "  <fo:block>\n" +
 "    <!-- pageclass can be front, body, back -->\n" +
 "    <!-- sequence can be odd, even, first, blank -->\n" +
@@ -1043,17 +1007,20 @@ message+="<!-- Parametres pied de page -->\n" +
 "      <xsl:when test=\"$double.sided = 0 and $position='right'\">\n" +
 "        <fo:page-number/>\n" +
 "      </xsl:when>\n" +
-"\n" +      
-"      <xsl:when test=\"$double.sided != 0 and $sequence = 'even'\"\n" +
+"      \n" +
+"\n" +
+"      <xsl:when test=\"$double.sided != 0 and $sequence = 'even'\n" +
 "                      and $position='left'\">\n" +
 "        <fo:page-number/>\n" +
 "      </xsl:when>\n" +
-"\n" +      
-"      <xsl:when test=\"$double.sided != 0 and ($sequence = 'odd' or $sequence = 'first')\"\n" +
-"                      and $position='right'>\n" +
+"      \n" +
+"\n" +
+"      <xsl:when test=\"$double.sided != 0 and ($sequence = 'odd' or $sequence = 'first')\n" +
+"                      and $position='right'\">\n" +
 "        <fo:page-number/>\n" +
 "      </xsl:when>\n" +
-"\n" +     
+"      \n" +
+"\n" +
 "      <xsl:when test=\"$sequence='blank'\">\n" +
 "        <xsl:choose>\n" +
 "          <xsl:when test=\"$double.sided != 0 and $position = 'left'\">\n" +
@@ -1070,19 +1037,18 @@ message+="<!-- Parametres pied de page -->\n" +
 "    </xsl:choose>\n" +
 "  </fo:block>\n" +
 "</xsl:template>\n" +
-
-"<!-- List item -->\n" +
+"\n" +
+"\n" +
 "<xsl:attribute-set name=\"list.block.spacing\">\n" +
 "  <xsl:attribute name=\"margin-left\">\n" +
 "    <xsl:choose>\n" +
-        //MODIFIABLE
-//"      <xsl:when test=\"self::itemizedlist\">0pt</xsl:when>\n" +
+"      <xsl:when test=\"self::itemizedlist\">0pt</xsl:when>\n" +
 "      <xsl:otherwise>0pt</xsl:otherwise>\n" +
 "    </xsl:choose>\n" +
 "  </xsl:attribute>\n" +
 "</xsl:attribute-set>\n" +
 "\n" +
-"<!-- Definition variables -->\n" +
+"\n" +
 "<xsl:template match=\"d:itemizedlist/d:listitem\">\n" +
 "  <xsl:variable name=\"id\"><xsl:call-template name=\"object.id\"/></xsl:variable>\n" +
 "\n" +
@@ -1117,7 +1083,7 @@ message+="<!-- Parametres pied de page -->\n" +
 "    </fo:list-item-body>\n" +
 "  </xsl:variable>\n" +
 "\n" +
-"  <!-- Mise en page -->\n" +
+"\n" +
 "  <xsl:choose>\n" +
 "    <xsl:when test=\"parent::*/@spacing = 'compact'\">\n" +
 "      <fo:list-item id=\"{$id}\" xsl:use-attribute-sets=\"compact.list.item.spacing\">\n" +
@@ -1129,7 +1095,7 @@ message+="<!-- Parametres pied de page -->\n" +
 "      </fo:list-item>\n" +
 "    </xsl:when>\n" +
 "    <xsl:otherwise>\n" +
-"     <fo:list-item id=\"{$id}\" xsl:use-attribute-sets=\"list.item.spacing\">\n" +
+"      <fo:list-item id=\"{$id}\" xsl:use-attribute-sets=\"list.item.spacing\">\n" +
 "        <xsl:if test=\"$keep.together != ''\">\n" +
 "          <xsl:attribute name=\"keep-together.within-column\"><xsl:value-of\n" +
 "                          select=\"$keep.together\"/></xsl:attribute>\n" +
@@ -1144,7 +1110,7 @@ message+="<!-- Parametres pied de page -->\n" +
 "<xsl:param name=\"header.rule\" select=\"0\"/>\n" +
 "<xsl:param name=\"footer.rule\" select=\"0\"/>\n" +
 "\n" +
-"<!-- Parametres sommaire -->\n" +
+"\n" +
 "<!-- ==== TOC ==== -->\n" +
 "<xsl:param name=\"generate.toc\">\n" +
 "  /appendix toc,title\n" +
@@ -1163,48 +1129,44 @@ message+="<!-- Parametres pied de page -->\n" +
 "  /section  toc\n" +
 "  set       toc,title\n" +
 "</xsl:param>\n" +
-
-"<!-- Initialisation numéro de pages -->\n" +
+"\n" +
+"\n" +
 "<xsl:template name=\"initial.page.number\">auto</xsl:template>\n" +
 "<xsl:template name=\"page.number.format\">1</xsl:template>\n" +
 "\n" +
-        //MODIFIABLE
-"<!-- Page de titre du sommaire -->\n" +
+"\n" +
 "<xsl:template name=\"table.of.contents.titlepage.recto\">\n" +
 "  <fo:block xsl:use-attribute-sets=\"table.of.contents.titlepage.recto.style\" \n" +
-//"	    space-before.minimum=\"1em\" space-before.optimum=\"1.5em\" \n" +
-//"	    space-before.maximum=\"2em\" margin-left=\"{$title.margin.left}\"\n" +
-//"	    start-indent=\"0pt\" font-weight=\"normal\" font-family=\"{$title.fontset}\"\n" +
-//"	    space-after=\"15pt\" color=\"gray\" font-size=\"24pt\">\n" +
+"	    space-before.minimum=\"1em\" space-before.optimum=\"1.5em\" \n" +
+"	    space-before.maximum=\"2em\" margin-left=\"{$title.margin.left}\"\n" +
+"	    start-indent=\"0pt\" font-weight=\"normal\" font-family=\"{$title.fontset}\"\n" +
+"	    space-after=\"15pt\" color=\"gray\" font-size=\"24pt\">\n" +
 "    <xsl:call-template name=\"gentext\">\n" +
 "      <xsl:with-param name=\"key\" select=\"'TableofContents'\"/>\n" +
 "    </xsl:call-template>\n" +
 "  </fo:block>\n" +
 "</xsl:template>\n" +
 "\n" +
-"<!-- Formatage du contenu -->\n" +
+"\n" +
 "<xsl:attribute-set name=\"toc.line.properties\">\n" +
 "  <xsl:attribute name=\"color\">\n" +
 "    <xsl:choose>\n" +
-        //MODIFIABLE
-//"      <xsl:when test=\"self::d:section[not(ancestor::d:section)]\">gray</xsl:when>\n" +
-//"      <xsl:otherwise>inherit</xsl:otherwise>\n" +
+"      <xsl:when test=\"self::d:section[not(ancestor::d:section)]\">gray</xsl:when>\n" +
+"      <xsl:otherwise>inherit</xsl:otherwise>\n" +
 "    </xsl:choose>\n" +
 "  </xsl:attribute> \n" +
 "  <xsl:attribute name=\"font-weight\">\n" +
 "    <xsl:choose>\n" +
-        //MODIFIABLE
-//"      <xsl:when test=\"self::d:section[not(ancestor::d:section)]\">bold</xsl:when>\n" +
-//"      <xsl:otherwise>normal</xsl:otherwise>\n" +
+"      <xsl:when test=\"self::d:section[not(ancestor::d:section)]\">bold</xsl:when>\n" +
+"      <xsl:otherwise>normal</xsl:otherwise>\n" +
 "    </xsl:choose>\n" +
 "  </xsl:attribute> \n" +
 "  <xsl:attribute name=\"font-size\">\n" +
 "    <xsl:choose>\n" +
-        //MODIFIABLE
-//"      <xsl:when test=\"self::d:section[not(ancestor::d:section)]\">11pt</xsl:when>\n" +
-//"      <xsl:otherwise>9pt</xsl:otherwise>\n" +
+"      <xsl:when test=\"self::d:section[not(ancestor::d:section)]\">11pt</xsl:when>\n" +
+"      <xsl:otherwise>9pt</xsl:otherwise>\n" +
 "    </xsl:choose>\n" +
-"  </xsl:attribute> \n" +   
+"  </xsl:attribute>    \n" +
 "  <xsl:attribute name=\"keep-with-previous.within-column\">\n" +
 "    <xsl:choose>\n" +
 "      <xsl:when test=\"ancestor::d:section\">always</xsl:when>\n" +
@@ -1213,29 +1175,32 @@ message+="<!-- Parametres pied de page -->\n" +
 "  </xsl:attribute>\n" +
 "</xsl:attribute-set>\n" +
 "\n" +
-"<!-- Mise en page -->\n" +
+"\n" +
 "<xsl:template name=\"toc.line\">\n" +
 "  <xsl:param name=\"toc-context\" select=\"NOTANODE\"/>\n" +
-"\n" +  
+"  \n" +
+"\n" +
 "  <xsl:variable name=\"id\">\n" +
 "    <xsl:call-template name=\"object.id\"/>\n" +
 "  </xsl:variable>\n" +
-"\n" +  
+"  \n" +
+"\n" +
 "  <xsl:variable name=\"label\">\n" +
 "    <xsl:apply-templates select=\".\" mode=\"label.markup\"/>\n" +
 "  </xsl:variable>\n" +
-" \n" + 
+"  \n" +
+"\n" +
 "  <xsl:choose>\n" +
 "    <xsl:when test=\"self::d:chapter\">\n" +
-        //MODIFIABLE
-//"      <fo:block border-bottom=\"solid, #007ac2, 2pt\" space-after=\"10pt\" space-before=\"10pt\"\n" + 
-//"                font-weight=\"bold\" font-size=\"12pt\" text-transform=\"uppercase\" width=\"120mm\">\n" +
+"      <fo:block border-bottom=\"solid, #007ac2, 2pt\" space-after=\"10pt\" space-before=\"10pt\" \n" +
+"                font-weight=\"bold\" font-size=\"12pt\" text-transform=\"uppercase\" width=\"120mm\">\n" +
 "	<fo:basic-link internal-destination=\"{$id}\">\n" +
 "          <xsl:apply-templates select=\".\" mode=\"titleabbrev.markup\"/>\n" +
 "	</fo:basic-link>\n" +
-"      </fo:block> \n" +  
+"      </fo:block>   \n" +
 "    </xsl:when>\n" +
-"\n" +    
+"    \n" +
+"\n" +
 "    <xsl:otherwise>\n" +
 "      <fo:block xsl:use-attribute-sets=\"toc.line.properties\">\n" +
 "	<fo:inline keep-with-next.within-line=\"always\">\n" +
@@ -1249,11 +1214,10 @@ message+="<!-- Parametres pied de page -->\n" +
 "	</fo:inline>\n" +
 "	<fo:inline keep-together.within-line=\"always\">\n" +
 "	  <xsl:text> </xsl:text>\n" +
-        //MODIFIABLE
-//"	  <fo:leader leader-pattern=\"dots\"\n" +
-//"                     leader-pattern-width=\"3pt\"\n" +
-//"                     leader-alignment=\"reference<-area\"\n" +
-//"                     keep-with-next.within-line=\"always\"/\n" +
+"	  <fo:leader leader-pattern=\"dots\"\n" +
+"                     leader-pattern-width=\"3pt\"\n" +
+"                     leader-alignment=\"reference-area\"\n" +
+"                     keep-with-next.within-line=\"always\"/>\n" +
 "	  <xsl:text> </xsl:text> \n" +
 "	  <fo:basic-link internal-destination=\"{$id}\">\n" +
 "            <fo:page-number-citation ref-id=\"{$id}\"/>\n" +
@@ -1264,7 +1228,7 @@ message+="<!-- Parametres pied de page -->\n" +
 "  </xsl:choose>\n" +
 "</xsl:template>\n" +
 "\n" +
-"<!-- Intégration du formatage dans la mise en page -->\n" +
+"\n" +
 "<xsl:template name=\"set.toc.indent\">\n" +
 "  <xsl:param name=\"reldepth\"/>\n" +
 "\n" +
@@ -1290,37 +1254,36 @@ message+="<!-- Parametres pied de page -->\n" +
 "  </xsl:choose>\n" +
 "</xsl:template>\n" +
 "\n" +
-"<!-- Page des listes -->\n" +
+"\n" +
 "<xsl:template name=\"list.of.figures.titlepage.recto\">\n" +
-"  <fo:block xmlns:fo=\"http://www.w3.org/1999/XSL/Format\"\n" +
-        //MODIFIABLE
-//"	    xsl:use-attribute-sets=\"list.of.figures.titlepage.recto.style\" \n" +
-//"	    space-before.minimum=\"1em\" space-before.optimum=\"1.5em\" \n" +
-//"	    space-before.maximum=\"2em\" space-after=\"0.5em\" \n" +
-//"	    margin-left=\"{$title.margin.left}\" start-indent=\"0pt\" font-size=\"17.28pt\" \n" +
-//"	    font-weight=\"bold\" font-family=\"{$title.fontset}\">\n" +
+"  <fo:block xmlns:fo=\"http://www.w3.org/1999/XSL/Format\" \n" +
+"	    xsl:use-attribute-sets=\"list.of.figures.titlepage.recto.style\" \n" +
+"	    space-before.minimum=\"1em\" space-before.optimum=\"1.5em\" \n" +
+"	    space-before.maximum=\"2em\" space-after=\"0.5em\" \n" +
+"	    margin-left=\"{$title.margin.left}\" start-indent=\"0pt\" font-size=\"17.28pt\" \n" +
+"	    font-weight=\"bold\" font-family=\"{$title.fontset}\">\n" +
 "    <xsl:call-template name=\"gentext\">\n" +
 "      <xsl:with-param name=\"key\" select=\"'ListofFigures'\"/>\n" +
 "    </xsl:call-template>\n" +
 "  </fo:block>\n" +
 "</xsl:template>\n" +
- 
+" \n" +
 "<xsl:template name=\"back.cover\"> \n" +
 "  <xsl:call-template name=\"page.sequence\">\n" +
 "    <xsl:with-param name=\"master-reference\">blank</xsl:with-param>\n" +
 "    <xsl:with-param name=\"content\">\n" +
 "      <fo:block break-after=\"page\"/>\n" +
-        //MODIFIABLE
-//"      <fo:block-container position=\"fixed\" reference-orientation=\"90\" left=\"200mm\" top=\"20mm\"\n" +
-//"			  width=\"180mm\">\n" +
+"      <fo:block-container position=\"fixed\" reference-orientation=\"90\" left=\"200mm\" top=\"20mm\"\n" +
+"			  width=\"180mm\">\n" +
 "	<fo:block>Conception documentation technique <fo:inline font-weight=\"bold\">cabinet Martinez</fo:inline> Nantes - www.capmundi.com</fo:block>\n" +
 "      </fo:block-container>\n" +
-"\n" +    
-        //MODIFIABLE
-//"      <fo:block-container height=\"83mm\" width=\"210mm\" top=\"214mm\" text-align=\"center\" position=\"fixed\"\n" +
-//"			  background-color=\"#ffffff\" space-before=\"10mm\">\n" +
-//"\n" +	
-//"  	<fo:block font-size=\"9pt\" border-top=\"13pt #007ac2 solid\" padding-top=\"7mm\"> \n" +
+"      \n" +
+"\n" +
+"      <fo:block-container height=\"83mm\" width=\"210mm\" top=\"214mm\" text-align=\"center\" position=\"fixed\"\n" +
+"			  background-color=\"#ffffff\" space-before=\"10mm\">\n" +
+"	\n" +
+"\n" +
+"  	<fo:block font-size=\"9pt\" border-top=\"13pt #007ac2 solid\" padding-top=\"7mm\"> \n" +
 "	  <xsl:apply-templates select =\"d:info/d:cover\"/>\n" +
 "	</fo:block>\n" +
 "      </fo:block-container>\n" +
@@ -1329,8 +1292,7 @@ message+="<!-- Parametres pied de page -->\n" +
 "</xsl:template>\n" +
 "\n" +
 "<xsl:template match=\"d:link[ancestor::d:cover]\">\n" +
-        //MODIFIABLE
-//"  <fo:inline color=\"#007ac2\" font-weight=\"bold\">\n" +
+"  <fo:inline color=\"#007ac2\" font-weight=\"bold\">\n" +
 "    <xsl:apply-imports/>\n" +
 "  </fo:inline>\n" +
 "</xsl:template>\n" +
@@ -1340,13 +1302,13 @@ message+="<!-- Parametres pied de page -->\n" +
 "     These templates are in fo/titlepage.templates.xsl file\n" +
 "     of the standard DocBook XSL\n" +
 "-->\n" +
-"\n" ;
-message+="<!-- ==== Chapter, Appendix Titles ==== -->\n" +
+"\n" +
+"<!-- ==== Chapter, Appendix Titles ==== -->\n" +
 "<!--\n" +
 "    See: http://www.sagehill.net/docbookxsl/TitleFontSizes.html#ChapterTitles\n" +
 "-->\n" +
 "\n" +
-"<!-- Numérotation des titres de chapitres et annexes -->\n" +
+"\n" +
 "<xsl:param name=\"appendix.autolabel\">A</xsl:param>\n" +
 "<xsl:param name=\"chapter.autolabel\" select=\"0\"></xsl:param>\n" +
 "\n" +
@@ -1359,16 +1321,18 @@ message+="<!-- ==== Chapter, Appendix Titles ==== -->\n" +
 "\n" +
 "<!-- General Properties -->\n" +
 "<xsl:attribute-set name=\"section.title.properties\">\n" +
-"\n" +  
+"  \n" +
+"\n" +
 "</xsl:attribute-set>\n" +
 "\n" +
-"<!-- Variable et mise en page des titres de section -->\n" +
+"\n" +
 "<xsl:template name=\"section.heading\">\n" +
 "  <xsl:param name=\"level\" select=\"1\"/>\n" +
 "  <xsl:param name=\"marker\" select=\"1\"/>\n" +
 "  <xsl:param name=\"title\"/>\n" +
 "  <xsl:param name=\"marker.title\"/>\n" +
-"\n" +  
+"  \n" +
+"\n" +
 "  <fo:block xsl:use-attribute-sets=\"section.title.properties\">\n" +
 "    <xsl:if test=\"$marker != 0\">\n" +
 "      <fo:marker marker-class-name=\"section.head.marker\">\n" +
@@ -1411,14 +1375,14 @@ message+="<!-- ==== Chapter, Appendix Titles ==== -->\n" +
 "    </xsl:choose>\n" +
 "  </fo:block>\n" +
 "</xsl:template>\n" +
-"\n" ;
-message+="<!-- Specific Level Properties -->\n" +
+"\n" +
+"<!-- Specific Level Properties -->\n" +
 "<xsl:attribute-set name=\"section.title.level1.properties\">\n" +
 "  <xsl:attribute name=\"font-size\">\n" +
 "    <xsl:value-of select=\"$body.font.master * 1.8\"/>\n" +
 "    <xsl:text>pt</xsl:text>\n" +
 "  </xsl:attribute>\n" +
-//"  <xsl:attribute name=\"border-bottom\">solid, #007ac2, 2pt </xsl:attribute>\n" +
+"  <xsl:attribute name=\"border-bottom\">solid, #007ac2, 2pt </xsl:attribute>\n" +
 "  <xsl:attribute name=\"color\">\n" +
 "    <xsl:value-of select=\"$section.title.l1.color\"/>\n" +
 "  </xsl:attribute>\n" +
@@ -1443,7 +1407,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "  <xsl:attribute name=\"color\">\n" +
 "    <xsl:value-of select=\"$section.title.l3.color\"/>\n" +
 "  </xsl:attribute>\n" +
-//"  <xsl:attribute name=\"font-weight\">bold</xsl:attribute>\n" +
+"  <xsl:attribute name=\"font-weight\">bold</xsl:attribute>\n" +
 "</xsl:attribute-set>\n" +
 "\n" +
 "<xsl:attribute-set name=\"section.title.level4.properties\">\n" +
@@ -1474,12 +1438,38 @@ message+="<!-- Specific Level Properties -->\n" +
 "  <xsl:attribute name=\"color\">\n" +
 "    <xsl:value-of select=\"$section.title.l6.color\"/>\n" +
 "  </xsl:attribute>\n" +
-"</xsl:attribute-set>\n";
-        message+="      <fo:table-body start-indent=\"0pt\">	\n" +
-"       <xsl:variable name=\"pgwide\"> \n" +
+"</xsl:attribute-set>\n" +
+"\n" +
+"<!-- ==== Figures ==== -->\n" +
+"<xsl:attribute-set name=\"figure.properties\">\n" +
+"  <!-- Often used to center the content of figures(including title) -->\n" +
+"</xsl:attribute-set>\n" +
+"\n" +
+"\n" +
+"<!--\n" +
+"    Side-by-side image and other content.\n" +
+"    \n" +
+"    Adapted from ([db-xsl]/fo/formal.xsl) template \"informal.object\"\n" +
+"-->\n" +
+"<xsl:template match=\"d:informalfigure[*[not(self::d:info or self::d:mediaobject)]]\">\n" +
+"  <xsl:variable name=\"id\">\n" +
+"    <xsl:call-template name=\"object.id\"/>\n" +
+"  </xsl:variable>\n" +
+"  \n" +
+"  <xsl:variable name=\"keep.together\">\n" +
+"    <xsl:call-template name=\"pi.dbfo_keep-together\"/>\n" +
+"  </xsl:variable>\n" +
+"  \n" +
+"  <!-- Some don't have a pgwide attribute, so may use a PI -->\n" +
+"  <xsl:variable name=\"pgwide.pi\">\n" +
+"    <xsl:call-template name=\"pi.dbfo_pgwide\"/>\n" +
+"  </xsl:variable>\n" +
+"\n" +
+"\n" +
+"  <xsl:variable name=\"pgwide\">\n" +
 "    <xsl:choose>\n" +
-"      <xsl:when test=\"@pgwide\"> \n" +
-"        <xsl:value-of select=\"@pgwide\"/> \n" +
+"      <xsl:when test=\"@pgwide\">\n" +
+"        <xsl:value-of select=\"@pgwide\"/>\n" +
 "      </xsl:when>\n" +
 "      <xsl:when test=\"$pgwide.pi\">\n" +
 "        <xsl:value-of select=\"$pgwide.pi\"/>\n" +
@@ -1490,21 +1480,23 @@ message+="<!-- Specific Level Properties -->\n" +
 "      </xsl:when>\n" +
 "    </xsl:choose>\n" +
 "  </xsl:variable>\n" +
-"  <!-- TAILLE DE LA PAGE, DEFINITION DES DIMENSIONS DE LA PAGE --> \n" +
-"  <xsl:choose> \n" +
+"  \n" +
+"\n" +
+"  <xsl:choose>\n" +
 "    <xsl:when test=\"$pgwide = '1'\">\n" +
 "      <fo:block id=\"{$id}\" xsl:use-attribute-sets=\"pgwide.properties informalfigure.properties\">\n" +
-"        <xsl:if test=\"$keep.together != ''\"> \n" +
-"          <xsl:attribute name=\"keep-together.within-column\"> \n" +
-"	    <xsl:value-of select=\"$keep.together\"/> \n" +
-"	  </xsl:attribute> \n" +
-"       </xsl:if>\n" +
-"   \n" +
-"	<xsl:call-template name=\"side-by-side\"/> \n" +
-"     </fo:block> \n" +
-"  </xsl:when> \n" +
-"    <xsl:otherwise> \n" +
-"      <fo:block id=\"{$id}\" \n" +
+"        <xsl:if test=\"$keep.together != ''\">\n" +
+"          <xsl:attribute name=\"keep-together.within-column\">\n" +
+"	    <xsl:value-of select=\"$keep.together\"/>\n" +
+"	  </xsl:attribute>\n" +
+"        </xsl:if>\n" +
+"\n" +
+"\n" +
+"	<xsl:call-template name=\"side-by-side\"/>\n" +
+"      </fo:block>\n" +
+"    </xsl:when>\n" +
+"    <xsl:otherwise>\n" +
+"      <fo:block id=\"{$id}\"\n" +
 "                xsl:use-attribute-sets=\"informalfigure.properties\">\n" +
 "        <xsl:if test=\"$keep.together != ''\">\n" +
 "          <xsl:attribute name=\"keep-together.within-column\">\n" +
@@ -1535,7 +1527,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "	    <xsl:apply-templates select=\"d:mediaobject\"/>\n" +
 "	  </fo:block>\n" +
 "	</fo:table-cell>\n" +
-"     </fo:table-row>\n" +
+"      </fo:table-row>\n" +
 "    </fo:table-body>\n" +
 "  </fo:table>\n" +
 "</xsl:template>\n" +
@@ -1597,7 +1589,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "    <xsl:choose>\n" +
 "      <xsl:when test=\"ancestor::d:thead\">#ffffff</xsl:when>\n" +
 "      <xsl:otherwise>\n" +
-"	<xsl:value-of select=\"$table.cell.border.color\"/>\n" +
+"	<xsl:value-of select=\"$table.cell.border.color\"/>	\n" +
 "      </xsl:otherwise>\n" +
 "    </xsl:choose>\n" +
 "  </xsl:attribute>\n" +
@@ -1677,6 +1669,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "	  <xsl:variable name=\"color\" select=\"normalize-space(substring-after(@remap, ';'))\"/>\n" +
 "\n" +
 "	  <xsl:if test=\"translate($bgcolor, '0123456789abcdefABCDEF', '%%%%%%%%%%%%%%%%%%%%%%') = '#%%%%%%'\">\n" +
+"            <xsl:attribute name=\"background-color\">\n" +
 "              <xsl:value-of select=\"$bgcolor\"/>\n" +
 "            </xsl:attribute>\n" +
 "	  </xsl:if>\n" +
@@ -1695,14 +1688,16 @@ message+="<!-- Specific Level Properties -->\n" +
 "        </xsl:call-template>\n" +
 "      </xsl:if>\n" +
 "\n" +
-"      <xsl:if test=\"$colsep.inherit &gt; 0 and $col &lt; (ancestor::d:tgroup/@cols|ancestor::d:entrytbl/@cols)[last()]\">\n" +
+"      <xsl:if test=\"$colsep.inherit &gt; 0 and \n" +
+"                      $col &lt; (ancestor::d:tgroup/@cols|ancestor::d:entrytbl/@cols)[last()]\">\n" +
+"\n" +
 "        <xsl:call-template name=\"border\">\n" +
 "          <xsl:with-param name=\"side\" select=\"'end'\"/>\n" +
 "        </xsl:call-template>\n" +
 "      </xsl:if>\n" +
 "\n" +
 "      <xsl:if test=\"$valign.inherit != ''\">\n" +
-"       <xsl:attribute name=\"display-align\">\n" +
+"        <xsl:attribute name=\"display-align\">\n" +
 "          <xsl:choose>\n" +
 "            <xsl:when test=\"$valign.inherit='top'\">before</xsl:when>\n" +
 "            <xsl:when test=\"$valign.inherit='middle'\">center</xsl:when>\n" +
@@ -1717,7 +1712,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "            </xsl:otherwise>\n" +
 "          </xsl:choose>\n" +
 "        </xsl:attribute>\n" +
-"     </xsl:if>\n" +
+"      </xsl:if>\n" +
 "\n" +
 "      <xsl:choose>\n" +
 "        <xsl:when test=\"$align.inherit = 'char' and $char.inherit != ''\">\n" +
@@ -1816,7 +1811,9 @@ message+="<!-- Specific Level Properties -->\n" +
 "</xsl:attribute-set>\n" +
 "\n" +
 "<!--\n" +
-"    See: http://www.sagehill.net/docbookxsl/Itemizedlists.html#DiffBulletSymbol-->\n" +
+"    See: http://www.sagehill.net/docbookxsl/Itemizedlists.html#DiffBulletSymbol\n" +
+"-->\n" +
+"\n" +
 "<xsl:template name=\"next.itemsymbol\">\n" +
 "  <xsl:param name=\"itemsymbol\" select=\"'default'\"/>\n" +
 "  <xsl:choose>\n" +
@@ -1892,11 +1889,11 @@ message+="<!-- Specific Level Properties -->\n" +
 "<!-- ==== Inline ==== -->\n" +
 "<xsl:attribute-set name=\"xref.properties\">\n" +
 "  <xsl:attribute name=\"font-weight\">bold</xsl:attribute>\n" +
-" <xsl:attribute name=\"font-style\">italic</xsl:attribute>\n" +
+"  <xsl:attribute name=\"font-style\">italic</xsl:attribute>\n" +
 "</xsl:attribute-set>\n" +
 "\n" +
 "<xsl:template match=\"*\" mode=\"page.citation\">\n" +
-"<xsl:param name=\"id\" select=\"'???'\"/>\n" +
+"  <xsl:param name=\"id\" select=\"'???'\"/>\n" +
 "\n" +
 "  <fo:basic-link internal-destination=\"{$id}\">\n" +
 "    <fo:inline keep-together.within-line=\"always\">\n" +
@@ -1907,9 +1904,9 @@ message+="<!-- Specific Level Properties -->\n" +
 "            <xsl:with-param name=\"context\" select=\"'xref'\"/>\n" +
 "          </xsl:call-template>\n" +
 "        </xsl:with-param>\n" +
-"     </xsl:call-template>\n" +
+"      </xsl:call-template>\n" +
 "    </fo:inline>\n" +
-" </fo:basic-link>\n" +
+"  </fo:basic-link>\n" +
 "</xsl:template>\n" +
 "\n" +
 "<!-- ==== Images ==== -->\n" +
@@ -1925,7 +1922,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "      <xsl:when test=\"$ignore.image.scaling != 0\">0</xsl:when>\n" +
 "      <xsl:when test=\"@contentwidth\">0</xsl:when>\n" +
 "      <xsl:when test=\"@contentdepth and \n" +
-"                     @contentdepth != '100%'\">0</xsl:when>\n" +
+"                      @contentdepth != '100%'\">0</xsl:when>\n" +
 "      <xsl:when test=\"@scale\">0</xsl:when>\n" +
 "      <xsl:when test=\"@scalefit\"><xsl:value-of select=\"@scalefit\"/></xsl:when>\n" +
 "      <xsl:when test=\"@width or @depth\">1</xsl:when>\n" +
@@ -1973,7 +1970,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "\n" +
 "  <xsl:variable name=\"bgcolor\">\n" +
 "    <xsl:call-template name=\"pi.dbfo_background-color\">\n" +
-"      <xsl:with-param name=\"node\" select\"..\"/>\n" +
+"      <xsl:with-param name=\"node\" select=\"..\"/>\n" +
 "    </xsl:call-template>\n" +
 "  </xsl:variable>\n" +
 "\n" +
@@ -1985,7 +1982,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "    <xsl:attribute name=\"src\">\n" +
 "      <xsl:call-template name=\"fo-external-image\">\n" +
 "        <xsl:with-param name=\"filename\">\n" +
-"          <xsl:if test=\"$img.src.path != '' and \n" +
+"          <xsl:if test=\"$img.src.path != '' and\n" +
 "                        not(starts-with($filename, '/')) and\n" +
 "                        not(contains($filename, '://'))\">\n" +
 "            <xsl:value-of select=\"$img.src.path\"/>\n" +
@@ -2013,7 +2010,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
 "          </xsl:call-template>\n" +
 "        </xsl:when>\n" +
-"       <xsl:otherwise>\n" +
+"        <xsl:otherwise>\n" +
 "	  <xsl:choose>\n" +
 "	    <xsl:when test=\"ancestor-or-self::d:inlinemediaobject\">auto</xsl:when>\n" +
 "	    <xsl:otherwise>100%</xsl:otherwise>\n" +
@@ -2041,7 +2038,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "    <xsl:attribute name=\"content-width\">\n" +
 "      <xsl:choose>\n" +
 "        <xsl:when test=\"$ignore.image.scaling != 0\">auto</xsl:when>\n" +
-"       <xsl:when test=\"contains(@contentwidth,'%')\">\n" +
+"        <xsl:when test=\"contains(@contentwidth,'%')\">\n" +
 "          <xsl:value-of select=\"@contentwidth\"/>\n" +
 "        </xsl:when>\n" +
 "        <xsl:when test=\"@contentwidth\">\n" +
@@ -2066,9 +2063,9 @@ message+="<!-- Specific Level Properties -->\n" +
 "          <xsl:value-of select=\"@contentdepth\"/>\n" +
 "        </xsl:when>\n" +
 "        <xsl:when test=\"@contentdepth\">\n" +
-"         <xsl:call-template name=\"length-spec\">\n" +
+"          <xsl:call-template name=\"length-spec\">\n" +
 "            <xsl:with-param name=\"length\" select=\"@contentdepth\"/>\n" +
-"           <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
+"            <xsl:with-param name=\"default.units\" select=\"'px'\"/>\n" +
 "          </xsl:call-template>\n" +
 "        </xsl:when>\n" +
 "        <xsl:when test=\"number($scale) != 1.0\">\n" +
@@ -2085,19 +2082,22 @@ message+="<!-- Specific Level Properties -->\n" +
 "        <xsl:value-of select=\"concat('content-type:',$content-type)\"/>\n" +
 "      </xsl:attribute>\n" +
 "    </xsl:if>\n" +
-"<!-- COULEUR DU FOND D ECRAN -->\n" +
+"\n" +
+"\n" +
 "    <xsl:if test=\"$bgcolor != ''\">\n" +
 "      <xsl:attribute name=\"background-color\">\n" +
 "        <xsl:value-of select=\"$bgcolor\"/>\n" +
 "      </xsl:attribute>\n" +
 "    </xsl:if>\n" +
-"<!-- ALIGNEMENT DU TEXTE -->\n" +
+"\n" +
+"\n" +
 "    <xsl:if test=\"@align\">\n" +
 "      <xsl:attribute name=\"text-align\">\n" +
 "        <xsl:value-of select=\"@align\"/>\n" +
 "      </xsl:attribute>\n" +
 "    </xsl:if>\n" +
-"<!-- ALIGNEMENT VERTICAL DU TEXTE -->\n" +
+"\n" +
+"\n" +
 "    <xsl:if test=\"@valign\">\n" +
 "      <xsl:attribute name=\"display-align\">\n" +
 "        <xsl:choose>\n" +
@@ -2116,7 +2116,7 @@ message+="<!-- Specific Level Properties -->\n" +
 "</xsl:template>\n" +
 "\n" +
 "\n" +
-"</xsl:stylesheet>\n";
+"</xsl:stylesheet>";
     
         return message;
     }
