@@ -1,14 +1,20 @@
 package controleur;
 
 
+import Test.FlipImage;
 import Vue.Menu;
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.JColorChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -20,8 +26,14 @@ import javax.swing.JOptionPane;
  */
 public class controleur {
     
-    
+    private static BufferedImage image;
     private static Menu vue;
+    private static BufferedImage image2;
+    private static BufferedImage image3;
+    private static BufferedImage image4;
+    private static BufferedImage image5;
+    private static BufferedImage image6;
+    private static Color newColor;
     
     public controleur(Menu vue) {
         this.vue = vue;
@@ -127,7 +139,7 @@ public class controleur {
 "               c:desc=\"Couleur des titres de chapitre\">#808080</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"section.title.l1.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de section - niveau 1\">#000000</xsl:param>\n" +
+"               c:desc=\"Couleur des titres de section - niveau 1\">#"+getColor()+"</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"section.title.l2.color\" c:type=\"color\"\n" +
 "               c:desc=\"Couleur des titres de section - niveau 2\">#000000</xsl:param>\n" +
@@ -3349,9 +3361,78 @@ public class controleur {
         chooser.setCurrentDirectory(new File("/home/me/Documents"));
         chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int retrival = chooser.showSaveDialog(null);
-    
         String path = chooser.getSelectedFile().getAbsolutePath() ;
+        File dir = new File(path+"\\content");
+        dir.mkdir();
         
+        
+        Image img = ImageIO.read(new File(path+"/images/caution.png"));//caution.png
+        image = new BufferedImage(img.getWidth(null), img.getHeight(null),BufferedImage.TYPE_INT_ARGB);
+        image.getGraphics().drawImage(img, 0, 0, null);
+        BufferedImage caution = image;
+        File catn = new File(path+"/content/caution.png");
+                    try {	
+                        ImageIO.write(caution, "png", catn);
+                    } catch (IOException ex) {
+                        Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+        
+        Image img2 = ImageIO.read(new File(path+"/images/fleche.png"));//fleche.png
+        BufferedImage image2 = new BufferedImage(img2.getWidth(null), img2.getHeight(null),BufferedImage.TYPE_INT_ARGB);
+        image2.getGraphics().drawImage(img2, 0, 0, null);
+        BufferedImage fleche = image2;
+        File flch = new File(path+"/content/fleche.png");
+                     try {	
+                         ImageIO.write(fleche, "png", flch);
+                     } catch (IOException ex) {
+                         Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+                     
+        Image img3 = ImageIO.read(new File(path+"/images/important.png"));//important.png
+        BufferedImage image3 = new BufferedImage(img3.getWidth(null), img3.getHeight(null),BufferedImage.TYPE_INT_ARGB);
+        image3.getGraphics().drawImage(img3, 0, 0, null);
+        BufferedImage important = image3;
+        File impt = new File(path+"/content/important.png");
+                     try {	
+                         ImageIO.write(important, "png", impt);
+                     } catch (IOException ex) {
+                         Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+                     
+        Image img4 = ImageIO.read(new File(path+"/images/note.png"));//note.png
+        BufferedImage image4 = new BufferedImage(img4.getWidth(null), img4.getHeight(null),BufferedImage.TYPE_INT_ARGB);
+        image4.getGraphics().drawImage(img4, 0, 0, null);
+        BufferedImage note = image4;
+        File nt = new File(path+"/content/note.png");
+                     try {	
+                         ImageIO.write(note, "png", nt);
+                     } catch (IOException ex) {
+                         Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+                     
+        Image img5 = ImageIO.read(new File(path+"/images/tip.png"));//tip.png
+        BufferedImage image5 = new BufferedImage(img5.getWidth(null), img5.getHeight(null),BufferedImage.TYPE_INT_ARGB);
+        image5.getGraphics().drawImage(img5, 0, 0, null);
+        BufferedImage tip = image5;
+        File tp = new File(path+"/content/tip.png");
+                     try {	
+                         ImageIO.write(tip, "png", tp);
+                     } catch (IOException ex) {
+                         Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+                     
+        Image img6 = ImageIO.read(new File(path+"/images/warning.png"));//warning.png
+        BufferedImage image6 = new BufferedImage(img6.getWidth(null), img6.getHeight(null),BufferedImage.TYPE_INT_ARGB);
+        image6.getGraphics().drawImage(img6, 0, 0, null);
+        BufferedImage warning = image6;
+        File warn = new File(path+"/content/warning.png");
+                     try {	
+                         ImageIO.write(warning, "png", warn);
+                     } catch (IOException ex) {
+                         Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+                     
+                     
         String pdf;
         String pdfbase ;
         String layout;
@@ -3366,11 +3447,14 @@ public class controleur {
         config=getConfig();
         
         //nom et chemin des fichier
+        
+        path+="\\content";
         File fil=new File(path+"\\pdf-"+Entreprise()+".xsl");
         File file=new File(path+"\\pdf-"+Entreprise()+"-base.xsl");
         File lay=new File(path+"\\page-layout-anywhere.xsl");
         File trk=new File(path+"\\fo-tricks.xsl");
         File conf=new File(path+"\\pdf-"+Entreprise()+"-config.xsl");
+        
         
         // On instancie nos objets :
         DataOutputStream fos = null;
@@ -3449,7 +3533,16 @@ public class controleur {
     
     //Creation panel couleur
     public void color() throws FileNotFoundException, IOException {
-        Color newColor = JColorChooser.showDialog(null, "Choisissez une couleur", Color.BLACK);
+  //      Color newColor = JColorChooser.showDialog(null, "Choisissez une couleur", Color.BLACK);
+  //      System.out.print(Integer.toHexString(newColor.getRGB()));
+    }
+    
+    public static String getColor(){
+        String color;
+        color=Integer.toHexString(getVue().getC().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
     }
     
 }
