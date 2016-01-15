@@ -3531,12 +3531,6 @@ public class controleur {
         return column;
     }
     
-    //Creation panel couleur
-    public void color() throws FileNotFoundException, IOException {
-  //      Color newColor = JColorChooser.showDialog(null, "Choisissez une couleur", Color.BLACK);
-  //      System.out.print(Integer.toHexString(newColor.getRGB()));
-    }
-    
     public static String getColor(){
         String color;
         color=Integer.toHexString(getVue().getC().getRGB());
