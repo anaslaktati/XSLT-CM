@@ -647,10 +647,10 @@ public class controleur {
 "\n" +
 "	  <fo:table-cell text-align=\"center\" number-columns-spanned=\"2\" number-rows-spanned=\"3\">\n" +
 "	    <fo:block color=\"#007ac2\" font-size=\"20pt\" font-weight=\"bold\">\n" +
-"	      <xsl:value-of select =\"/*/d:info/d:productname\"/>\n" +
+"	      <xsl:value-of select =\"\'"+getVue().getJproN().getText()+"\'\"/>\n" +
 "            </fo:block>\n" +
 "            <fo:block font-size=\"14pt\">\n" +
-"	      <xsl:value-of select =\"/*/d:info/d:productnumber\"/>\n" +
+"	      <xsl:value-of select =\"\'"+getVue().getJPronum().getText()+"\'\"/>\n" +
 "            </fo:block>\n" +
 "          </fo:table-cell>	  \n" +
 "	</fo:table-row>	\n" +
@@ -659,7 +659,7 @@ public class controleur {
 "        <fo:table-row block-progression-dimension=\"15mm\">          \n" +
 "          <fo:table-cell text-align=\"center\" border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n" +
 "	    <fo:block font-size=\"13\" margin-top=\"1mm\">\n" +
-"	      <xsl:value-of select =\"/*/d:info/d:keywordset/d:keyword[1]\"/>\n" +
+"	      <xsl:value-of select =\"\'"+getVue().getJKey1().getText()+"\'\"/>\n" +
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
@@ -668,7 +668,7 @@ public class controleur {
 "        <fo:table-row block-progression-dimension=\"15mm\">          \n" +
 "          <fo:table-cell text-align=\"center\"  border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n" +
 "	    <fo:block space-before=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n" +
-"	      <xsl:value-of select =\"/*/d:info/d:keywordset/d:keyword[2]\"/>\n" +
+"	      <xsl:value-of select =\"\'"+getVue().getJkey2().getText()+"\'\"/>\n" +
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
@@ -703,10 +703,10 @@ public class controleur {
 "	    </fo:block>\n" +
 "	    <fo:block space-before=\"19pt\" space-after=\"5pt\" font-size=\"16pt\"\n" +
 "		      color=\"{$main.title.color}\">\n" +
-"	      <xsl:value-of select =\"/*/d:info/d:title\"/> \n" +
+"	      <xsl:value-of select =\"\'"+getVue().getJtit().getText()+"\'\"/> \n" +
 "	    </fo:block>\n" +
 "	    <fo:block space-after=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n" +
-"	      <xsl:value-of select =\"/*/d:info/d:releaseinfo\"/>\n" +
+"	      <xsl:value-of select =\"\'"+getVue().getJreleas().getText()+"\'\"/>\n" +
 "	    </fo:block>\n" +
 "	  </fo:table-cell> \n" +
 "	</fo:table-row>\n" +
@@ -720,14 +720,17 @@ public class controleur {
 "	  </fo:table-cell>\n" +
 "	  \n" +
 "          <fo:table-cell padding-left=\"1em\" padding-right=\"4mm\" border-top=\"13pt solid #007ac2\" border-left=\"1pt solid #007ac2\">\n" +
-"	    <fo:block>\n" +
-"	      <xsl:apply-templates select=\"/*/d:info/d:annotation/*\"/>\n" +
+"	    <fo:block >\n" +
+"	      <xsl:apply-templates select=\"/*/d:info/d:annotation/d:mediaobject\"/>\n" +
+"		</fo:block>\n" +
+"		<fo:block>\n" +
+"		  <xsl:value-of select=\"\'"+getVue().getJAnno().getText()+"\'\"/>\n" +
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
 "      </fo:table-body>\n" +
 "    </fo:table>\n" +
-"  </fo:block-container>\n" +
+"  </fo:block-container>"+
 "\n" +
 "</xsl:template>\n" +
 "\n" +
@@ -3537,6 +3540,12 @@ public class controleur {
         color=color.substring(2,8);
         System.out.print(color);
         return color;
+    }
+    
+    public static String getProdName(){
+        String PName;
+        PName=getVue().getJproN().getText();
+        return PName;
     }
     
 }
