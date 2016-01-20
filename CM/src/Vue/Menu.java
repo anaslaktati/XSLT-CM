@@ -43,19 +43,19 @@ public class Menu extends javax.swing.JFrame {
     }
 
     public JSpinner getjSpinner1() {
-        return jSpinner1;
+        return jSpinnerColonne1;
     }
 
     public JSpinner getjSpinner2() {
-        return jSpinner2;
+        return jSpinnerColonne2;
     }
 
     public JSpinner getjSpinner3() {
-        return jSpinner3;
+        return jSpinnerColonne3;
     }
 
     public static String getjTextField1() {
-        String j = jTextField1.getText();
+        String j = jTextFieldNomEntreprise.getText();
         return j;
     }
 
@@ -94,15 +94,15 @@ public class Menu extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jButtonCouleur = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox10 = new javax.swing.JComboBox();
+        jComboBoxFormat = new javax.swing.JComboBox();
         jLabel18 = new javax.swing.JLabel();
-        jComboBox11 = new javax.swing.JComboBox();
+        jComboBoxOrientation = new javax.swing.JComboBox();
         jLabel13 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldNomEntreprise = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
-        jSpinner1 = new javax.swing.JSpinner();
-        jSpinner2 = new javax.swing.JSpinner();
-        jSpinner3 = new javax.swing.JSpinner();
+        jSpinnerColonne1 = new javax.swing.JSpinner();
+        jSpinnerColonne2 = new javax.swing.JSpinner();
+        jSpinnerColonne3 = new javax.swing.JSpinner();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -115,8 +115,8 @@ public class Menu extends javax.swing.JFrame {
         Jtit = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        JKey1 = new javax.swing.JTextField();
-        Jkey2 = new javax.swing.JTextField();
+        JKeyMotCle1 = new javax.swing.JTextField();
+        JkeyMotCle2 = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         Jreleas = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
@@ -209,17 +209,17 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel14.setText("Format du papier :");
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4A0", "2A0", "A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10" }));
-        jComboBox10.setSelectedIndex(6);
-        jComboBox10.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxFormat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4A0", "2A0", "A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10" }));
+        jComboBoxFormat.setSelectedIndex(6);
+        jComboBoxFormat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox10ActionPerformed(evt);
+                jComboBoxFormatActionPerformed(evt);
             }
         });
 
         jLabel18.setText("Orientation de la page :");
 
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "portrait", "landscape" }));
+        jComboBoxOrientation.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "portrait", "landscape" }));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -259,11 +259,11 @@ public class Menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBoxFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBoxOrientation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -290,9 +290,9 @@ public class Menu extends javax.swing.JFrame {
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel18)
-                                .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jComboBoxOrientation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(399, 399, 399))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -323,7 +323,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel25.setText("Keyword [1] :");
 
-        jLabel26.setText("Keyword (2) :");
+        jLabel26.setText("Keyword [2] :");
 
         jLabel27.setText("Release info :");
 
@@ -343,17 +343,17 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSpinner3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSpinnerColonne2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSpinnerColonne1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSpinnerColonne3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel26)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Jkey2))
+                        .addComponent(JkeyMotCle2))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel25)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JKey1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(JKeyMotCle1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(46, 46, 46)
                 .addComponent(jLabel19)
                 .addGap(32, 32, 32)
@@ -384,15 +384,15 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSpinnerColonne1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSpinnerColonne2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSpinnerColonne3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,11 +429,11 @@ public class Menu extends javax.swing.JFrame {
                                 .addGap(5, 5, 5)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel25)
-                                    .addComponent(JKey1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(JKeyMotCle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel26)
-                                    .addComponent(Jkey2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(JkeyMotCle2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap())))
         );
 
@@ -447,7 +447,7 @@ public class Menu extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 1145, Short.MAX_VALUE)
                         .addGap(2, 2, 2))
@@ -461,7 +461,7 @@ public class Menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
                 .addContainerGap())
@@ -739,9 +739,9 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jComboBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox10ActionPerformed
+    private void jComboBoxFormatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxFormatActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox10ActionPerformed
+    }//GEN-LAST:event_jComboBoxFormatActionPerformed
 
     private void jButtonCouleurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCouleurActionPerformed
         JColorChooser jc = new JColorChooser();
@@ -792,9 +792,9 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JAnno;
-    private javax.swing.JTextField JKey1;
+    private javax.swing.JTextField JKeyMotCle1;
     private javax.swing.JTextField JPronum;
-    private javax.swing.JTextField Jkey2;
+    private javax.swing.JTextField JkeyMotCle2;
     private javax.swing.JTextField JproN;
     private javax.swing.JTextField Jreleas;
     private javax.swing.JTextField Jtit;
@@ -813,14 +813,14 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCouleur;
     private javax.swing.JButton jButtonItalique;
     private javax.swing.JButton jButtonSouligner;
-    private javax.swing.JComboBox jComboBox10;
-    private javax.swing.JComboBox jComboBox11;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
+    private javax.swing.JComboBox jComboBoxFormat;
+    private javax.swing.JComboBox jComboBoxOrientation;
     private javax.swing.JComboBox<String> jComboBoxPolice;
     private javax.swing.JComboBox<String> jComboBoxTaille;
     private javax.swing.JLabel jLabel10;
@@ -868,11 +868,11 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JSpinner jSpinner3;
+    private javax.swing.JSpinner jSpinnerColonne1;
+    private javax.swing.JSpinner jSpinnerColonne2;
+    private javax.swing.JSpinner jSpinnerColonne3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private static javax.swing.JTextField jTextField1;
+    private static javax.swing.JTextField jTextFieldNomEntreprise;
     // End of variables declaration//GEN-END:variables
 
     public javax.swing.JButton getjButton1() {
@@ -1088,11 +1088,11 @@ public class Menu extends javax.swing.JFrame {
     }
 
     public JComboBox getPapier() {
-        return jComboBox10;
+        return jComboBoxFormat;
     }
 
     public JComboBox getPageO() {
-        return jComboBox11;
+        return jComboBoxOrientation;
     }
 
     public JTextField getJAnno() {
@@ -1100,7 +1100,7 @@ public class Menu extends javax.swing.JFrame {
     }
 
     public JTextField getJKey1() {
-        return JKey1;
+        return JKeyMotCle1;
     }
 
     public JTextField getJPronum() {
@@ -1108,7 +1108,7 @@ public class Menu extends javax.swing.JFrame {
     }
 
     public JTextField getJkey2() {
-        return Jkey2;
+        return JkeyMotCle2;
     }
 
     public JTextField getJproN() {
