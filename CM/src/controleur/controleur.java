@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -253,7 +254,7 @@ public class controleur {
 "		exclude-result-prefixes=\"d\"\n" +
 "		version=\"1.0\">\n" +
 "  \n" +
-"<?calenco-dep logo-"+Entreprise()+".png?>\n" +
+"<?calenco-dep logo-bonnet.png?>\n" +
 "<?calenco-dep fleche.png?>\n" +
 "\n" +
 "<?calenco-dep note.png?>\n" +
@@ -262,14 +263,14 @@ public class controleur {
 "<?calenco-dep warning.png?>\n" +
 "<?calenco-dep caution.png?>\n" +
 "    \n" +
-"<?calenco-dep l10n-"+Entreprise()+".xml?>\n" +
+"<?calenco-dep l10n-bonnet.xml?>\n" +
 "\n" +
 "<xsl:import href=\"http://docbook.sourceforge.net/release/xsl-ns/current/fo/profile-docbook.xsl\" />\n" +
 "<xsl:import href=\"fo-tricks.xsl\" />\n" +
 "\n" +
 "<xsl:param name=\"fop1.extensions\" select=\"1\"></xsl:param>\n" +
 "\n" +
-"<xsl:param name=\"local.l10n.xml\" select=\"document('l10n-"+Entreprise()+".xml')\"/>\n" +
+"<xsl:param name=\"local.l10n.xml\" select=\"document('l10n-bonnet.xml')\"/>\n" +
 "\n" +
 "<xsl:param name=\"footers.on.blank.pages\" select=\"0\"></xsl:param>\n" +
 "\n" +
@@ -647,10 +648,10 @@ public class controleur {
 "\n" +
 "	  <fo:table-cell text-align=\"center\" number-columns-spanned=\"2\" number-rows-spanned=\"3\">\n" +
 "	    <fo:block color=\"#007ac2\" font-size=\"20pt\" font-weight=\"bold\">\n" +
-"	      <xsl:value-of select =\"\'"+getVue().getJproN().getText()+"\'\"/>\n" +
+"	      <xsl:value-of select =\"'"+getVue().getJproN().getText()+"'\"/>\n" +
 "            </fo:block>\n" +
 "            <fo:block font-size=\"14pt\">\n" +
-"	      <xsl:value-of select =\"\'"+getVue().getJPronum().getText()+"\'\"/>\n" +
+"	      <xsl:value-of select =\"'"+getVue().getJPronum().getText()+"'\"/>\n" +
 "            </fo:block>\n" +
 "          </fo:table-cell>	  \n" +
 "	</fo:table-row>	\n" +
@@ -659,7 +660,7 @@ public class controleur {
 "        <fo:table-row block-progression-dimension=\"15mm\">          \n" +
 "          <fo:table-cell text-align=\"center\" border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n" +
 "	    <fo:block font-size=\"13\" margin-top=\"1mm\">\n" +
-"	      <xsl:value-of select =\"\'"+getVue().getJKey1().getText()+"\'\"/>\n" +
+"	      <xsl:value-of select =\"'"+getVue().getJKey1().getText()+"'\"/>\n" +
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
@@ -668,7 +669,7 @@ public class controleur {
 "        <fo:table-row block-progression-dimension=\"15mm\">          \n" +
 "          <fo:table-cell text-align=\"center\"  border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n" +
 "	    <fo:block space-before=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n" +
-"	      <xsl:value-of select =\"\'"+getVue().getJkey2().getText()+"\'\"/>\n" +
+"	      <xsl:value-of select =\"'"+getVue().getJkey2().getText()+"'\"/>\n" +
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
@@ -703,10 +704,10 @@ public class controleur {
 "	    </fo:block>\n" +
 "	    <fo:block space-before=\"19pt\" space-after=\"5pt\" font-size=\"16pt\"\n" +
 "		      color=\"{$main.title.color}\">\n" +
-"	      <xsl:value-of select =\"\'"+getVue().getJtit().getText()+"\'\"/> \n" +
+"	      <xsl:value-of select =\"'"+getVue().getJtit().getText()+"'\"/> \n" +
 "	    </fo:block>\n" +
 "	    <fo:block space-after=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n" +
-"	      <xsl:value-of select =\"\'"+getVue().getJreleas().getText()+"\'\"/>\n" +
+"	      <xsl:value-of select =\"'"+getVue().getJreleas().getText()+"'\"/>\n" +
 "	    </fo:block>\n" +
 "	  </fo:table-cell> \n" +
 "	</fo:table-row>\n" +
@@ -720,17 +721,17 @@ public class controleur {
 "	  </fo:table-cell>\n" +
 "	  \n" +
 "          <fo:table-cell padding-left=\"1em\" padding-right=\"4mm\" border-top=\"13pt solid #007ac2\" border-left=\"1pt solid #007ac2\">\n" +
-"	    <fo:block >\n" +
-"	      <xsl:apply-templates select=\"/*/d:info/d:annotation/d:mediaobject\"/>\n" +
-"		</fo:block>\n" +
-"		<fo:block>\n" +
-"		  <xsl:value-of select=\"\'"+getVue().getJAnno().getText()+"\'\"/>\n" +
+"	    <fo:block>\n" +
+"	      <xsl:apply-templates select=\"/*/d:info/d:annotation/d:mediaobject/*\"/>\n" +
 "	    </fo:block>\n" +
+"		<fo:block>\n" +
+"		  <xsl:value-of select=\"'"+getVue().getJAnno().getText()+"'\" />\n" +
+"		</fo:block>"+
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
 "      </fo:table-body>\n" +
 "    </fo:table>\n" +
-"  </fo:block-container>"+
+"  </fo:block-container>\n" +
 "\n" +
 "</xsl:template>\n" +
 "\n" +
@@ -3465,7 +3466,7 @@ public class controleur {
         DataOutputStream frosh=null;
         DataOutputStream furosh=null;
         DataOutputStream furoshu=null;
-
+           
         
         // on va écrire dans les nouveaux fichiers !
        
