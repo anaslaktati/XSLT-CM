@@ -722,11 +722,8 @@ public class controleur {
 "	  \n" +
 "          <fo:table-cell padding-left=\"1em\" padding-right=\"4mm\" border-top=\"13pt solid #007ac2\" border-left=\"1pt solid #007ac2\">\n" +
 "	    <fo:block>\n" +
-"	      <xsl:apply-templates select=\"/*/d:info/d:annotation/d:mediaobject/*\"/>\n" +
+"	      <xsl:apply-templates select=\"/*/d:info/d:annotation/*\"/>\n" +
 "	    </fo:block>\n" +
-"		<fo:block>\n" +
-"		  <xsl:value-of select=\"'"+getVue().getJAnno().getText()+"'\" />\n" +
-"		</fo:block>"+
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
 "      </fo:table-body>\n" +
@@ -3548,5 +3545,9 @@ public class controleur {
         PName=getVue().getJproN().getText();
         return PName;
     }
+    
+    
+    
+    
     
 }
