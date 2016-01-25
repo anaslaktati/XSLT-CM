@@ -17,6 +17,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import jdk.nashorn.internal.runtime.JSType;
 
@@ -28,6 +29,7 @@ public class Menu extends javax.swing.JFrame {
 
     private controleur controleur;
     private Color c = Color.RED;
+    private JTabbedPane JTabbedPane1;
 
     /**
      * Creates new form Menu
@@ -77,7 +79,7 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTabbedPane1 = new javax.swing.JTabbedPane(JTabbedPane1.LEFT);
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabelPolice = new javax.swing.JLabel();
@@ -1452,7 +1454,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField jTextFieldNomEntreprise;
+    private static javax.swing.JTextField jTextFieldNomEntreprise;
     // End of variables declaration//GEN-END:variables
 
     public javax.swing.JButton getjButton1() {
