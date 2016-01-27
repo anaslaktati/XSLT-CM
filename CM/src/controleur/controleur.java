@@ -7,11 +7,14 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.BufferedOutputStream;
+import java.io.BufferedWriter;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -3471,26 +3474,29 @@ public class controleur {
         
         
         // On instancie nos objets :
-        DataOutputStream fos = null;
-        DataOutputStream fros = null;
-        DataOutputStream frosh=null;
-        DataOutputStream furosh=null;
-        DataOutputStream furoshu=null;
+        BufferedWriter fos = null;
+        BufferedWriter fros = null;
+        BufferedWriter frosh=null;
+        BufferedWriter furosh=null;
+        BufferedWriter furoshu=null;
            
         
         // on va écrire dans les nouveaux fichiers !
        
-        fos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
-        fros = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(fil)));
-        frosh = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(lay)));
-        furosh= new DataOutputStream(new BufferedOutputStream(new FileOutputStream(trk)));
-        furoshu=new DataOutputStream(new BufferedOutputStream(new FileOutputStream(conf)));
+        fos = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+        fros = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fil), "UTF-8"));
+        frosh = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(lay), "UTF-8"));
+        furosh= new BufferedWriter(new OutputStreamWriter(new FileOutputStream(trk), "UTF-8"));
+        furoshu = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(conf), "UTF-8"));
+
+        //furoshu=new DataOutputStream(new BufferedOutputStream(new FileOutputStream(conf)));
         
-        fos.writeBytes(pdfbase);
-        fros.writeBytes(pdf);
-        frosh.writeBytes(layout);
-        furosh.writeBytes(tricks);
-        furoshu.writeBytes(config);
+        
+        fos.write(pdfbase);
+        fros.write(pdf);
+        frosh.write(layout);
+        furosh.write(tricks);
+        furoshu.write(config);
         
         //crée nos fichier
         fil.createNewFile();
