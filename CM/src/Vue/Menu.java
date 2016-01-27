@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.BorderFactory;
 import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -1126,6 +1127,7 @@ public class Menu extends javax.swing.JFrame {
         jTabbedPane1.addTab("PFin", jPanel3);
 
         cTitre.setBackground(new java.awt.Color(0, 0, 0));
+        cTitre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cTitre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cTitreActionPerformed(evt);
@@ -1271,7 +1273,7 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", Color.BLACK);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(null);
+        jButtonCouleur.setBorder(BorderFactory.createLineBorder(Color.black));
         jButtonCouleur.setBackground(c);    
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleurActionPerformed
@@ -1301,7 +1303,7 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         ctitle = jc.showDialog(null, "Choisissez une couleur", Color.BLACK);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        cTitre.setBorder(null);
+        cTitre.setBorder(BorderFactory.createLineBorder(Color.black));
         cTitre.setBackground(ctitle);    
         System.out.println(ctitle);
     }//GEN-LAST:event_cTitreActionPerformed
