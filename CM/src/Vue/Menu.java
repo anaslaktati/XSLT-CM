@@ -2,27 +2,17 @@ package Vue;
 
 import controleur.controleur;
 import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.GraphicsEnvironment;
-import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.WindowEvent;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.lang.model.type.ArrayType;
-import javax.swing.ImageIcon;
 import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
-import jdk.nashorn.internal.runtime.JSType;
 
 /**
  *
@@ -47,7 +37,7 @@ public class Menu extends javax.swing.JFrame {
     public Color getC() {
         return c;
     }
-
+    //Create 3 spinner for Columns
     public JSpinner getjSpinner1() {
         return jSpinnerColonne1;
     }
@@ -59,7 +49,7 @@ public class Menu extends javax.swing.JFrame {
     public JSpinner getjSpinner3() {
         return jSpinnerColonne3;
     }
-
+    //Create jTextField for entreprise name
     public String getjTextField1() {
         String j = jTextFieldNomEntreprise.getText();
         return j;
@@ -1209,6 +1199,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        //Attribution de la methode Save() au bouton save
         try {
             this.controleur.save();
         } catch (IOException ex) {
@@ -1261,8 +1252,10 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxFormatActionPerformed
 
     private void jButtonCouleurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCouleurActionPerformed
+        //Creation d'un jColorChooser, Panel de couleur
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", Color.BLACK);
+        //Bouton du panel de couleur affiche la couleur choisie actuellement
         jButtonCouleur.setBorder(null);
         jButtonCouleur.setBackground(c);    
         System.out.println(c);
@@ -1273,11 +1266,13 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void verif(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_verif
+        //Recupere la valeur des colonnes
         Integer c1,c2,c3;
         c1=(Integer)jSpinnerColonne1.getValue();
         c2=(Integer)jSpinnerColonne1.getValue();
         c3=(Integer)jSpinnerColonne1.getValue();
         int somme=c1+c2+c3;
+        //Renvoie une erreur si format page non respecté
         if(jComboBoxFormat.getSelectedItem() == "A4" && somme != 210){
             jSpinnerColonne1.setBackground(Color.RED);
             jSpinnerColonne2.setBackground(Color.RED);
@@ -1523,15 +1518,18 @@ public class Menu extends javax.swing.JFrame {
 //    public javax.swing.JButton getjButton9() {
 //        return jButton9;
 //    }
-
+    
+    //jComboBox pour la police d'ecriture
     public javax.swing.JComboBox<String> getjComboBox1() {
         return jComboBoxPolice;
     }
-
+    
+    //jComboBox pour la taille de la police
     public javax.swing.JComboBox<String> getjComboBox2() {
         return jComboBoxTaille;
     }
 
+    //jButton pour le panel de couleur
     public javax.swing.JButton getjButton15() {
         return jButtonCouleur;
     }
@@ -1591,7 +1589,7 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JLabel getjLabel17() {
         return jLabel17;
     }
-
+    
     public javax.swing.JLabel getjLabel2() {
         return jLabelTaille;
     }

@@ -1,6 +1,6 @@
 package controleur;
 
-
+//Import des plugins necessaires aux fonctionnalites
 import Test.FlipImage;
 import Vue.Menu;
 import java.awt.Color;
@@ -27,8 +27,9 @@ import javax.swing.JOptionPane;
  */
 public class controleur {
     
-    private static BufferedImage image;
+    
     private static Menu vue;
+    private static BufferedImage image;
     private static BufferedImage image2;
     private static BufferedImage image3;
     private static BufferedImage image4;
@@ -36,6 +37,7 @@ public class controleur {
     private static BufferedImage image6;
     private static Color newColor;
     
+    //Creation de la classe Controleur
     public controleur(Menu vue) {
         this.vue = vue;
         this.vue.setControleur(this);
@@ -59,17 +61,19 @@ public class controleur {
         }
     }
     
+    //Recuperation de la Vue
     public static Menu getVue() {
         return vue;
     }
-
+    
     public void setVue(Menu vue) {
         this.vue = vue;
     }
     
 
-    //fichier xsl
-    
+    /*
+    *Creation String pour reecriture dans fichier XSL Config
+    */
     public static String Config(){
         String conf;
         conf="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -79,7 +83,7 @@ public class controleur {
 "                xmlns:c=\"http://www.calenco.com/ns/configurator\"\n" +
 "                exclude-result-prefixes=\"d\"\n" +
 "                version='1.0'>\n" +
-"    <xsl:import href=\"pdf-"+Entreprise()+".xsl\" />\n" +
+"    <xsl:import href=\"pdf-"+Entreprise()+".xsl\" />\n" + //Modification nom entreprise dans fichier XSL
 "\n" +
 "    <c:configurator>\n" +
 "        <c:xsl role=\"instance\">../../../res/db5xslconf/XSL-Instance.xsl</c:xsl>\n" +
@@ -134,13 +138,13 @@ public class controleur {
 "               c:desc=\"Marge à gauche des titres\">0pt</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"main.title.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur du titre principal\">#000000</xsl:param>\n" +
+"               c:desc=\"Couleur du titre principal\">#"+getColor()+"</xsl:param>\n" + //Modification couleur en hexadecimal
 "\n" +
 "    <xsl:param name=\"chapter.title.color\" c:type=\"color\"\n" +
 "               c:desc=\"Couleur des titres de chapitre\">#808080</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"section.title.l1.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de section - niveau 1\">#"+getColor()+"</xsl:param>\n" +
+"               c:desc=\"Couleur des titres de section - niveau 1\">#"+getColor()+"</xsl:param>\n" + //Modification couleur en hexadecimal
 "\n" +
 "    <xsl:param name=\"section.title.l2.color\" c:type=\"color\"\n" +
 "               c:desc=\"Couleur des titres de section - niveau 2\">#000000</xsl:param>\n" +
@@ -183,7 +187,7 @@ public class controleur {
 "               c:type=\"font\">monospace</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"logo\" c:type=\"text\"\n" +
-"               c:desc=\"Logo\">logo-"+Entreprise()+".png</xsl:param>\n" +
+"               c:desc=\"Logo\">logo-"+Entreprise()+".png</xsl:param>\n" + //Modification nom entreprise
 "\n" +
 "    <xsl:param name=\"header.rule\" c:desc=\"Règle d'en-tête\"\n" +
 "               c:type=\"check\">0</xsl:param>\n" +
@@ -218,7 +222,9 @@ public class controleur {
 "</xsl:stylesheet>";
         return conf;
     }
-    
+    /*
+    *Creation String pour reecriture dans fichier XSL
+    */
     public static String Pdf(){
         String pdf;
         pdf="";
@@ -244,7 +250,9 @@ public class controleur {
 "</xsl:stylesheet>";
         return pdf;
     }
-    
+    /*
+    *Creation String pour reecriture dans fichier XSL base
+    */
     public static String PdfBase(){
         String message;
         message="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -660,7 +668,7 @@ public class controleur {
 "        <fo:table-row block-progression-dimension=\"15mm\">          \n" +
 "          <fo:table-cell text-align=\"center\" border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n" +
 "	    <fo:block font-size=\"13\" margin-top=\"1mm\">\n" +
-"	      <xsl:value-of select =\"'"+getVue().getJKey1().getText()+"'\"/>\n" +
+"	      <xsl:value-of select =\"'"+getVue().getJKey1().getText()+"'\"/>\n" + //Valeur du keyword1
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
@@ -669,7 +677,7 @@ public class controleur {
 "        <fo:table-row block-progression-dimension=\"15mm\">          \n" +
 "          <fo:table-cell text-align=\"center\"  border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n" +
 "	    <fo:block space-before=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n" +
-"	      <xsl:value-of select =\"'"+getVue().getJkey2().getText()+"'\"/>\n" +
+"	      <xsl:value-of select =\"'"+getVue().getJkey2().getText()+"'\"/>\n" + //Valeur du keyword2
 "	    </fo:block>\n" +
 "	  </fo:table-cell>\n" +
 "	</fo:table-row>\n" +
@@ -704,10 +712,10 @@ public class controleur {
 "	    </fo:block>\n" +
 "	    <fo:block space-before=\"19pt\" space-after=\"5pt\" font-size=\"16pt\"\n" +
 "		      color=\"{$main.title.color}\">\n" +
-"	      <xsl:value-of select =\"'"+getVue().getJtit().getText()+"'\"/> \n" +
+"	      <xsl:value-of select =\"'"+getVue().getJtit().getText()+"'\"/> \n" + //Valeur du title 
 "	    </fo:block>\n" +
 "	    <fo:block space-after=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n" +
-"	      <xsl:value-of select =\"'"+getVue().getJreleas().getText()+"'\"/>\n" +
+"	      <xsl:value-of select =\"'"+getVue().getJreleas().getText()+"'\"/>\n" + //Valeur du releaseinfo
 "	    </fo:block>\n" +
 "	  </fo:table-cell> \n" +
 "	</fo:table-row>\n" +
@@ -2133,7 +2141,9 @@ public class controleur {
     
         return message;
     }
-    
+    /*
+    *Creation String pour reecriture dans fichier XSL layoutWhere
+    */
     public static String layoutWhere(){
         String lay;
         lay = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -2591,6 +2601,9 @@ public class controleur {
         return lay;
     }
     
+    /*
+    *Creation String pour reecriture dans fichier XSL Tricks-fo
+    */
     public static String Tricks(){
         String tricks;
         tricks="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -3322,7 +3335,7 @@ public class controleur {
         return tricks;
     }
     
-    //Getters xsl
+    //Getters XSL
     
     public static String getLayout(){
         String layout;
@@ -3366,7 +3379,7 @@ public class controleur {
         File dir = new File(path+"\\content");
         dir.mkdir();
         
-        
+    //Methode pour creer des images dans le dossier content   
         Image img = ImageIO.read(new File(path+"/images/caution.png"));//caution.png
         image = new BufferedImage(img.getWidth(null), img.getHeight(null),BufferedImage.TYPE_INT_ARGB);
         image.getGraphics().drawImage(img, 0, 0, null);
@@ -3433,7 +3446,7 @@ public class controleur {
                          Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
                      }
                      
-                     
+        //Declaration des variables des fichiers XSL             
         String pdf;
         String pdfbase ;
         String layout;
