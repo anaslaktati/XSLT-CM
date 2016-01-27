@@ -22,6 +22,7 @@ public class Menu extends javax.swing.JFrame {
 
     private controleur controleur;
     private Color c = Color.RED;
+    private Color ctitle=Color.BLACK;
     private JTabbedPane JTabbedPane1;
 
     /**
@@ -75,9 +76,9 @@ public class Menu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabelPolice = new javax.swing.JLabel();
-        jComboBoxPolice = new javax.swing.JComboBox<>();
+        jComboBoxPolice = new javax.swing.JComboBox<String>();
         jLabelTaille = new javax.swing.JLabel();
-        jComboBoxTaille = new javax.swing.JComboBox<>();
+        jComboBoxTaille = new javax.swing.JComboBox<String>();
         jLabelCouleur = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButtonItalique = new javax.swing.JButton();
@@ -127,9 +128,9 @@ public class Menu extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabelPolice1 = new javax.swing.JLabel();
-        jComboBoxPolice1 = new javax.swing.JComboBox<>();
+        jComboBoxPolice1 = new javax.swing.JComboBox<String>();
         jLabelTaille1 = new javax.swing.JLabel();
-        jComboBoxTaille1 = new javax.swing.JComboBox<>();
+        jComboBoxTaille1 = new javax.swing.JComboBox<String>();
         jLabelCouleur1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButtonItalique11 = new javax.swing.JButton();
@@ -160,9 +161,9 @@ public class Menu extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabelPolice2 = new javax.swing.JLabel();
-        jComboBoxPolice2 = new javax.swing.JComboBox<>();
+        jComboBoxPolice2 = new javax.swing.JComboBox<String>();
         jLabelTaille2 = new javax.swing.JLabel();
-        jComboBoxTaille2 = new javax.swing.JComboBox<>();
+        jComboBoxTaille2 = new javax.swing.JComboBox<String>();
         jLabelCouleur2 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButtonItalique2 = new javax.swing.JButton();
@@ -185,9 +186,9 @@ public class Menu extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jPanel11 = new javax.swing.JPanel();
         jLabelPolice3 = new javax.swing.JLabel();
-        jComboBoxPolice3 = new javax.swing.JComboBox<>();
+        jComboBoxPolice3 = new javax.swing.JComboBox<String>();
         jLabelTaille3 = new javax.swing.JLabel();
-        jComboBoxTaille3 = new javax.swing.JComboBox<>();
+        jComboBoxTaille3 = new javax.swing.JComboBox<String>();
         jLabelCouleur3 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButtonItalique3 = new javax.swing.JButton();
@@ -205,6 +206,7 @@ public class Menu extends javax.swing.JFrame {
         jComboBoxOrientation3 = new javax.swing.JComboBox();
         jSeparator6 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
+        cTitre = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -228,11 +230,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabelPolice.setText("Police :");
 
-        jComboBoxPolice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelTaille.setText("Taille :");
 
-        jComboBoxTaille.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabelCouleur.setText("Couleur :");
 
@@ -571,11 +573,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabelPolice1.setText("Police :");
 
-        jComboBoxPolice1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelTaille1.setText("Taille :");
 
-        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabelCouleur1.setText("Couleur :");
 
@@ -793,11 +795,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabelPolice2.setText("Police :");
 
-        jComboBoxPolice2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelTaille2.setText("Taille :");
 
-        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabelCouleur2.setText("Couleur :");
 
@@ -958,11 +960,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabelPolice3.setText("Police :");
 
-        jComboBoxPolice3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelTaille3.setText("Taille :");
 
-        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabelCouleur3.setText("Couleur :");
 
@@ -1123,15 +1125,28 @@ public class Menu extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("PFin", jPanel3);
 
+        cTitre.setBackground(new java.awt.Color(0, 0, 0));
+        cTitre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cTitreActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1136, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(186, 186, 186)
+                .addComponent(cTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(871, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(cTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(601, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Global", jPanel5);
@@ -1281,6 +1296,16 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_verif
 
+    private void cTitreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cTitreActionPerformed
+        //Creation d'un jColorChooser, Panel de couleur
+        JColorChooser jc = new JColorChooser();
+        ctitle = jc.showDialog(null, "Choisissez une couleur", Color.BLACK);
+        //Bouton du panel de couleur affiche la couleur choisie actuellement
+        cTitre.setBorder(null);
+        cTitre.setBackground(ctitle);    
+        System.out.println(ctitle);
+    }//GEN-LAST:event_cTitreActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -1327,6 +1352,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField JproN;
     private javax.swing.JTextField Jreleas;
     private javax.swing.JTextField Jtit;
+    private javax.swing.JButton cTitre;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
