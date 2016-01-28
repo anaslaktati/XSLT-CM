@@ -141,28 +141,28 @@ public class controleur {
 "               c:desc=\"Marge à gauche des titres\">0pt</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"main.title.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur du titre principal\">#"+getColor()+"</xsl:param>\n" + //Modification couleur en hexadecimal
+"               c:desc=\"Couleur du titre principal\">#"+getColorMainTitle()+"</xsl:param>\n" + //Modification couleur en hexadecimal
 "\n" +
 "    <xsl:param name=\"chapter.title.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de chapitre\">#808080</xsl:param>\n" +
+"               c:desc=\"Couleur des titres de chapitre\">#"+getColorChapterTitle()+"</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"section.title.l1.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de section - niveau 1\">#"+getColor()+"</xsl:param>\n" + //Modification couleur en hexadecimal
+"               c:desc=\"Couleur des titres de section - niveau 1\">#"+getColorTitle1()+"</xsl:param>\n" + //Modification couleur en hexadecimal
 "\n" +
 "    <xsl:param name=\"section.title.l2.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de section - niveau 2\">#000000</xsl:param>\n" +
+"               c:desc=\"Couleur des titres de section - niveau 2\">#"+getColorTitle2()+"</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"section.title.l3.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de section - niveau 3\">#007ac2</xsl:param>\n" +
+"               c:desc=\"Couleur des titres de section - niveau 3\">#"+getColorTitle3()+"</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"section.title.l4.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de section - niveau 4\">#000000</xsl:param>\n" +
+"               c:desc=\"Couleur des titres de section - niveau 4\">#"+getColorTitle4()+"</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"section.title.l5.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de section - niveau 5\">#000000</xsl:param>\n" +
+"               c:desc=\"Couleur des titres de section - niveau 5\">#"+getColorTitle5()+"</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"section.title.l6.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur des titres de section - niveau 6\">#000000</xsl:param>\n" +
+"               c:desc=\"Couleur des titres de section - niveau 6\">#"+getColorTitle6()+"</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"body.font.family\" c:type=\"font\"\n" +
 "               c:desc=\"Police de caractère pour le texte\">sans-serif</xsl:param>\n" +
@@ -211,7 +211,7 @@ public class controleur {
 "               c:type=\"select-down\" c:desc=\"Style de bordure extérieure\">solid</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"table.frame.border.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur de bordure extérieure\">#000000</xsl:param>\n" +
+"               c:desc=\"Couleur de bordure extérieure\">#"+getColorBorderOut()+"</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"table.cell.border.thickness\" c:type=\"length\"\n" +
 "               c:desc=\"Epaisseur de bordure intérieure\">0.5pt</xsl:param>\n" +
@@ -220,7 +220,7 @@ public class controleur {
 "               c:type=\"select-down\" c:desc=\"Style de bordure intérieure\" >solid</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"table.cell.border.color\" c:type=\"color\"\n" +
-"               c:desc=\"Couleur de bordure intérieure\">#000000</xsl:param>\n" +
+"               c:desc=\"Couleur de bordure intérieure\">#"+getColorBorderIn()+"</xsl:param>\n" +
 "\n" +
 "</xsl:stylesheet>";
         return conf;
@@ -3551,9 +3551,81 @@ public class controleur {
         return column;
     }
     
-    public static String getColor(){
+    public static String getColorMainTitle(){
         String color;
-        color=Integer.toHexString(getVue().getC().getRGB());
+        color=Integer.toHexString(getVue().getcMainTitle().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorChapterTitle() {
+        String color;
+            color=Integer.toHexString(getVue().getcTitleChapter().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorTitle1(){
+        String color;
+        color=Integer.toHexString(getVue().getcTitle1().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorTitle2(){
+        String color;
+        color=Integer.toHexString(getVue().getcTitle2().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorTitle3(){
+        String color;
+        color=Integer.toHexString(getVue().getcTitle3().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorTitle4(){
+        String color;
+        color=Integer.toHexString(getVue().getcTitle4().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorTitle5(){
+        String color;
+        color=Integer.toHexString(getVue().getcTitle5().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorTitle6(){
+        String color;
+        color=Integer.toHexString(getVue().getcTitle6().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorBorderOut(){
+        String color;
+        color=Integer.toHexString(getVue().getcBorderOut().getRGB());
+        color=color.substring(2,8);
+        System.out.print(color);
+        return color;
+    }
+    
+    public static String getColorBorderIn(){
+        String color;
+        color=Integer.toHexString(getVue().getcBorderIn().getRGB());
         color=color.substring(2,8);
         System.out.print(color);
         return color;
