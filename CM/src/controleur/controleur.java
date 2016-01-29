@@ -841,7 +841,7 @@ public class controleur {
 "      \n" +
 "      <xsl:when test=\"$position='left'\">\n" +
 "        <fo:block font-size=\"11.5pt\">\n" +
-"	  <xsl:value-of select =\"/*/d:info/d:productnumber\"/>\n" +
+"	  <xsl:value-of select =\"'"+getVue().getJPronum().getText()+"'\"/>\n" +
 "        </fo:block>\n" +
 "      </xsl:when>\n" +
 "      \n" +
