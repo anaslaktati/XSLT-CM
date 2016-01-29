@@ -86,7 +86,7 @@ public class controleur {
 "                xmlns:c=\"http://www.calenco.com/ns/configurator\"\n" +
 "                exclude-result-prefixes=\"d\"\n" +
 "                version='1.0'>\n" +
-"    <xsl:import href=\"pdf-"+Entreprise()+".xsl\" />\n" + //Modification nom entreprise dans fichier XSL
+"    <xsl:import href=\"pdf-bonnet.xsl\" />\n" + //Modification nom entreprise dans fichier XSL
 "\n" +
 "    <c:configurator>\n" +
 "        <c:xsl role=\"instance\">../../../res/db5xslconf/XSL-Instance.xsl</c:xsl>\n" +
@@ -190,7 +190,7 @@ public class controleur {
 "               c:type=\"font\">monospace</xsl:param>\n" +
 "\n" +
 "    <xsl:param name=\"logo\" c:type=\"text\"\n" +
-"               c:desc=\"Logo\">logo-"+Entreprise()+".png</xsl:param>\n" + //Modification nom entreprise
+"               c:desc=\"Logo\">logo-bonnet.png</xsl:param>\n" + //Modification nom entreprise
 "\n" +
 "    <xsl:param name=\"header.rule\" c:desc=\"Règle d'en-tête\"\n" +
 "               c:type=\"check\">0</xsl:param>\n" +
@@ -238,7 +238,7 @@ public class controleur {
 "		exclude-result-prefixes=\"d\"\n" +
 "		version=\"1.0\">\n" +
 "\n" +
-"<xsl:import href=\"pdf-"+Entreprise()+"-base.xsl\"/>\n" +
+"<xsl:import href=\"pdf-bonnet-base.xsl\"/>\n" + //Rajouter méthode entreprise
 "\n" +
 "<xsl:include href=\"page-layout-anywhere.xsl\"/>\n" +
 "\n" +
@@ -3464,13 +3464,13 @@ public class controleur {
         config=getConfig();
         
         //nom et chemin des fichier
-        
+        //RAJOUTER METHODE ENTREPRISE
         path+="\\content";
-        File fil=new File(path+"\\pdf-"+Entreprise()+".xsl");
-        File file=new File(path+"\\pdf-"+Entreprise()+"-base.xsl");
+        File fil=new File(path+"\\pdf-bonnet.xsl");
+        File file=new File(path+"\\pdf-bonnet-base.xsl");
         File lay=new File(path+"\\page-layout-anywhere.xsl");
         File trk=new File(path+"\\fo-tricks.xsl");
-        File conf=new File(path+"\\pdf-"+Entreprise()+"-config.xsl");
+        File conf=new File(path+"\\pdf-bonnet-config.xsl");
         
         
         // On instancie nos objets :
@@ -3515,11 +3515,11 @@ public class controleur {
     
     //Getters Menu
     
-    public static String Entreprise(){
-        String nom;
-        nom=getVue().getjTextField1();
-        return nom;
-    }
+//    public static String Entreprise(){
+//        String nom;
+//        nom=getVue().getjTextField1();
+//        return nom;
+//    }
     
     public static String Papier(){
         String pap;
@@ -3638,7 +3638,11 @@ public class controleur {
     }
     
     
-    
-    
+    /*public static String getFont(){
+       String font;
+       font=(String) getVue().getFontComboBox().getSelectedItem();
+       return font;
+    }
+    */
     
 }
