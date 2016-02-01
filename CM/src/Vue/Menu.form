@@ -39,35 +39,6 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Edition"/>
-          </Properties>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
-              <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Ctrl+Z"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/undo.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Undo"/>
-              </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem10">
-              <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Ctrl+Y"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Images/redo.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Redo"/>
-              </Properties>
-            </MenuItem>
-          </SubComponents>
-        </Menu>
       </SubComponents>
     </Menu>
   </NonVisualComponents>
@@ -327,7 +298,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField7" min="-2" pref="106" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldNomEntreprise" min="-2" pref="106" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace pref="527" max="32767" attributes="0"/>
@@ -394,7 +365,7 @@
                                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldNomEntreprise" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                   <Component id="jButton7" min="-2" max="-2" attributes="0"/>
@@ -624,7 +595,10 @@
                             <Property name="text" type="java.lang.String" value="Nom de l&apos;entreprise :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField7">
+                        <Component class="javax.swing.JTextField" name="jTextFieldNomEntreprise">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNomEntrepriseActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -776,6 +750,9 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="JKeyMotCle1">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JKeyMotCle1ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel26">
                           <Properties>
@@ -869,11 +846,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                                  <Component id="jButton32" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jButtonAliCenCouv" min="-2" pref="37" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton33" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jButtonAliDroitCouv" min="-2" pref="37" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jButton31" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliGauCouv" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -894,10 +871,10 @@
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jComboBoxPolice7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxPolice" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jComboBox5" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jComboBoxTaille7" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jComboBoxTaille1" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel106" min="-2" max="-2" attributes="0"/>
                                               </Group>
@@ -906,9 +883,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jButton30" min="-2" pref="39" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButtonItalique2" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jButtonItaliqueCouv" min="-2" pref="37" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButtonSouligner7" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jButtonSouligner1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -933,12 +910,12 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabelPolice7" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                                      <Component id="jComboBoxPolice7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxPolice" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabelTaille7" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                      <Component id="jComboBoxTaille7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxTaille1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel106" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -955,15 +932,15 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel108" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButton30" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButtonItalique2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButtonSouligner7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonItaliqueCouv" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonSouligner1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                          <Component id="jButton31" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                          <Component id="jButton33" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jButton32" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jButtonAliGauCouv" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                          <Component id="jButtonAliDroitCouv" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jButtonAliCenCouv" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jLabel109" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
                                   </Group>
@@ -1001,7 +978,7 @@
                             <Property name="text" type="java.lang.String" value="Police :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBoxPolice7">
+                        <Component class="javax.swing.JComboBox" name="jComboBoxPolice">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="3">
@@ -1021,7 +998,7 @@
                             <Property name="text" type="java.lang.String" value="Taille :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBoxTaille7">
+                        <Component class="javax.swing.JComboBox" name="jComboBoxTaille1">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="4">
@@ -1084,33 +1061,33 @@
                             <Property name="text" type="java.lang.String" value="Alignement texte :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton31">
+                        <Component class="javax.swing.JButton" name="jButtonAliGauCouv">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/Images/text-align-left-icon(1).png"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButtonItalique2">
+                        <Component class="javax.swing.JButton" name="jButtonItaliqueCouv">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="I"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton32">
+                        <Component class="javax.swing.JButton" name="jButtonAliCenCouv">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/Images/Text-align-center-icon(1).png"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton33">
+                        <Component class="javax.swing.JButton" name="jButtonAliDroitCouv">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/Images/text-align-right-icon(1).png"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButtonSouligner7">
+                        <Component class="javax.swing.JButton" name="jButtonSouligner1">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="S"/>
                           </Properties>
@@ -1151,11 +1128,11 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel99" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="jButton23" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliGauTDM" min="-2" pref="37" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jButton24" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliCenTDM" min="-2" pref="37" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton25" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliDroitTDM" min="-2" pref="37" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1175,10 +1152,10 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jComboBoxPolice5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxPolice2" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jComboBox3" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jComboBoxTaille5" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxTaille2" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jLabel96" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -1187,9 +1164,9 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jButton22" min="-2" pref="39" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButtonItalique4" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonItaliqueTDM" min="-2" pref="37" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButtonSouligner5" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButtonSouligner2" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -1220,12 +1197,12 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabelPolice5" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                                  <Component id="jComboBoxPolice5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxPolice2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabelTaille5" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="jComboBoxTaille5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxTaille2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel96" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1242,17 +1219,17 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel98" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButton22" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonItalique4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonSouligner5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonItaliqueTDM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonSouligner2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="jButton25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButton24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliDroitTDM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliCenTDM" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel99" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
-                                  <Component id="jButton23" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="jButtonAliGauTDM" min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1301,7 +1278,7 @@
                 <Property name="text" type="java.lang.String" value="Police :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBoxPolice5">
+            <Component class="javax.swing.JComboBox" name="jComboBoxPolice2">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
@@ -1321,7 +1298,7 @@
                 <Property name="text" type="java.lang.String" value="Taille :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBoxTaille5">
+            <Component class="javax.swing.JComboBox" name="jComboBoxTaille2">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -1379,12 +1356,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton22ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonItalique4">
+            <Component class="javax.swing.JButton" name="jButtonItaliqueTDM">
               <Properties>
                 <Property name="text" type="java.lang.String" value="I"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonSouligner5">
+            <Component class="javax.swing.JButton" name="jButtonSouligner2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="S"/>
               </Properties>
@@ -1394,21 +1371,21 @@
                 <Property name="text" type="java.lang.String" value="Alignement texte :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton23">
+            <Component class="javax.swing.JButton" name="jButtonAliGauTDM">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Images/text-align-left-icon(1).png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton24">
+            <Component class="javax.swing.JButton" name="jButtonAliCenTDM">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Images/Text-align-center-icon(1).png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton25">
+            <Component class="javax.swing.JButton" name="jButtonAliDroitTDM">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Images/text-align-right-icon(1).png"/>
@@ -1478,11 +1455,11 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                              <Component id="jButton28" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliCenTitre" min="-2" pref="37" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton27" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliDroitTitre" min="-2" pref="37" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jButton29" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="jButtonAliGauTitre" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -1507,13 +1484,13 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jButton26" min="-2" pref="39" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButtonItalique5" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonItaliqueTitre" min="-2" pref="37" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButtonSouligner6" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButtonSouligner3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jComboBoxPolice6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxPolice3" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jComboBoxTaille6" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxTaille3" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jLabel104" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -1546,12 +1523,12 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabelPolice6" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                                          <Component id="jComboBoxPolice6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxPolice3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabelTaille6" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                          <Component id="jComboBoxTaille6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxTaille3" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel104" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1568,15 +1545,15 @@
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel103" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jButton26" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jButtonItalique5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jButtonSouligner6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jButtonItaliqueTitre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jButtonSouligner3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jButton29" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                              <Component id="jButton27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jButton28" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliGauTitre" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliDroitTitre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliCenTitre" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel102" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
                                       </Group>
@@ -1617,7 +1594,7 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBoxPolice6">
+                    <Component class="javax.swing.JComboBox" name="jComboBoxPolice3">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="3">
@@ -1643,7 +1620,7 @@
                         <Property name="text" type="java.lang.String" value="Taille :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBoxTaille6">
+                    <Component class="javax.swing.JComboBox" name="jComboBoxTaille3">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="4">
@@ -1686,24 +1663,24 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton26ActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButtonItalique5">
+                    <Component class="javax.swing.JButton" name="jButtonItaliqueTitre">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="I"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButtonSouligner6">
+                    <Component class="javax.swing.JButton" name="jButtonSouligner3">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="S"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton27">
+                    <Component class="javax.swing.JButton" name="jButtonAliDroitTitre">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/text-align-right-icon(1).png"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton28">
+                    <Component class="javax.swing.JButton" name="jButtonAliCenTitre">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/Text-align-center-icon(1).png"/>
@@ -1725,7 +1702,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox4ActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton29">
+                    <Component class="javax.swing.JButton" name="jButtonAliGauTitre">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/text-align-left-icon(1).png"/>
@@ -1792,13 +1769,13 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jButton38" min="-2" pref="39" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButtonItalique6" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonItaliquePara" min="-2" pref="37" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButtonSouligner8" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButtonSouligner4" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jComboBoxPolice8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxPolice4" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jComboBoxTaille8" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxTaille4" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jLabel113" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -1837,11 +1814,11 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                              <Component id="jButton36" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliCenPara" min="-2" pref="37" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton35" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliDroitPara" min="-2" pref="37" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jButton37" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="jButtonAliGauPara" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jComboBox1" min="-2" pref="92" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -1893,12 +1870,12 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabelPolice8" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                                  <Component id="jComboBoxPolice8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxPolice4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabelTaille8" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="jComboBoxTaille8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxTaille4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel113" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1915,15 +1892,15 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel111" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButton38" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonItalique6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonSouligner8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonItaliquePara" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonSouligner4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="jButton37" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="jButton35" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButton36" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliGauPara" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliDroitPara" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliCenPara" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel110" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
                               </Group>
@@ -1947,21 +1924,21 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="jButton35">
+                    <Component class="javax.swing.JButton" name="jButtonAliDroitPara">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/text-align-right-icon(1).png"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton36">
+                    <Component class="javax.swing.JButton" name="jButtonAliCenPara">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/Text-align-center-icon(1).png"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton37">
+                    <Component class="javax.swing.JButton" name="jButtonAliGauPara">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/text-align-left-icon(1).png"/>
@@ -1996,12 +1973,12 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton38ActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButtonItalique6">
+                    <Component class="javax.swing.JButton" name="jButtonItaliquePara">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="I"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButtonSouligner8">
+                    <Component class="javax.swing.JButton" name="jButtonSouligner4">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="S"/>
                       </Properties>
@@ -2027,7 +2004,7 @@
                         <Property name="text" type="java.lang.String" value="Taille :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBoxTaille8">
+                    <Component class="javax.swing.JComboBox" name="jComboBoxTaille4">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="4">
@@ -2047,7 +2024,7 @@
                         <Property name="text" type="java.lang.String" value="pt"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBoxPolice8">
+                    <Component class="javax.swing.JComboBox" name="jComboBoxPolice4">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="3">
@@ -2380,7 +2357,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jTitre9" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="cBordureInt5" min="-2" pref="24" max="-2" attributes="0"/>
+                                          <Component id="cFondEnTeteColonne" min="-2" pref="24" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -2390,8 +2367,8 @@
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="cBordureInt3" min="-2" pref="24" max="-2" attributes="0"/>
-                                              <Component id="cBordureInt4" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="cBordureFondCourant" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="cFondEnTeteLigne" min="-2" pref="24" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -2409,12 +2386,12 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="cBordureInt3" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
+                                              <Component id="cBordureFondCourant" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jTitre8" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="cBordureInt4" min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="cFondEnTeteLigne" min="-2" pref="26" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
@@ -2423,7 +2400,7 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="cBordureInt5" min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="cFondEnTeteColonne" min="-2" pref="26" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace pref="30" max="32767" attributes="0"/>
@@ -2447,7 +2424,7 @@
                             <Property name="text" type="java.lang.String" value="En-t&#xea;te de colonne :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="cBordureInt3">
+                        <Component class="javax.swing.JButton" name="cBordureFondCourant">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -2459,10 +2436,10 @@
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBordureInt3ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBordureFondCourantActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="cBordureInt4">
+                        <Component class="javax.swing.JButton" name="cFondEnTeteLigne">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -2474,10 +2451,10 @@
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBordureInt4ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cFondEnTeteLigneActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="cBordureInt5">
+                        <Component class="javax.swing.JButton" name="cFondEnTeteColonne">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -2489,7 +2466,7 @@
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBordureInt5ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cFondEnTeteColonneActionPerformed"/>
                           </Events>
                         </Component>
                       </SubComponents>
@@ -2525,9 +2502,9 @@
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jComboBoxPolice9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxPolice5" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jComboBoxTaille10" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jComboBoxTaille5" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel118" min="-2" max="-2" attributes="0"/>
                                               </Group>
@@ -2536,9 +2513,9 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jButton40" min="-2" pref="39" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButtonItalique8" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jButtonItaliqueTab" min="-2" pref="37" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButtonSouligner10" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jButtonSouligner5" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Component id="jComboBox7" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -2550,11 +2527,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                                  <Component id="jButton42" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jButtonAliCenTab" min="-2" pref="37" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton41" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jButtonAliDroitTab" min="-2" pref="37" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jButton43" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                              <Component id="jButtonAliGauTab" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace pref="570" max="32767" attributes="0"/>
                                           <Component id="jButton9" min="-2" max="-2" attributes="0"/>
@@ -2577,12 +2554,12 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabelPolice9" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                                              <Component id="jComboBoxPolice9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxPolice5" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabelTaille10" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                              <Component id="jComboBoxTaille10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jComboBoxTaille5" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel118" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -2599,15 +2576,15 @@
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel120" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jButton40" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jButtonItalique8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jButtonSouligner10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButtonItaliqueTab" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButtonSouligner5" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                  <Component id="jButton43" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                                  <Component id="jButton41" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jButton42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jButtonAliGauTab" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                                  <Component id="jButtonAliDroitTab" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jButtonAliCenTab" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Component id="jLabel121" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
                                           </Group>
@@ -2650,7 +2627,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBoxPolice9">
+                        <Component class="javax.swing.JComboBox" name="jComboBoxPolice5">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="3">
@@ -2664,7 +2641,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBoxTaille10">
+                        <Component class="javax.swing.JComboBox" name="jComboBoxTaille5">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="4">
@@ -2722,31 +2699,31 @@
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton40ActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButtonItalique8">
+                        <Component class="javax.swing.JButton" name="jButtonItaliqueTab">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="I"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButtonSouligner10">
+                        <Component class="javax.swing.JButton" name="jButtonSouligner5">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="S"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton41">
+                        <Component class="javax.swing.JButton" name="jButtonAliDroitTab">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/Images/text-align-right-icon(1).png"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton42">
+                        <Component class="javax.swing.JButton" name="jButtonAliCenTab">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/Images/Text-align-center-icon(1).png"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton43">
+                        <Component class="javax.swing.JButton" name="jButtonAliGauTab">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/Images/text-align-left-icon(1).png"/>
@@ -2812,17 +2789,17 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jButton47" min="-2" pref="39" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButtonItalique9" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jButtonItalique5" min="-2" pref="37" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jButtonSouligner11" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                      <Component id="jButton45" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliCenImages" min="-2" pref="37" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButton46" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliDroitImages" min="-2" pref="37" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jButton44" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jButtonAliGauImages" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="427" max="32767" attributes="0"/>
                           </Group>
@@ -2850,7 +2827,7 @@
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                       <Component id="jLabel123" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButton47" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButtonItalique9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonItalique5" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButtonSouligner11" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -2861,9 +2838,9 @@
                                       <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jButton44" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="jButton46" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButton45" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliGauImages" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliDroitImages" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonAliCenImages" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
@@ -2881,21 +2858,21 @@
                         <Property name="text" type="java.lang.String" value="Alignement :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton44">
+                    <Component class="javax.swing.JButton" name="jButtonAliGauImages">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/text-align-left-icon(1).png"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton45">
+                    <Component class="javax.swing.JButton" name="jButtonAliCenImages">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/Text-align-center-icon(1).png"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton46">
+                    <Component class="javax.swing.JButton" name="jButtonAliDroitImages">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/Images/text-align-right-icon(1).png"/>
@@ -2963,7 +2940,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton47ActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButtonItalique9">
+                    <Component class="javax.swing.JButton" name="jButtonItalique5">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="I"/>
                       </Properties>
@@ -3010,7 +2987,7 @@
                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="jLabelTaille12" min="-2" pref="44" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jComboBoxTaille12" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxTaille6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel124" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -3022,9 +2999,9 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jButton48" min="-2" pref="39" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonItalique10" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="jButtonItaliqueDos" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButtonSouligner12" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonSouligner6" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
@@ -3068,7 +3045,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                       <Component id="jLabelTaille12" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                      <Component id="jComboBoxTaille12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxTaille6" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel124" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTitre12" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -3076,8 +3053,8 @@
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                       <Component id="jLabel125" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButton48" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButtonItalique10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButtonSouligner12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonItaliqueDos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonSouligner6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
@@ -3126,7 +3103,7 @@
                 <Property name="text" type="java.lang.String" value="Taille :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBoxTaille12">
+            <Component class="javax.swing.JComboBox" name="jComboBoxTaille6">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -3174,12 +3151,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton48ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonItalique10">
+            <Component class="javax.swing.JButton" name="jButtonItaliqueDos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="I"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonSouligner12">
+            <Component class="javax.swing.JButton" name="jButtonSouligner6">
               <Properties>
                 <Property name="text" type="java.lang.String" value="S"/>
               </Properties>

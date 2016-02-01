@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -105,10 +106,10 @@ public class Menu extends javax.swing.JFrame {
         return jSpinnerColonne3;
     }
     //Create jTextField for entreprise name
-//    public String getjTextField1() {
-//        String j = jTextFieldNomEntreprise.getText();
-//        return j;
-//    }
+    public String getjTextField1() {
+        String j = jTextFieldNomEntreprise.getText();
+        return j;
+    }
 
     public controleur getControleur() {
         return controleur;
@@ -164,7 +165,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel58 = new javax.swing.JLabel();
         jButtonCouleur = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        jTextFieldNomEntreprise = new javax.swing.JTextField();
         jPanel13 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
@@ -188,11 +189,11 @@ public class Menu extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jLabel105 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<String>();
+        jComboBox5 = new javax.swing.JComboBox<>();
         jLabelPolice7 = new javax.swing.JLabel();
-        jComboBoxPolice7 = new javax.swing.JComboBox<String>();
+        jComboBoxPolice = new javax.swing.JComboBox<>();
         jLabelTaille7 = new javax.swing.JLabel();
-        jComboBoxTaille7 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille1 = new javax.swing.JComboBox<>();
         jLabel106 = new javax.swing.JLabel();
         jTitre5 = new javax.swing.JLabel();
         jButtonCouleur9 = new javax.swing.JButton();
@@ -201,20 +202,20 @@ public class Menu extends javax.swing.JFrame {
         jLabel108 = new javax.swing.JLabel();
         jButton30 = new javax.swing.JButton();
         jLabel109 = new javax.swing.JLabel();
-        jButton31 = new javax.swing.JButton();
-        jButtonItalique2 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButtonSouligner7 = new javax.swing.JButton();
+        jButtonAliGauCouv = new javax.swing.JButton();
+        jButtonItaliqueCouv = new javax.swing.JButton();
+        jButtonAliCenCouv = new javax.swing.JButton();
+        jButtonAliDroitCouv = new javax.swing.JButton();
+        jButtonSouligner1 = new javax.swing.JButton();
         jButton34 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel95 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<String>();
+        jComboBox3 = new javax.swing.JComboBox<>();
         jLabelPolice5 = new javax.swing.JLabel();
-        jComboBoxPolice5 = new javax.swing.JComboBox<String>();
+        jComboBoxPolice2 = new javax.swing.JComboBox<>();
         jLabelTaille5 = new javax.swing.JLabel();
-        jComboBoxTaille5 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille2 = new javax.swing.JComboBox<>();
         jLabel96 = new javax.swing.JLabel();
         jTitre3 = new javax.swing.JLabel();
         jButtonCouleur7 = new javax.swing.JButton();
@@ -222,59 +223,59 @@ public class Menu extends javax.swing.JFrame {
         jCheckBox3 = new javax.swing.JCheckBox();
         jLabel98 = new javax.swing.JLabel();
         jButton22 = new javax.swing.JButton();
-        jButtonItalique4 = new javax.swing.JButton();
-        jButtonSouligner5 = new javax.swing.JButton();
+        jButtonItaliqueTDM = new javax.swing.JButton();
+        jButtonSouligner2 = new javax.swing.JButton();
         jLabel99 = new javax.swing.JLabel();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
+        jButtonAliGauTDM = new javax.swing.JButton();
+        jButtonAliCenTDM = new javax.swing.JButton();
+        jButtonAliDroitTDM = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
         jLabel100 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<String>();
-        jComboBoxPolice6 = new javax.swing.JComboBox<String>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBoxPolice3 = new javax.swing.JComboBox<>();
         jLabelPolice6 = new javax.swing.JLabel();
         jLabelTaille6 = new javax.swing.JLabel();
-        jComboBoxTaille6 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille3 = new javax.swing.JComboBox<>();
         jButtonCouleur8 = new javax.swing.JButton();
         jTitre4 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
         jButton26 = new javax.swing.JButton();
-        jButtonItalique5 = new javax.swing.JButton();
-        jButtonSouligner6 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
+        jButtonItaliqueTitre = new javax.swing.JButton();
+        jButtonSouligner3 = new javax.swing.JButton();
+        jButtonAliDroitTitre = new javax.swing.JButton();
+        jButtonAliCenTitre = new javax.swing.JButton();
         jLabel102 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
         jCheckBox4 = new javax.swing.JCheckBox();
-        jButton29 = new javax.swing.JButton();
+        jButtonAliGauTitre = new javax.swing.JButton();
         jLabel104 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
-        jButton37 = new javax.swing.JButton();
+        jButtonAliDroitPara = new javax.swing.JButton();
+        jButtonAliCenPara = new javax.swing.JButton();
+        jButtonAliGauPara = new javax.swing.JButton();
         jLabel110 = new javax.swing.JLabel();
         jLabel111 = new javax.swing.JLabel();
         jLabel112 = new javax.swing.JLabel();
         jCheckBox6 = new javax.swing.JCheckBox();
         jButton38 = new javax.swing.JButton();
-        jButtonItalique6 = new javax.swing.JButton();
-        jButtonSouligner8 = new javax.swing.JButton();
+        jButtonItaliquePara = new javax.swing.JButton();
+        jButtonSouligner4 = new javax.swing.JButton();
         jButtonCouleur10 = new javax.swing.JButton();
         jTitre6 = new javax.swing.JLabel();
         jLabelTaille8 = new javax.swing.JLabel();
-        jComboBoxTaille8 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille4 = new javax.swing.JComboBox<>();
         jLabel113 = new javax.swing.JLabel();
-        jComboBoxPolice8 = new javax.swing.JComboBox<String>();
+        jComboBoxPolice4 = new javax.swing.JComboBox<>();
         jLabelPolice8 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<String>();
+        jComboBox6 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
@@ -282,7 +283,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabelTaille9 = new javax.swing.JLabel();
-        jComboBoxTaille9 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille9 = new javax.swing.JComboBox<>();
         jLabel115 = new javax.swing.JLabel();
         jTitre7 = new javax.swing.JLabel();
         jButtonCouleur11 = new javax.swing.JButton();
@@ -304,16 +305,16 @@ public class Menu extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         jTitre8 = new javax.swing.JLabel();
         jTitre9 = new javax.swing.JLabel();
-        cBordureInt3 = new javax.swing.JButton();
-        cBordureInt4 = new javax.swing.JButton();
-        cBordureInt5 = new javax.swing.JButton();
+        cBordureFondCourant = new javax.swing.JButton();
+        cFondEnTeteLigne = new javax.swing.JButton();
+        cFondEnTeteColonne = new javax.swing.JButton();
         jPanel18 = new javax.swing.JPanel();
         jLabelTaille10 = new javax.swing.JLabel();
         jLabelPolice9 = new javax.swing.JLabel();
         jLabel117 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox<String>();
-        jComboBoxPolice9 = new javax.swing.JComboBox<String>();
-        jComboBoxTaille10 = new javax.swing.JComboBox<String>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBoxPolice5 = new javax.swing.JComboBox<>();
+        jComboBoxTaille5 = new javax.swing.JComboBox<>();
         jLabel118 = new javax.swing.JLabel();
         jTitre10 = new javax.swing.JLabel();
         jButtonCouleur12 = new javax.swing.JButton();
@@ -321,28 +322,28 @@ public class Menu extends javax.swing.JFrame {
         jCheckBox7 = new javax.swing.JCheckBox();
         jLabel120 = new javax.swing.JLabel();
         jButton40 = new javax.swing.JButton();
-        jButtonItalique8 = new javax.swing.JButton();
-        jButtonSouligner10 = new javax.swing.JButton();
-        jButton41 = new javax.swing.JButton();
-        jButton42 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
+        jButtonItaliqueTab = new javax.swing.JButton();
+        jButtonSouligner5 = new javax.swing.JButton();
+        jButtonAliDroitTab = new javax.swing.JButton();
+        jButtonAliCenTab = new javax.swing.JButton();
+        jButtonAliGauTab = new javax.swing.JButton();
         jLabel121 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
-        jButton44 = new javax.swing.JButton();
-        jButton45 = new javax.swing.JButton();
-        jButton46 = new javax.swing.JButton();
+        jButtonAliGauImages = new javax.swing.JButton();
+        jButtonAliCenImages = new javax.swing.JButton();
+        jButtonAliDroitImages = new javax.swing.JButton();
         jLabel32 = new javax.swing.JLabel();
         jCheckBox2 = new javax.swing.JCheckBox();
         jLabelTaille11 = new javax.swing.JLabel();
-        jComboBoxTaille11 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille11 = new javax.swing.JComboBox<>();
         jLabel122 = new javax.swing.JLabel();
         jTitre11 = new javax.swing.JLabel();
         jButtonCouleur13 = new javax.swing.JButton();
         jLabel123 = new javax.swing.JLabel();
         jButton47 = new javax.swing.JButton();
-        jButtonItalique9 = new javax.swing.JButton();
+        jButtonItalique5 = new javax.swing.JButton();
         jButtonSouligner11 = new javax.swing.JButton();
         jLabel33 = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
@@ -351,19 +352,19 @@ public class Menu extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabelTaille12 = new javax.swing.JLabel();
-        jComboBoxTaille12 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille6 = new javax.swing.JComboBox<>();
         jLabel124 = new javax.swing.JLabel();
         jTitre12 = new javax.swing.JLabel();
         jButtonCouleur14 = new javax.swing.JButton();
         jLabel125 = new javax.swing.JLabel();
         jButton48 = new javax.swing.JButton();
-        jButtonItalique10 = new javax.swing.JButton();
-        jButtonSouligner12 = new javax.swing.JButton();
+        jButtonItaliqueDos = new javax.swing.JButton();
+        jButtonSouligner6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
         jCheckBox8 = new javax.swing.JCheckBox();
         jLabelTaille13 = new javax.swing.JLabel();
-        jComboBoxTaille13 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille13 = new javax.swing.JComboBox<>();
         jLabel126 = new javax.swing.JLabel();
         jTitre13 = new javax.swing.JLabel();
         jButtonCouleur15 = new javax.swing.JButton();
@@ -371,9 +372,6 @@ public class Menu extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("XSLT-CM");
@@ -476,6 +474,12 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel5.setText("Nom de l'entreprise :");
 
+        jTextFieldNomEntreprise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNomEntrepriseActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -549,7 +553,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(527, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
@@ -602,7 +606,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jButton7)
                 .addGap(98, 98, 98))
@@ -613,6 +617,12 @@ public class Menu extends javax.swing.JFrame {
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/exemple.jpg"))); // NOI18N
 
         jLabel25.setText("Keyword [1] :");
+
+        JKeyMotCle1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JKeyMotCle1ActionPerformed(evt);
+            }
+        });
 
         jLabel26.setText("Keyword [2] :");
 
@@ -741,17 +751,17 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel105.setText("Nom du style :");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Keyword [1]", "Keyword [2]", "Title\t", "Productname" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Keyword [1]", "Keyword [2]", "Title\t", "Productname" }));
 
         jLabelPolice7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice7.setText("Police :");
 
-        jComboBoxPolice7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelTaille7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille7.setText("Taille :");
 
-        jComboBoxTaille7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel106.setText("pt");
 
@@ -783,15 +793,15 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel109.setText("Alignement texte :");
 
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
+        jButtonAliGauCouv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
 
-        jButtonItalique2.setText("I");
+        jButtonItaliqueCouv.setText("I");
 
-        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
+        jButtonAliCenCouv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
 
-        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
+        jButtonAliDroitCouv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
 
-        jButtonSouligner7.setText("S");
+        jButtonSouligner1.setText("S");
 
         jButton34.setText("Sauvegarder");
         jButton34.addActionListener(new java.awt.event.ActionListener() {
@@ -813,10 +823,10 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
-                                .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliCenCouv, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButtonAliDroitCouv, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonAliGauCouv, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
@@ -831,10 +841,10 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jLabel108, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBoxPolice7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxPolice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(jComboBoxTaille7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxTaille1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel106))
                             .addComponent(jButtonCouleur9, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -842,9 +852,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonItalique2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonItaliqueCouv, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonSouligner7)))))
+                                .addComponent(jButtonSouligner1)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(786, Short.MAX_VALUE)
@@ -861,11 +871,11 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelPolice7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxPolice7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxPolice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelTaille7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxTaille7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxTaille1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel106))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -879,14 +889,14 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel108)
                     .addComponent(jButton30)
-                    .addComponent(jButtonItalique2)
-                    .addComponent(jButtonSouligner7))
+                    .addComponent(jButtonItaliqueCouv)
+                    .addComponent(jButtonSouligner1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton33)
-                        .addComponent(jButton32))
+                        .addComponent(jButtonAliGauCouv, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAliDroitCouv)
+                        .addComponent(jButtonAliCenCouv))
                     .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addComponent(jButton34)
@@ -946,17 +956,17 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel95.setText("Nom du style :");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
 
         jLabelPolice5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice5.setText("Police :");
 
-        jComboBoxPolice5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelTaille5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille5.setText("Taille :");
 
-        jComboBoxTaille5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel96.setText("pt");
 
@@ -986,17 +996,17 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButtonItalique4.setText("I");
+        jButtonItaliqueTDM.setText("I");
 
-        jButtonSouligner5.setText("S");
+        jButtonSouligner2.setText("S");
 
         jLabel99.setText("Alignement texte :");
 
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
+        jButtonAliGauTDM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
 
-        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
+        jButtonAliCenTDM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
 
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
+        jButtonAliDroitTDM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
 
         jButton12.setText("Sauvegarder");
 
@@ -1012,11 +1022,11 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addComponent(jLabel99)
                                 .addGap(12, 12, 12)
-                                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliGauTDM, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliCenTDM, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButtonAliDroitTDM, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel8Layout.createSequentialGroup()
@@ -1031,10 +1041,10 @@ public class Menu extends javax.swing.JFrame {
                                     .addComponent(jLabel98, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBoxPolice5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxPolice2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel8Layout.createSequentialGroup()
-                                        .addComponent(jComboBoxTaille5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBoxTaille2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel96))
                                     .addComponent(jButtonCouleur7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1042,9 +1052,9 @@ public class Menu extends javax.swing.JFrame {
                                     .addGroup(jPanel8Layout.createSequentialGroup()
                                         .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButtonItalique4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButtonItaliqueTDM, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButtonSouligner5)))))
+                                        .addComponent(jButtonSouligner2)))))
                         .addGap(79, 79, 79)
                         .addComponent(jLabel20)
                         .addGap(152, 152, 152))
@@ -1065,11 +1075,11 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelPolice5, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxPolice5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBoxPolice2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelTaille5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxTaille5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxTaille2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel96))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1083,15 +1093,15 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel98)
                             .addComponent(jButton22)
-                            .addComponent(jButtonItalique4)
-                            .addComponent(jButtonSouligner5))
+                            .addComponent(jButtonItaliqueTDM)
+                            .addComponent(jButtonSouligner2))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton25)
-                                .addComponent(jButton24))
+                                .addComponent(jButtonAliDroitTDM)
+                                .addComponent(jButtonAliCenTDM))
                             .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButtonAliGauTDM, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 242, Short.MAX_VALUE)
                 .addComponent(jButton12)
                 .addContainerGap())
@@ -1103,9 +1113,9 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel100.setText("Nom du style :");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
 
-        jComboBoxPolice6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelPolice6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice6.setText("Police :");
@@ -1113,7 +1123,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille6.setText("Taille :");
 
-        jComboBoxTaille6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jButtonCouleur8.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCouleur8.addActionListener(new java.awt.event.ActionListener() {
@@ -1133,13 +1143,13 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButtonItalique5.setText("I");
+        jButtonItaliqueTitre.setText("I");
 
-        jButtonSouligner6.setText("S");
+        jButtonSouligner3.setText("S");
 
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
+        jButtonAliDroitTitre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
 
-        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
+        jButtonAliCenTitre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
 
         jLabel102.setText("Alignement texte :");
 
@@ -1151,7 +1161,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
+        jButtonAliGauTitre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
 
         jLabel104.setText("pt");
 
@@ -1177,10 +1187,10 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
-                                .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliCenTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButtonAliDroitTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonAliGauTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
@@ -1199,12 +1209,12 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonItalique5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonItaliqueTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonSouligner6))
-                            .addComponent(jComboBoxPolice6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonSouligner3))
+                            .addComponent(jComboBoxPolice3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jComboBoxTaille6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxTaille3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel104))
                             .addComponent(jButtonCouleur8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1229,11 +1239,11 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelPolice6, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxPolice6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBoxPolice3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelTaille6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxTaille6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxTaille3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel104))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1247,14 +1257,14 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel103)
                             .addComponent(jButton26)
-                            .addComponent(jButtonItalique5)
-                            .addComponent(jButtonSouligner6))
+                            .addComponent(jButtonItaliqueTitre)
+                            .addComponent(jButtonSouligner3))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton27)
-                                .addComponent(jButton28))
+                                .addComponent(jButtonAliGauTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliDroitTitre)
+                                .addComponent(jButtonAliCenTitre))
                             .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
@@ -1265,11 +1275,11 @@ public class Menu extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Style de titres", jPanel7);
 
-        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
+        jButtonAliDroitPara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
 
-        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
+        jButtonAliCenPara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
 
-        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
+        jButtonAliGauPara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
 
         jLabel110.setText("Alignement texte :");
 
@@ -1290,9 +1300,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButtonItalique6.setText("I");
+        jButtonItaliquePara.setText("I");
 
-        jButtonSouligner8.setText("S");
+        jButtonSouligner4.setText("S");
 
         jButtonCouleur10.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCouleur10.addActionListener(new java.awt.event.ActionListener() {
@@ -1306,22 +1316,22 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille8.setText("Taille :");
 
-        jComboBoxTaille8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel113.setText("pt");
 
-        jComboBoxPolice8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelPolice8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice8.setText("Police :");
 
         jLabel114.setText("Nom du style :");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Para", "Liste", "Guibutton", "Guilabel", "Guimenu", "Keycap", "Note", "Tip", "Warning", "Important", "Caution", " " }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Para", "Liste", "Guibutton", "Guilabel", "Guimenu", "Keycap", "Note", "Tip", "Warning", "Important", "Caution", " " }));
 
         jLabel1.setText("Type de liste :");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Puces", "Numéros", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Puces", "Numéros", " " }));
 
         jLabel2.setText("Niveau :");
 
@@ -1334,7 +1344,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille9.setText("Taille :");
 
-        jComboBoxTaille9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel115.setText("pt");
 
@@ -1393,12 +1403,12 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonItalique6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonItaliquePara, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonSouligner8))
-                            .addComponent(jComboBoxPolice8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonSouligner4))
+                            .addComponent(jComboBoxPolice4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addComponent(jComboBoxTaille8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxTaille4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel113))
                             .addComponent(jButtonCouleur10, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1432,10 +1442,10 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
-                                .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliCenPara, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliDroitPara, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonAliGauPara, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33)
@@ -1475,11 +1485,11 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelPolice8, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxPolice8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxPolice4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelTaille8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxTaille8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxTaille4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel113))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1493,14 +1503,14 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel111)
                     .addComponent(jButton38)
-                    .addComponent(jButtonItalique6)
-                    .addComponent(jButtonSouligner8))
+                    .addComponent(jButtonItaliquePara)
+                    .addComponent(jButtonSouligner4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton35)
-                        .addComponent(jButton36))
+                        .addComponent(jButtonAliGauPara, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAliDroitPara)
+                        .addComponent(jButtonAliCenPara))
                     .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1592,27 +1602,27 @@ public class Menu extends javax.swing.JFrame {
 
         jTitre9.setText("En-tête de colonne :");
 
-        cBordureInt3.setBackground(new java.awt.Color(0, 0, 0));
-        cBordureInt3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cBordureInt3.addActionListener(new java.awt.event.ActionListener() {
+        cBordureFondCourant.setBackground(new java.awt.Color(0, 0, 0));
+        cBordureFondCourant.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cBordureFondCourant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cBordureInt3ActionPerformed(evt);
+                cBordureFondCourantActionPerformed(evt);
             }
         });
 
-        cBordureInt4.setBackground(new java.awt.Color(0, 0, 0));
-        cBordureInt4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cBordureInt4.addActionListener(new java.awt.event.ActionListener() {
+        cFondEnTeteLigne.setBackground(new java.awt.Color(0, 0, 0));
+        cFondEnTeteLigne.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cFondEnTeteLigne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cBordureInt4ActionPerformed(evt);
+                cFondEnTeteLigneActionPerformed(evt);
             }
         });
 
-        cBordureInt5.setBackground(new java.awt.Color(0, 0, 0));
-        cBordureInt5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cBordureInt5.addActionListener(new java.awt.event.ActionListener() {
+        cFondEnTeteColonne.setBackground(new java.awt.Color(0, 0, 0));
+        cFondEnTeteColonne.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cFondEnTeteColonne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cBordureInt5ActionPerformed(evt);
+                cFondEnTeteColonneActionPerformed(evt);
             }
         });
 
@@ -1626,7 +1636,7 @@ public class Menu extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jTitre9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cBordureInt5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cFondEnTeteColonne, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1634,8 +1644,8 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jTitre8))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cBordureInt3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cBordureInt4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(cBordureFondCourant, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cFondEnTeteLigne, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel17Layout.setVerticalGroup(
@@ -1647,17 +1657,17 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel30))
-                            .addComponent(cBordureInt3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cBordureFondCourant, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jTitre8))
-                    .addComponent(cBordureInt4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cFondEnTeteLigne, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jTitre9))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cBordureInt5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cFondEnTeteColonne, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -1671,11 +1681,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel117.setText("Nom du style :");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre du tableau", "En-tête de ligne", "En-tête de colonne" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre du tableau", "En-tête de ligne", "En-tête de colonne" }));
 
-        jComboBoxPolice9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
-        jComboBoxTaille10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel118.setText("pt");
 
@@ -1705,15 +1715,15 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButtonItalique8.setText("I");
+        jButtonItaliqueTab.setText("I");
 
-        jButtonSouligner10.setText("S");
+        jButtonSouligner5.setText("S");
 
-        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
+        jButtonAliDroitTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
 
-        jButton42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
+        jButtonAliCenTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
 
-        jButton43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
+        jButtonAliGauTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
 
         jLabel121.setText("Alignement texte :");
 
@@ -1739,9 +1749,9 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jLabel117, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBoxPolice9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxPolice5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel18Layout.createSequentialGroup()
-                                .addComponent(jComboBoxTaille10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxTaille5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel118))
                             .addComponent(jButtonCouleur12, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1749,9 +1759,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel18Layout.createSequentialGroup()
                                 .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonItalique8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonItaliqueTab, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonSouligner10))
+                                .addComponent(jButtonSouligner5))
                             .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel18Layout.createSequentialGroup()
@@ -1760,10 +1770,10 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel18Layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
-                                .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliCenTab, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButtonAliDroitTab, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonAliGauTab, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 570, Short.MAX_VALUE)
                         .addComponent(jButton9)
                         .addGap(20, 20, 20))))
@@ -1780,11 +1790,11 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelPolice9, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxPolice9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBoxPolice5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelTaille10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxTaille10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxTaille5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel118))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1798,14 +1808,14 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel120)
                             .addComponent(jButton40)
-                            .addComponent(jButtonItalique8)
-                            .addComponent(jButtonSouligner10))
+                            .addComponent(jButtonItaliqueTab)
+                            .addComponent(jButtonSouligner5))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton43, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton41)
-                                .addComponent(jButton42))
+                                .addComponent(jButtonAliGauTab, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAliDroitTab)
+                                .addComponent(jButtonAliCenTab))
                             .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
@@ -1838,18 +1848,18 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel31.setText("Alignement :");
 
-        jButton44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
+        jButtonAliGauImages.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-left-icon(1).png"))); // NOI18N
 
-        jButton45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
+        jButtonAliCenImages.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Text-align-center-icon(1).png"))); // NOI18N
 
-        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
+        jButtonAliDroitImages.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/text-align-right-icon(1).png"))); // NOI18N
 
         jLabel32.setText("Titre :");
 
         jLabelTaille11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille11.setText("Taille :");
 
-        jComboBoxTaille11.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel122.setText("pt");
 
@@ -1871,7 +1881,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButtonItalique9.setText("I");
+        jButtonItalique5.setText("I");
 
         jButtonSouligner11.setText("S");
 
@@ -1910,15 +1920,15 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton47, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonItalique9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonItalique5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonSouligner11))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
-                        .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAliCenImages, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonAliDroitImages, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonAliGauImages, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(427, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -1941,7 +1951,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel123)
                         .addComponent(jButton47)
-                        .addComponent(jButtonItalique9)
+                        .addComponent(jButtonItalique5)
                         .addComponent(jButtonSouligner11)))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1949,9 +1959,9 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addComponent(jLabel31))
                     .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton46)
-                        .addComponent(jButton45)))
+                        .addComponent(jButtonAliGauImages, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAliDroitImages)
+                        .addComponent(jButtonAliCenImages)))
                 .addGap(44, 44, 44)
                 .addComponent(jButton10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1985,7 +1995,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille12.setText("Taille :");
 
-        jComboBoxTaille12.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel124.setText("pt");
 
@@ -2007,9 +2017,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButtonItalique10.setText("I");
+        jButtonItaliqueDos.setText("I");
 
-        jButtonSouligner12.setText("S");
+        jButtonSouligner6.setText("S");
 
         jButton5.setText("Sauvegarder");
 
@@ -2018,7 +2028,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille13.setText("Epaisseur :");
 
-        jComboBoxTaille13.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel126.setText("pt");
 
@@ -2046,7 +2056,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(50, 50, 50)
                         .addComponent(jLabelTaille12, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBoxTaille12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxTaille6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel124)
                         .addGap(18, 18, 18)
@@ -2058,9 +2068,9 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonItalique10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonItaliqueDos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonSouligner12))
+                        .addComponent(jButtonSouligner6))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addComponent(jLabel34)
@@ -2097,15 +2107,15 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabelTaille12, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jComboBoxTaille12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxTaille6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel124)
                                 .addComponent(jTitre12))
                             .addComponent(jButtonCouleur14, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel125)
                                 .addComponent(jButton48)
-                                .addComponent(jButtonItalique10)
-                                .addComponent(jButtonSouligner12)))
+                                .addComponent(jButtonItaliqueDos)
+                                .addComponent(jButtonSouligner6)))
                         .addGap(48, 48, 48)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel34)
@@ -2149,20 +2159,6 @@ public class Menu extends javax.swing.JFrame {
         jMenu1.add(jMenuItem5);
 
         jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edition");
-
-        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/undo.png"))); // NOI18N
-        jMenuItem9.setText("Undo");
-        jMenu2.add(jMenuItem9);
-
-        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/redo.png"))); // NOI18N
-        jMenuItem10.setText("Redo");
-        jMenu2.add(jMenuItem10);
-
-        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -2233,17 +2229,17 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCouleur12ActionPerformed
 
-    private void cBordureInt5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureInt5ActionPerformed
+    private void cFondEnTeteColonneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cFondEnTeteColonneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cBordureInt5ActionPerformed
+    }//GEN-LAST:event_cFondEnTeteColonneActionPerformed
 
-    private void cBordureInt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureInt4ActionPerformed
+    private void cFondEnTeteLigneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cFondEnTeteLigneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cBordureInt4ActionPerformed
+    }//GEN-LAST:event_cFondEnTeteLigneActionPerformed
 
-    private void cBordureInt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureInt3ActionPerformed
+    private void cBordureFondCourantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureFondCourantActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cBordureInt3ActionPerformed
+    }//GEN-LAST:event_cBordureFondCourantActionPerformed
 
     private void cBordureInt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureInt2ActionPerformed
         // TODO add your handling code here:
@@ -2361,6 +2357,14 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_verif
 
+    private void jTextFieldNomEntrepriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomEntrepriseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNomEntrepriseActionPerformed
+
+    private void JKeyMotCle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JKeyMotCle1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JKeyMotCle1ActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -2407,42 +2411,24 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField JproN;
     private javax.swing.JTextField Jreleas;
     private javax.swing.JTextField Jtit;
+    private javax.swing.JButton cBordureFondCourant;
     private javax.swing.JButton cBordureInt1;
     private javax.swing.JButton cBordureInt2;
-    private javax.swing.JButton cBordureInt3;
-    private javax.swing.JButton cBordureInt4;
-    private javax.swing.JButton cBordureInt5;
+    private javax.swing.JButton cFondEnTeteColonne;
+    private javax.swing.JButton cFondEnTeteLigne;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
     private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
-    private javax.swing.JButton jButton46;
     private javax.swing.JButton jButton47;
     private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton5;
@@ -2450,6 +2436,24 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButtonAliCenCouv;
+    private javax.swing.JButton jButtonAliCenImages;
+    private javax.swing.JButton jButtonAliCenPara;
+    private javax.swing.JButton jButtonAliCenTDM;
+    private javax.swing.JButton jButtonAliCenTab;
+    private javax.swing.JButton jButtonAliCenTitre;
+    private javax.swing.JButton jButtonAliDroitCouv;
+    private javax.swing.JButton jButtonAliDroitImages;
+    private javax.swing.JButton jButtonAliDroitPara;
+    private javax.swing.JButton jButtonAliDroitTDM;
+    private javax.swing.JButton jButtonAliDroitTab;
+    private javax.swing.JButton jButtonAliDroitTitre;
+    private javax.swing.JButton jButtonAliGauCouv;
+    private javax.swing.JButton jButtonAliGauImages;
+    private javax.swing.JButton jButtonAliGauPara;
+    private javax.swing.JButton jButtonAliGauTDM;
+    private javax.swing.JButton jButtonAliGauTab;
+    private javax.swing.JButton jButtonAliGauTitre;
     private javax.swing.JButton jButtonAligneCentre;
     private javax.swing.JButton jButtonAligneDroite;
     private javax.swing.JButton jButtonAligneGauche;
@@ -2463,21 +2467,21 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCouleur7;
     private javax.swing.JButton jButtonCouleur8;
     private javax.swing.JButton jButtonCouleur9;
-    private javax.swing.JButton jButtonItalique10;
-    private javax.swing.JButton jButtonItalique2;
-    private javax.swing.JButton jButtonItalique4;
     private javax.swing.JButton jButtonItalique5;
-    private javax.swing.JButton jButtonItalique6;
     private javax.swing.JButton jButtonItalique7;
-    private javax.swing.JButton jButtonItalique8;
-    private javax.swing.JButton jButtonItalique9;
-    private javax.swing.JButton jButtonSouligner10;
+    private javax.swing.JButton jButtonItaliqueCouv;
+    private javax.swing.JButton jButtonItaliqueDos;
+    private javax.swing.JButton jButtonItaliquePara;
+    private javax.swing.JButton jButtonItaliqueTDM;
+    private javax.swing.JButton jButtonItaliqueTab;
+    private javax.swing.JButton jButtonItaliqueTitre;
+    private javax.swing.JButton jButtonSouligner1;
     private javax.swing.JButton jButtonSouligner11;
-    private javax.swing.JButton jButtonSouligner12;
+    private javax.swing.JButton jButtonSouligner2;
+    private javax.swing.JButton jButtonSouligner3;
+    private javax.swing.JButton jButtonSouligner4;
     private javax.swing.JButton jButtonSouligner5;
     private javax.swing.JButton jButtonSouligner6;
-    private javax.swing.JButton jButtonSouligner7;
-    private javax.swing.JButton jButtonSouligner8;
     private javax.swing.JButton jButtonSouligner9;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
@@ -2495,19 +2499,19 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox jComboBoxFormat;
     private javax.swing.JComboBox jComboBoxOrientation;
+    private javax.swing.JComboBox<String> jComboBoxPolice;
+    private javax.swing.JComboBox<String> jComboBoxPolice2;
+    private javax.swing.JComboBox<String> jComboBoxPolice3;
+    private javax.swing.JComboBox<String> jComboBoxPolice4;
     private javax.swing.JComboBox<String> jComboBoxPolice5;
-    private javax.swing.JComboBox<String> jComboBoxPolice6;
-    private javax.swing.JComboBox<String> jComboBoxPolice7;
-    private javax.swing.JComboBox<String> jComboBoxPolice8;
-    private javax.swing.JComboBox<String> jComboBoxPolice9;
-    private javax.swing.JComboBox<String> jComboBoxTaille10;
+    private javax.swing.JComboBox<String> jComboBoxTaille1;
     private javax.swing.JComboBox<String> jComboBoxTaille11;
-    private javax.swing.JComboBox<String> jComboBoxTaille12;
     private javax.swing.JComboBox<String> jComboBoxTaille13;
+    private javax.swing.JComboBox<String> jComboBoxTaille2;
+    private javax.swing.JComboBox<String> jComboBoxTaille3;
+    private javax.swing.JComboBox<String> jComboBoxTaille4;
     private javax.swing.JComboBox<String> jComboBoxTaille5;
     private javax.swing.JComboBox<String> jComboBoxTaille6;
-    private javax.swing.JComboBox<String> jComboBoxTaille7;
-    private javax.swing.JComboBox<String> jComboBoxTaille8;
     private javax.swing.JComboBox<String> jComboBoxTaille9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;
@@ -2599,12 +2603,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTaille8;
     private javax.swing.JLabel jLabelTaille9;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel12;
@@ -2632,9 +2633,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTextFieldNomEntreprise;
     private javax.swing.JLabel jTitre1;
     private javax.swing.JLabel jTitre10;
     private javax.swing.JLabel jTitre11;
@@ -2654,167 +2655,186 @@ public class Menu extends javax.swing.JFrame {
         return jButton1;
     }
 
-//    public javax.swing.JButton getjButton10() {
-//        return jButton10;
-//    }
 
-//    public javax.swing.JButton getjButton11() {
-//        return jButtonItalique11;
-//    }
-
-//    public javax.swing.JButton getjButton12() {
-//        return jButton12;
-//    }
-
-    public javax.swing.JButton getjButton13() {
-        return jButtonAligneCentre;
+  
+    /*----------------------------------------------------------------*/
+    //Boutons Aligner
+    public javax.swing.JButton getjButtonAliGauCouv() {
+        return jButtonAliGauCouv;
+    }
+    
+    public javax.swing.JButton getjButtonAliCenCouv() {
+        return jButtonAliCenCouv;
     }
 
-    public javax.swing.JButton getjButton14() {
-        return jButtonAligneDroite;
+    public javax.swing.JButton getjButtonAliDroitCouv() {
+        return jButtonAliDroitCouv;
     }
 
-//    public javax.swing.JButton getjButton2() {
-//        return jButtonItalique;
-//    }
-//
-//    public javax.swing.JButton getjButton3() {
-//        return jButtonSouligner;
-//    }
-
-//    public javax.swing.JButton getjButton4() {
-//        return jButton4;
-//    }
-
-    public javax.swing.JButton getjButton5() {
-        return jButtonAligneGauche;
+    public javax.swing.JButton getjButtonAliGauTDM() {
+        return jButtonAliGauTDM;
+    }
+    
+    public javax.swing.JButton getjButtonAliCenTDM() {
+        return jButtonAliCenTDM;
+    }
+    
+    public javax.swing.JButton getjButtonAliDroitTDM() {
+        return jButtonAliDroitTDM;
     }
 
-//    public javax.swing.JButton getjButton6() {
-//        return jButton6;
-//    }
-//
-//    public javax.swing.JButton getjButton7() {
-//        return jButton7;
-//    }
-//
-//    public javax.swing.JButton getjButton8() {
-//        return jButton8;
-//    }
-//
-//    public javax.swing.JButton getjButton9() {
-//        return jButton9;
-//    }
+    public javax.swing.JButton getjButtonAliCenPara() {
+        return jButtonAliCenPara;
+    }
+
+    public javax.swing.JButton getjButtonAliCenTitre() {
+        return jButtonAliCenTitre;
+    }
+
+    public javax.swing.JButton getjButtonAliDroitPara() {
+        return jButtonAliDroitPara;
+    }
+
+    public javax.swing.JButton getjButtonAliDroitTitre() {
+        return jButtonAliDroitTitre;
+    }
+
+    public javax.swing.JButton getjButtonAliGauPara() {
+        return jButtonAliGauPara;
+    }
+
+    public javax.swing.JButton getjButtonAliGauTitre() {
+        return jButtonAliGauTitre;
+    }
+
+    public javax.swing.JButton getjButtonAliCenImages() {
+        return jButtonAliCenImages;
+    }
+
+    public javax.swing.JButton getjButtonAliCenTab() {
+        return jButtonAliCenTab;
+    }
+
+    public javax.swing.JButton getjButtonAliDroitImages() {
+        return jButtonAliDroitImages;
+    }
+
+    public javax.swing.JButton getjButtonAliDroitTab() {
+        return jButtonAliDroitTab;
+    }
+
+    public javax.swing.JButton getjButtonAliGauImages() {
+        return jButtonAliGauImages;
+    }
+
+    public javax.swing.JButton getjButtonAliGauTab() {
+        return jButtonAliGauTab;
+    }
+    
+    /*----------------------------------------------------------------*/
+
+    public JButton getjButtonItaliqueCouv() {
+        return jButtonItaliqueCouv;
+    }
+
+    public JButton getjButtonItaliqueDos() {
+        return jButtonItaliqueDos;
+    }
+
+    public JButton getjButtonItaliquePara() {
+        return jButtonItaliquePara;
+    }
+
+    public JButton getjButtonItaliqueTDM() {
+        return jButtonItaliqueTDM;
+    }
+
+    public JButton getjButtonItaliqueTab() {
+        return jButtonItaliqueTab;
+    }
+
+    public JButton getjButtonItaliqueTitre() {
+        return jButtonItaliqueTitre;
+    }
+
+    //Boutons souligner
+    public javax.swing.JButton getjButtonSoulignerCouv() {
+        return jButtonSouligner1;
+    }
+    
+    public javax.swing.JButton getjButtonSoulignerTDM() {
+        return jButtonSouligner2;
+    }
+
+    public javax.swing.JButton getjButtonSoulignerTitre() {
+        return jButtonSouligner3;
+    }
+    
+    public javax.swing.JButton getjButtonSoulignerPara() {
+        return jButtonSouligner4;
+    }
+    
+    public javax.swing.JButton getjButtonSoulignerTab() {
+        return jButtonSouligner5;
+    }
+    
+    public javax.swing.JButton getjButtonSoulignerDos() {
+        return jButtonSouligner6;
+    }
     
     //jComboBox pour la police d'ecriture
-//    public javax.swing.JComboBox<String> getjComboBox1() {
-//        return jComboBoxPolice;
-//    }
-//    
-//    //jComboBox pour la taille de la police
-//    public javax.swing.JComboBox<String> getjComboBox2() {
-//        return jComboBoxTaille;
-//    }
+    public javax.swing.JComboBox<String> getjComboBoxPolice1() {
+        return jComboBoxPolice;
+    }
+    
+    public javax.swing.JComboBox<String> getjComboBoxPolice2() {
+        return jComboBoxPolice2;
+    }
+    
+    public javax.swing.JComboBox<String> getjComboBoxPoliceTitre() {
+        return jComboBoxPolice3;
+    }
+    
+    public javax.swing.JComboBox<String> getjComboBoxPolicePara() {
+        return jComboBoxPolice4;
+    }
+    
+    public javax.swing.JComboBox<String> getjComboBoxPolicejTab() {
+        return jComboBoxPolice5;
+    }
+    
+    //jComboBox pour la taille de la police
+    public javax.swing.JComboBox<String> getjComboBoxTailleCouv() {
+        return jComboBoxTaille1;
+    }
+    
+    public javax.swing.JComboBox<String> getjComboBoxTailleTDM() {
+        return jComboBoxTaille2;
+    }
 
+    public javax.swing.JComboBox<String> getjComboBoxTailleTitre() {
+        return jComboBoxTaille3;
+    }
+    
+    public javax.swing.JComboBox<String> getjComboBoxTaillePara() {
+        return jComboBoxTaille4;
+    }
+    
+    public javax.swing.JComboBox<String> getjComboBoxTailleTab() {
+        return jComboBoxTaille5;
+    }
+    
+    public javax.swing.JComboBox<String> getjComboBoxTailleDos() {
+        return jComboBoxTaille6;
+    }
+    
     //jButton pour le panel de couleur
     public javax.swing.JButton getjButton15() {
         return jButtonCouleur;
     }
 
-//    public javax.swing.JComboBox<String> getjComboBox4() {
-//        return jComboBox4;
-//    }
-//
-//    public javax.swing.JComboBox<String> getjComboBox5() {
-//        return jComboBox5;
-//    }
-//
-//    public javax.swing.JComboBox<String> getjComboBox6() {
-//        return jComboBox6;
-//    }
-//
-//    public javax.swing.JComboBox<String> getjComboBox7() {
-//        return jComboBox7;
-//    }
-//
-//    public javax.swing.JComboBox<String> getjComboBox8() {
-//        return jComboBox8;
-//    }
-//
-//    public javax.swing.JComboBox<String> getjComboBox9() {
-//        return jComboBox9;
-//    }
-
-//    public javax.swing.JLabel getjLabel1() {
-//        return jLabelPolice;
-//    }
-//
-//    public javax.swing.JLabel getjLabel10() {
-//        return jLabel10;
-//    }
-//
-//    public javax.swing.JLabel getjLabel11() {
-//        return jLabel11;
-//    }
-//
-//    public javax.swing.JLabel getjLabel12() {
-//        return jLabel12;
-//    }
-
-//    public javax.swing.JLabel getjLabel13() {
-//        return jLabel13;
-//    }
-
-    public javax.swing.JLabel getjLabel15() {
-        return jLabel15;
-    }
-
-    public javax.swing.JLabel getjLabel16() {
-        return jLabel16;
-    }
-
-    public javax.swing.JLabel getjLabel17() {
-        return jLabel17;
-    }
-    
-//    public javax.swing.JLabel getjLabel2() {
-//        return jLabelTaille;
-//    }
-
-//    public javax.swing.JLabel getjLabel3() {
-//        return jLabelCouleur;
-//    }
-
-    public javax.swing.JLabel getjLabel4() {
-        return jLabel4;
-    }
-
-//    public javax.swing.JLabel getjLabel5() {
-//        return jLabel5;
-//    }
-//
-//    public javax.swing.JLabel getjLabel6() {
-//        return jLabel6;
-//    }
-//
-//    public javax.swing.JLabel getjLabel7() {
-//        return jLabel7;
-//    }
-//
-//    public javax.swing.JLabel getjLabel8() {
-//        return jLabel8;
-//    }
-//
-//    public javax.swing.JLabel getjLabel9() {
-//        return jLabel9;
-//    }
-
     public javax.swing.JMenu getjMenu1() {
         return jMenu1;
-    }
-
-    public javax.swing.JMenu getjMenu2() {
-        return jMenu2;
     }
 
     public javax.swing.JMenuBar getjMenuBar1() {
@@ -2825,16 +2845,8 @@ public class Menu extends javax.swing.JFrame {
         return jMenuItem1;
     }
 
-    public javax.swing.JMenuItem getjMenuItem10() {
-        return jMenuItem10;
-    }
-
     public javax.swing.JMenuItem getjMenuItem5() {
         return jMenuItem5;
-    }
-
-    public javax.swing.JMenuItem getjMenuItem9() {
-        return jMenuItem9;
     }
 
     public javax.swing.JPanel getjPanel1() {
