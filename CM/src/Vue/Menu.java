@@ -29,6 +29,9 @@ public class Menu extends javax.swing.JFrame {
     private Color cTDM = Color.BLACK;
     private Color cBorderInt = Color.BLACK;
     private Color cBorderExt = Color.BLACK;
+    private Color cBackgroundHeaderCol = Color.BLACK;
+    private Color cBackgroundHeaderLine = Color.BLACK;
+    private Color cBorderBackground = Color.BLACK;
     private Color cMainTitle = Color.BLACK;
     private Color cTitleChapter = Color.BLACK;
     private Color cTitle1 = Color.BLACK;
@@ -2214,8 +2217,8 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", c);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
+        jButtonCouleur15.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        jButtonCouleur15.setBackground(c);
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur15ActionPerformed
 
@@ -2228,8 +2231,8 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", c);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
+        jButtonCouleur14.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        jButtonCouleur14.setBackground(c);
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur14ActionPerformed
 
@@ -2242,8 +2245,8 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", c);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
+        jButtonCouleur13.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        jButtonCouleur13.setBackground(c);
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur13ActionPerformed
 
@@ -2260,39 +2263,36 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", c);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
+        jButtonCouleur12.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        jButtonCouleur12.setBackground(c);
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur12ActionPerformed
 
     private void cFondEnTeteColonneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cFondEnTeteColonneActionPerformed
         // TODO add your handling code here:
         JColorChooser jc = new JColorChooser();
-        c = jc.showDialog(null, "Choisissez une couleur", c);
+        cBackgroundHeaderCol = jc.showDialog(null, "Choisissez une couleur", cBackgroundHeaderCol);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
-        System.out.println(c);
+        cFondEnTeteColonne.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        cFondEnTeteColonne.setBackground(cBackgroundHeaderCol);
     }//GEN-LAST:event_cFondEnTeteColonneActionPerformed
 
     private void cFondEnTeteLigneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cFondEnTeteLigneActionPerformed
         // TODO add your handling code here:
         JColorChooser jc = new JColorChooser();
-        c = jc.showDialog(null, "Choisissez une couleur", c);
+        cBackgroundHeaderLine = jc.showDialog(null, "Choisissez une couleur", cBackgroundHeaderLine);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
-        System.out.println(c);
+        cFondEnTeteLigne.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        cFondEnTeteLigne.setBackground(cBackgroundHeaderLine);
     }//GEN-LAST:event_cFondEnTeteLigneActionPerformed
 
     private void cBordureFondCourantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureFondCourantActionPerformed
         // TODO add your handling code here:
         JColorChooser jc = new JColorChooser();
-        c = jc.showDialog(null, "Choisissez une couleur", c);
+        cBorderBackground = jc.showDialog(null, "Choisissez une couleur", cBorderBackground);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
-        System.out.println(c);
+        cBordureFondCourant.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        cBordureFondCourant.setBackground(cBorderBackground);
     }//GEN-LAST:event_cBordureFondCourantActionPerformed
 
     private void cBordureExtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureExtActionPerformed
@@ -2302,19 +2302,16 @@ public class Menu extends javax.swing.JFrame {
         //Bouton du panel de couleur affiche la couleur choisie actuellement
         cBordureExt.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
         cBordureExt.setBackground(cBorderExt);
-        System.out.println(c);
     }//GEN-LAST:event_cBordureExtActionPerformed
 
     private void cBordureIntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureIntActionPerformed
         // TODO add your handling code here:
-        
         JColorChooser jc = new JColorChooser();
         cBorderInt = jc.showDialog(null, "Choisissez une couleur", cBorderInt);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
         cBordureInt.setFocusPainted(false);
         //cBordureInt.setBorder(/*BorderFactory.createLineBorder(Color.black)*/);
         cBordureInt.setBackground(cBorderInt);   
-        System.out.println(c);
     }//GEN-LAST:event_cBordureIntActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -2330,8 +2327,8 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", c);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
+        jButtonCouleur11.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        jButtonCouleur11.setBackground(c);
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur11ActionPerformed
 
@@ -2340,8 +2337,8 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", c);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
+        jButtonCouleur10.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        jButtonCouleur10.setBackground(c);
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur10ActionPerformed
 
@@ -2370,8 +2367,8 @@ public class Menu extends javax.swing.JFrame {
         JColorChooser jc = new JColorChooser();
         c = jc.showDialog(null, "Choisissez une couleur", c);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur.setBackground(c);
+        jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        jButtonCouleur8.setBackground(c);
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur8ActionPerformed
 
