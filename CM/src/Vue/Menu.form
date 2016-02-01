@@ -478,7 +478,7 @@
                                               <Component id="jButtonCouleur9" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                                               <Component id="jCheckBox5" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jButton30" min="-2" pref="39" max="-2" attributes="0"/>
+                                                  <Component id="jButtonGras1" min="-2" pref="39" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jButtonItaliqueCouv" min="-2" pref="37" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -528,7 +528,7 @@
                                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel108" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButton30" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonGras1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButtonItaliqueCouv" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButtonSouligner1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -625,6 +625,9 @@
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCouleur9ActionPerformed"/>
@@ -645,12 +648,12 @@
                             <Property name="text" type="java.lang.String" value="Style :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton30">
+                        <Component class="javax.swing.JButton" name="jButtonGras1">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="G"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton30ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGras1ActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel109">
@@ -1085,6 +1088,9 @@
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCouleurActionPerformed"/>
@@ -1162,7 +1168,7 @@
                                           <Component id="jButtonCouleur7" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                                           <Component id="jCheckBox3" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jButton22" min="-2" pref="39" max="-2" attributes="0"/>
+                                              <Component id="jButtonGras2" min="-2" pref="39" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jButtonItaliqueTDM" min="-2" pref="37" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -1218,7 +1224,7 @@
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel98" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton22" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonGras2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButtonItaliqueTDM" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButtonSouligner2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1328,6 +1334,9 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCouleur7ActionPerformed"/>
@@ -1348,12 +1357,12 @@
                 <Property name="text" type="java.lang.String" value="Style :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton22">
+            <Component class="javax.swing.JButton" name="jButtonGras2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="G"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton22ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGras2ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonItaliqueTDM">
@@ -1482,7 +1491,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jComboBox4" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jButton26" min="-2" pref="39" max="-2" attributes="0"/>
+                                              <Component id="jButtonGras3" min="-2" pref="39" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jButtonItaliqueTitre" min="-2" pref="37" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -1544,7 +1553,7 @@
                                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel103" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jButton26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jButtonGras3" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jButtonItaliqueTitre" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jButtonSouligner3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
@@ -1640,6 +1649,9 @@
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="null"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCouleur8ActionPerformed"/>
@@ -1655,12 +1667,12 @@
                         <Property name="text" type="java.lang.String" value="C&#xe9;sure :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton26">
+                    <Component class="javax.swing.JButton" name="jButtonGras3">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="G"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton26ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGras3ActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButtonItaliqueTitre">
@@ -1767,7 +1779,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jComboBox6" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jButton38" min="-2" pref="39" max="-2" attributes="0"/>
+                                              <Component id="jButtonGras4" min="-2" pref="39" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jButtonItaliquePara" min="-2" pref="37" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -1891,7 +1903,7 @@
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel111" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonGras4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButtonItaliquePara" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButtonSouligner4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1965,12 +1977,12 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox6ActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton38">
+                    <Component class="javax.swing.JButton" name="jButtonGras4">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="G"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton38ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGras4ActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButtonItaliquePara">
@@ -1987,6 +1999,9 @@
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="null"/>
                         </Property>
                       </Properties>
                       <Events>
@@ -2151,6 +2166,9 @@
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="null"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCouleur11ActionPerformed"/>
@@ -2253,8 +2271,8 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="cBordureInt2" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Component id="cBordureInt1" min="-2" pref="24" max="-2" attributes="0"/>
+                                      <Component id="cBordureExt" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
+                                      <Component id="cBordureInt" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -2271,12 +2289,12 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="cBordureInt1" min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="cBordureInt" min="-2" pref="26" max="-2" attributes="0"/>
                                       <Component id="jTitre1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="cBordureInt2" min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="cBordureExt" min="-2" pref="26" max="-2" attributes="0"/>
                                       <Component id="jTitre2" min="-2" pref="14" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -2297,19 +2315,17 @@
                             <Property name="text" type="java.lang.String" value="pt"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="cBordureInt1">
+                        <Component class="javax.swing.JButton" name="cBordureInt">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
-                              </Border>
+                              <Border info="null"/>
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBordureInt1ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBordureIntActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jTitre1">
@@ -2322,19 +2338,17 @@
                             <Property name="text" type="java.lang.String" value="Bordures externes :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="cBordureInt2">
+                        <Component class="javax.swing.JButton" name="cBordureExt">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
-                              </Border>
+                              <Border info="null"/>
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBordureInt2ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBordureExtActionPerformed"/>
                           </Events>
                         </Component>
                       </SubComponents>
@@ -2430,9 +2444,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
-                              </Border>
+                              <Border info="null"/>
                             </Property>
                           </Properties>
                           <Events>
@@ -2445,9 +2457,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
-                              </Border>
+                              <Border info="null"/>
                             </Property>
                           </Properties>
                           <Events>
@@ -2460,9 +2470,7 @@
                               <Color blue="0" green="0" red="0" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                                <LineBorder/>
-                              </Border>
+                              <Border info="null"/>
                             </Property>
                           </Properties>
                           <Events>
@@ -2511,7 +2519,7 @@
                                               <Component id="jButtonCouleur12" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                                               <Component id="jCheckBox7" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jButton40" min="-2" pref="39" max="-2" attributes="0"/>
+                                                  <Component id="jButtonGras5" min="-2" pref="39" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jButtonItaliqueTab" min="-2" pref="37" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -2575,7 +2583,7 @@
                                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel120" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jButton40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButtonGras5" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jButtonItaliqueTab" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jButtonSouligner5" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -2691,12 +2699,12 @@
                             <Property name="text" type="java.lang.String" value="Style :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton40">
+                        <Component class="javax.swing.JButton" name="jButtonGras5">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="G"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton40ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGras5ActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButtonItaliqueTab">
@@ -2922,6 +2930,9 @@
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
                         </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="null"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCouleur13ActionPerformed"/>
@@ -2997,7 +3008,7 @@
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Component id="jLabel125" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jButton48" min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="jButtonGras6" min="-2" pref="39" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButtonItaliqueDos" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -3052,7 +3063,7 @@
                                   <Component id="jButtonCouleur14" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                       <Component id="jLabel125" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButton48" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonGras6" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButtonItaliqueDos" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButtonSouligner6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -3133,6 +3144,9 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCouleur14ActionPerformed"/>
@@ -3143,12 +3157,12 @@
                 <Property name="text" type="java.lang.String" value="Style :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton48">
+            <Component class="javax.swing.JButton" name="jButtonGras6">
               <Properties>
                 <Property name="text" type="java.lang.String" value="G"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton48ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGras6ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonItaliqueDos">
@@ -3208,6 +3222,9 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
                 </Property>
               </Properties>
               <Events>

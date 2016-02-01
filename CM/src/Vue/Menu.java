@@ -25,7 +25,10 @@ public class Menu extends javax.swing.JFrame {
     private controleur controleur;
     private Color c = Color.BLACK;
     private Color sc = Color.BLACK;
-    private Color TDM = Color.BLACK;
+    private Color cTabLine = Color.BLACK;    
+    private Color cTDM = Color.BLACK;
+    private Color cBorderInt = Color.BLACK;
+    private Color cBorderExt = Color.BLACK;
     private Color cMainTitle = Color.BLACK;
     private Color cTitleChapter = Color.BLACK;
     private Color cTitle1 = Color.BLACK;
@@ -168,7 +171,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel107 = new javax.swing.JLabel();
         jCheckBox5 = new javax.swing.JCheckBox();
         jLabel108 = new javax.swing.JLabel();
-        jButton30 = new javax.swing.JButton();
+        jButtonGras1 = new javax.swing.JButton();
         jLabel109 = new javax.swing.JLabel();
         jButtonAliGauCouv = new javax.swing.JButton();
         jButtonItaliqueCouv = new javax.swing.JButton();
@@ -222,7 +225,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel97 = new javax.swing.JLabel();
         jCheckBox3 = new javax.swing.JCheckBox();
         jLabel98 = new javax.swing.JLabel();
-        jButton22 = new javax.swing.JButton();
+        jButtonGras2 = new javax.swing.JButton();
         jButtonItaliqueTDM = new javax.swing.JButton();
         jButtonSouligner2 = new javax.swing.JButton();
         jLabel99 = new javax.swing.JLabel();
@@ -242,7 +245,7 @@ public class Menu extends javax.swing.JFrame {
         jButtonCouleur8 = new javax.swing.JButton();
         jTitre4 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
-        jButton26 = new javax.swing.JButton();
+        jButtonGras3 = new javax.swing.JButton();
         jButtonItaliqueTitre = new javax.swing.JButton();
         jButtonSouligner3 = new javax.swing.JButton();
         jButtonAliDroitTitre = new javax.swing.JButton();
@@ -262,7 +265,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel111 = new javax.swing.JLabel();
         jLabel112 = new javax.swing.JLabel();
         jCheckBox6 = new javax.swing.JCheckBox();
-        jButton38 = new javax.swing.JButton();
+        jButtonGras4 = new javax.swing.JButton();
         jButtonItaliquePara = new javax.swing.JButton();
         jButtonSouligner4 = new javax.swing.JButton();
         jButtonCouleur10 = new javax.swing.JButton();
@@ -297,10 +300,10 @@ public class Menu extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jSpinner2 = new javax.swing.JSpinner();
         jLabel29 = new javax.swing.JLabel();
-        cBordureInt1 = new javax.swing.JButton();
+        cBordureInt = new javax.swing.JButton();
         jTitre1 = new javax.swing.JLabel();
         jTitre2 = new javax.swing.JLabel();
-        cBordureInt2 = new javax.swing.JButton();
+        cBordureExt = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
         jTitre8 = new javax.swing.JLabel();
@@ -321,7 +324,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel119 = new javax.swing.JLabel();
         jCheckBox7 = new javax.swing.JCheckBox();
         jLabel120 = new javax.swing.JLabel();
-        jButton40 = new javax.swing.JButton();
+        jButtonGras5 = new javax.swing.JButton();
         jButtonItaliqueTab = new javax.swing.JButton();
         jButtonSouligner5 = new javax.swing.JButton();
         jButtonAliDroitTab = new javax.swing.JButton();
@@ -357,7 +360,7 @@ public class Menu extends javax.swing.JFrame {
         jTitre12 = new javax.swing.JLabel();
         jButtonCouleur14 = new javax.swing.JButton();
         jLabel125 = new javax.swing.JLabel();
-        jButton48 = new javax.swing.JButton();
+        jButtonGras6 = new javax.swing.JButton();
         jButtonItaliqueDos = new javax.swing.JButton();
         jButtonSouligner6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -547,6 +550,7 @@ public class Menu extends javax.swing.JFrame {
         jTitre5.setText("Couleur :");
 
         jButtonCouleur9.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur9.setBorder(null);
         jButtonCouleur9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleur9ActionPerformed(evt);
@@ -563,10 +567,10 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel108.setText("Style :");
 
-        jButton30.setText("G");
-        jButton30.addActionListener(new java.awt.event.ActionListener() {
+        jButtonGras1.setText("G");
+        jButtonGras1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton30ActionPerformed(evt);
+                jButtonGras1ActionPerformed(evt);
             }
         });
 
@@ -629,7 +633,7 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jButtonCouleur9, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox5)
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonGras1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonItaliqueCouv, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -667,7 +671,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel108)
-                    .addComponent(jButton30)
+                    .addComponent(jButtonGras1)
                     .addComponent(jButtonItaliqueCouv)
                     .addComponent(jButtonSouligner1))
                 .addGap(18, 18, 18)
@@ -757,6 +761,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel58.setText("Couleur de lignes :");
 
         jButtonCouleur.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur.setBorder(null);
         jButtonCouleur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleurActionPerformed(evt);
@@ -973,6 +978,7 @@ public class Menu extends javax.swing.JFrame {
         jTitre3.setText("Couleur :");
 
         jButtonCouleur7.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur7.setBorder(null);
         jButtonCouleur7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleur7ActionPerformed(evt);
@@ -989,10 +995,10 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel98.setText("Style :");
 
-        jButton22.setText("G");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
+        jButtonGras2.setText("G");
+        jButtonGras2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
+                jButtonGras2ActionPerformed(evt);
             }
         });
 
@@ -1050,7 +1056,7 @@ public class Menu extends javax.swing.JFrame {
                                     .addComponent(jButtonCouleur7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jCheckBox3)
                                     .addGroup(jPanel8Layout.createSequentialGroup()
-                                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButtonGras2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButtonItaliqueTDM, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1092,7 +1098,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel98)
-                            .addComponent(jButton22)
+                            .addComponent(jButtonGras2)
                             .addComponent(jButtonItaliqueTDM)
                             .addComponent(jButtonSouligner2))
                         .addGap(18, 18, 18)
@@ -1126,6 +1132,7 @@ public class Menu extends javax.swing.JFrame {
         jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jButtonCouleur8.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur8.setBorder(null);
         jButtonCouleur8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleur8ActionPerformed(evt);
@@ -1136,10 +1143,10 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel101.setText("Césure :");
 
-        jButton26.setText("G");
-        jButton26.addActionListener(new java.awt.event.ActionListener() {
+        jButtonGras3.setText("G");
+        jButtonGras3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26ActionPerformed(evt);
+                jButtonGras3ActionPerformed(evt);
             }
         });
 
@@ -1207,7 +1214,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonGras3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonItaliqueTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1256,7 +1263,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(12, 12, 12)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel103)
-                            .addComponent(jButton26)
+                            .addComponent(jButtonGras3)
                             .addComponent(jButtonItaliqueTitre)
                             .addComponent(jButtonSouligner3))
                         .addGap(18, 18, 18)
@@ -1293,10 +1300,10 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton38.setText("G");
-        jButton38.addActionListener(new java.awt.event.ActionListener() {
+        jButtonGras4.setText("G");
+        jButtonGras4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton38ActionPerformed(evt);
+                jButtonGras4ActionPerformed(evt);
             }
         });
 
@@ -1305,6 +1312,7 @@ public class Menu extends javax.swing.JFrame {
         jButtonSouligner4.setText("S");
 
         jButtonCouleur10.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur10.setBorder(null);
         jButtonCouleur10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleur10ActionPerformed(evt);
@@ -1351,6 +1359,7 @@ public class Menu extends javax.swing.JFrame {
         jTitre7.setText("Couleur :");
 
         jButtonCouleur11.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur11.setBorder(null);
         jButtonCouleur11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleur11ActionPerformed(evt);
@@ -1401,7 +1410,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonGras4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonItaliquePara, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1502,7 +1511,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel111)
-                    .addComponent(jButton38)
+                    .addComponent(jButtonGras4)
                     .addComponent(jButtonItaliquePara)
                     .addComponent(jButtonSouligner4))
                 .addGap(18, 18, 18)
@@ -1535,11 +1544,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel29.setText("pt");
 
-        cBordureInt1.setBackground(new java.awt.Color(0, 0, 0));
-        cBordureInt1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cBordureInt1.addActionListener(new java.awt.event.ActionListener() {
+        cBordureInt.setBackground(new java.awt.Color(0, 0, 0));
+        cBordureInt.setBorder(null);
+        cBordureInt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cBordureInt1ActionPerformed(evt);
+                cBordureIntActionPerformed(evt);
             }
         });
 
@@ -1547,11 +1556,11 @@ public class Menu extends javax.swing.JFrame {
 
         jTitre2.setText("Bordures externes :");
 
-        cBordureInt2.setBackground(new java.awt.Color(0, 0, 0));
-        cBordureInt2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cBordureInt2.addActionListener(new java.awt.event.ActionListener() {
+        cBordureExt.setBackground(new java.awt.Color(0, 0, 0));
+        cBordureExt.setBorder(null);
+        cBordureExt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cBordureInt2ActionPerformed(evt);
+                cBordureExtActionPerformed(evt);
             }
         });
 
@@ -1571,8 +1580,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel29))
-                    .addComponent(cBordureInt2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cBordureInt1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cBordureExt, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cBordureInt, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
@@ -1585,11 +1594,11 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jLabel29))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cBordureInt1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cBordureInt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTitre1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cBordureInt2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cBordureExt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTitre2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1603,7 +1612,7 @@ public class Menu extends javax.swing.JFrame {
         jTitre9.setText("En-tête de colonne :");
 
         cBordureFondCourant.setBackground(new java.awt.Color(0, 0, 0));
-        cBordureFondCourant.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cBordureFondCourant.setBorder(null);
         cBordureFondCourant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cBordureFondCourantActionPerformed(evt);
@@ -1611,7 +1620,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         cFondEnTeteLigne.setBackground(new java.awt.Color(0, 0, 0));
-        cFondEnTeteLigne.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cFondEnTeteLigne.setBorder(null);
         cFondEnTeteLigne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cFondEnTeteLigneActionPerformed(evt);
@@ -1619,7 +1628,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         cFondEnTeteColonne.setBackground(new java.awt.Color(0, 0, 0));
-        cFondEnTeteColonne.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cFondEnTeteColonne.setBorder(null);
         cFondEnTeteColonne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cFondEnTeteColonneActionPerformed(evt);
@@ -1708,10 +1717,10 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel120.setText("Style :");
 
-        jButton40.setText("G");
-        jButton40.addActionListener(new java.awt.event.ActionListener() {
+        jButtonGras5.setText("G");
+        jButtonGras5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton40ActionPerformed(evt);
+                jButtonGras5ActionPerformed(evt);
             }
         });
 
@@ -1757,7 +1766,7 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jButtonCouleur12, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox7)
                             .addGroup(jPanel18Layout.createSequentialGroup()
-                                .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonGras5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonItaliqueTab, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1807,7 +1816,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel120)
-                            .addComponent(jButton40)
+                            .addComponent(jButtonGras5)
                             .addComponent(jButtonItaliqueTab)
                             .addComponent(jButtonSouligner5))
                         .addGap(18, 18, 18)
@@ -1866,6 +1875,7 @@ public class Menu extends javax.swing.JFrame {
         jTitre11.setText("Couleur :");
 
         jButtonCouleur13.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur13.setBorder(null);
         jButtonCouleur13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleur13ActionPerformed(evt);
@@ -2002,6 +2012,7 @@ public class Menu extends javax.swing.JFrame {
         jTitre12.setText("Couleur :");
 
         jButtonCouleur14.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur14.setBorder(null);
         jButtonCouleur14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleur14ActionPerformed(evt);
@@ -2010,10 +2021,10 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel125.setText("Style :");
 
-        jButton48.setText("G");
-        jButton48.addActionListener(new java.awt.event.ActionListener() {
+        jButtonGras6.setText("G");
+        jButtonGras6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton48ActionPerformed(evt);
+                jButtonGras6ActionPerformed(evt);
             }
         });
 
@@ -2035,6 +2046,7 @@ public class Menu extends javax.swing.JFrame {
         jTitre13.setText("Couleur :");
 
         jButtonCouleur15.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCouleur15.setBorder(null);
         jButtonCouleur15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCouleur15ActionPerformed(evt);
@@ -2066,7 +2078,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addComponent(jLabel125)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton48, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonGras6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonItaliqueDos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2113,7 +2125,7 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jButtonCouleur14, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel125)
-                                .addComponent(jButton48)
+                                .addComponent(jButtonGras6)
                                 .addComponent(jButtonItaliqueDos)
                                 .addComponent(jButtonSouligner6)))
                         .addGap(48, 48, 48)
@@ -2207,9 +2219,9 @@ public class Menu extends javax.swing.JFrame {
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur15ActionPerformed
 
-    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
+    private void jButtonGras6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGras6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton48ActionPerformed
+    }//GEN-LAST:event_jButtonGras6ActionPerformed
 
     private void jButtonCouleur14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCouleur14ActionPerformed
         // TODO add your handling code here:
@@ -2235,9 +2247,9 @@ public class Menu extends javax.swing.JFrame {
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur13ActionPerformed
 
-    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+    private void jButtonGras5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGras5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton40ActionPerformed
+    }//GEN-LAST:event_jButtonGras5ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
         // TODO add your handling code here:
@@ -2283,25 +2295,27 @@ public class Menu extends javax.swing.JFrame {
         System.out.println(c);
     }//GEN-LAST:event_cBordureFondCourantActionPerformed
 
-    private void cBordureInt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureInt2ActionPerformed
+    private void cBordureExtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureExtActionPerformed
         // TODO add your handling code here:
         JColorChooser jc = new JColorChooser();
-        c = jc.showDialog(null, "Choisissez une couleur", c);
+        cBorderExt = jc.showDialog(null, "Choisissez une couleur", cBorderExt);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createLineBorder(Color.black));
-        jButtonCouleur.setBackground(c);
+        cBordureExt.setBorder(BorderFactory.createLineBorder(Color.black));
+        cBordureExt.setBackground(cBorderExt);
         System.out.println(c);
-    }//GEN-LAST:event_cBordureInt2ActionPerformed
+    }//GEN-LAST:event_cBordureExtActionPerformed
 
-    private void cBordureInt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureInt1ActionPerformed
+    private void cBordureIntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureIntActionPerformed
         // TODO add your handling code here:
+        
         JColorChooser jc = new JColorChooser();
-        c = jc.showDialog(null, "Choisissez une couleur", c);
+        cBorderInt = jc.showDialog(null, "Choisissez une couleur", cBorderInt);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur.setBorder(BorderFactory.createLineBorder(Color.black));
-        jButtonCouleur.setBackground(c);
+        cBordureInt.setFocusPainted(false);
+        //cBordureInt.setBorder(/*BorderFactory.createLineBorder(Color.black)*/);
+        cBordureInt.setBackground(cBorderInt);   
         System.out.println(c);
-    }//GEN-LAST:event_cBordureInt1ActionPerformed
+    }//GEN-LAST:event_cBordureIntActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -2331,9 +2345,9 @@ public class Menu extends javax.swing.JFrame {
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur10ActionPerformed
 
-    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+    private void jButtonGras4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGras4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton38ActionPerformed
+    }//GEN-LAST:event_jButtonGras4ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
         // TODO add your handling code here:
@@ -2347,9 +2361,9 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+    private void jButtonGras3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGras3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton26ActionPerformed
+    }//GEN-LAST:event_jButtonGras3ActionPerformed
 
     private void jButtonCouleur8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCouleur8ActionPerformed
         // TODO add your handling code here:
@@ -2361,9 +2375,9 @@ public class Menu extends javax.swing.JFrame {
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleur8ActionPerformed
 
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+    private void jButtonGras2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGras2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22ActionPerformed
+    }//GEN-LAST:event_jButtonGras2ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
         // TODO add your handling code here:
@@ -2372,19 +2386,19 @@ public class Menu extends javax.swing.JFrame {
     private void jButtonCouleur7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCouleur7ActionPerformed
         //Creation d'un jColorChooser, Panel de couleur
         JColorChooser jc = new JColorChooser();
-        TDM = jc.showDialog(null, "Choisissez une couleur", TDM);
+        cTDM = jc.showDialog(null, "Choisissez une couleur", cTDM);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
         jButtonCouleur7.setBorder(BorderFactory.createLineBorder(Color.black));
-        jButtonCouleur7.setBackground(TDM);
+        jButtonCouleur7.setBackground(cTDM);
     }//GEN-LAST:event_jButtonCouleur7ActionPerformed
 
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton34ActionPerformed
 
-    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+    private void jButtonGras1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGras1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton30ActionPerformed
+    }//GEN-LAST:event_jButtonGras1ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
         // TODO add your handling code here:
@@ -2483,26 +2497,20 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField JproN;
     private javax.swing.JTextField Jreleas;
     private javax.swing.JTextField Jtit;
+    private javax.swing.JButton cBordureExt;
     private javax.swing.JButton cBordureFondCourant;
-    private javax.swing.JButton cBordureInt1;
-    private javax.swing.JButton cBordureInt2;
+    private javax.swing.JButton cBordureInt;
     private javax.swing.JButton cFondEnTeteColonne;
     private javax.swing.JButton cFondEnTeteLigne;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton47;
-    private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -2539,6 +2547,12 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCouleur7;
     private javax.swing.JButton jButtonCouleur8;
     private javax.swing.JButton jButtonCouleur9;
+    private javax.swing.JButton jButtonGras1;
+    private javax.swing.JButton jButtonGras2;
+    private javax.swing.JButton jButtonGras3;
+    private javax.swing.JButton jButtonGras4;
+    private javax.swing.JButton jButtonGras5;
+    private javax.swing.JButton jButtonGras6;
     private javax.swing.JButton jButtonItalique5;
     private javax.swing.JButton jButtonItalique7;
     private javax.swing.JButton jButtonItaliqueCouv;
@@ -2852,6 +2866,31 @@ public class Menu extends javax.swing.JFrame {
     
     public javax.swing.JButton getjButtonSoulignerDos() {
         return jButtonSouligner6;
+    }
+    
+    //Boutons Gras 
+    public JButton getjButtonGrasCouv() {
+        return jButtonGras1;
+    }
+
+    public JButton getjButtonGrasTDM() {
+        return jButtonGras2;
+    }
+
+    public JButton getjButtonGrasTitre() {
+        return jButtonGras3;
+    }
+
+    public JButton getjButtonGrasPara() {
+        return jButtonGras4;
+    }
+
+    public JButton getjButtonGrasTab() {
+        return jButtonGras5;
+    }
+
+    public JButton getjButtonGrasDos() {
+        return jButtonGras6;
     }
     
     //jComboBox pour la police d'ecriture

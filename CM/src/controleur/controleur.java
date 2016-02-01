@@ -6,20 +6,15 @@ import Vue.Menu;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.nio.charset.StandardCharsets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import javax.swing.JColorChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -3614,7 +3609,15 @@ public class controleur {
         System.out.print(color);
         return color;
     }
-    
+     
+//    public static String getColorTabLine() {
+//        String color;
+//        color=Integer.toHexString(getVue().getcBordureFondCourant().getRGB());
+//        color=color.substring(2,8);
+//        System.out.print(color);
+//        return color;
+//    }
+            
     public static String getColorBorderOut(){
         String color;
         color=Integer.toHexString(getVue().getcBorderOut().getRGB());
