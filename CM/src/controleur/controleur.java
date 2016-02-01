@@ -54,9 +54,12 @@ public class controleur {
         int rep = JOptionPane.showConfirmDialog(getVue(), "Quitter l'application\nEtes-vous sûr(e) ?", "XSLT-CM", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (rep == JOptionPane.YES_OPTION) {
             // mettre fin à l'application
-//            getVue().dispose();
-            System.exit(0);
+//          getVue().dispose();
+            getVue().setDefaultCloseOperation(getVue().EXIT_ON_CLOSE);
+        } else if (rep == JOptionPane.NO_OPTION){
+            getVue().setDefaultCloseOperation(getVue().DO_NOTHING_ON_CLOSE);
         }
+
     }
     
     //Recuperation de la Vue
