@@ -123,10 +123,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jPanel4" min="-2" pref="437" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jPanel4" alignment="0" pref="708" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -885,6 +882,9 @@
                         </Component>
                         <Component class="javax.swing.JSpinner" name="jSpinnerColonne1">
                           <Properties>
+                            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                              <SpinnerModel initial="0" maximum="300" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                            </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Curseur par d&#xe9;faut"/>
                             </Property>
@@ -905,6 +905,9 @@
                         </Component>
                         <Component class="javax.swing.JSpinner" name="jSpinnerColonne2">
                           <Properties>
+                            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                              <SpinnerModel initial="0" maximum="300" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                            </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Curseur par d&#xe9;faut"/>
                             </Property>
@@ -913,11 +916,15 @@
                             </Property>
                           </Properties>
                           <Events>
+                            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jSpinnerColonne2FocusGained,verif"/>
                             <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="verif"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="jSpinnerColonne3">
                           <Properties>
+                            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                              <SpinnerModel initial="0" maximum="300" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                            </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Curseur par d&#xe9;faut"/>
                             </Property>
@@ -961,22 +968,40 @@
                         </Component>
                         <Component class="javax.swing.JSpinner" name="jSpinnerColonne4">
                           <Properties>
+                            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                              <SpinnerModel initial="0" maximum="300" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                            </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Curseur par d&#xe9;faut"/>
+                            </Property>
+                            <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="75" type="code"/>
                             </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="jSpinnerColonne5">
                           <Properties>
+                            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                              <SpinnerModel initial="0" maximum="300" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                            </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Curseur par d&#xe9;faut"/>
+                            </Property>
+                            <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="10" type="code"/>
                             </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="jSpinnerColonne6">
                           <Properties>
+                            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                              <SpinnerModel initial="0" maximum="300" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                            </Property>
                             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                               <Color id="Curseur par d&#xe9;faut"/>
+                            </Property>
+                            <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="175" type="code"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -1071,6 +1096,9 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Parcourir"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel57">
                           <Properties>
@@ -1111,9 +1139,6 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextFieldNomEntreprise">
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNomEntrepriseActionPerformed"/>
-                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>

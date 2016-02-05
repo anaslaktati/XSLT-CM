@@ -16,6 +16,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
+
 /**
  *
  * @author anas
@@ -693,6 +694,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel9.setText("Colonne 1 :");
 
+        jSpinnerColonne1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
         jSpinnerColonne1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne1.setValue(50);
 
@@ -700,14 +702,20 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel17.setText("Colonne 3 :");
 
+        jSpinnerColonne2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
         jSpinnerColonne2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne2.setValue(116);
         jSpinnerColonne2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jSpinnerColonne2FocusGained(evt);
+                verif(evt);
+            }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 verif(evt);
             }
         });
 
+        jSpinnerColonne3.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
         jSpinnerColonne3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne3.setValue(43);
         jSpinnerColonne3.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -728,11 +736,17 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel52.setText("Ligne 3 :");
 
+        jSpinnerColonne4.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
         jSpinnerColonne4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSpinnerColonne4.setValue(75);
 
+        jSpinnerColonne5.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
         jSpinnerColonne5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSpinnerColonne5.setValue(10);
 
+        jSpinnerColonne6.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
         jSpinnerColonne6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSpinnerColonne6.setValue(175);
 
         jLabel53.setText("mm");
 
@@ -757,6 +771,11 @@ public class Menu extends javax.swing.JFrame {
         jLabel56.setText("Logo :");
 
         jButton4.setText("Parcourir");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel57.setText("Image : ");
 
@@ -775,12 +794,6 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jLabel5.setText("Nom de l'entreprise :");
-
-        jTextFieldNomEntreprise.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomEntrepriseActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -956,9 +969,7 @@ public class Menu extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 708, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Couverture", jPanel1);
@@ -2435,21 +2446,24 @@ public class Menu extends javax.swing.JFrame {
         c3=(Integer)jSpinnerColonne1.getValue();
         int somme=c1+c2+c3;
         //Renvoie une erreur si format page non respecté
-        if(jComboBoxFormat.getSelectedItem() == "A4" && somme != 210){
-            jSpinnerColonne1.setBackground(Color.RED);
-            jSpinnerColonne2.setBackground(Color.RED);
-            jSpinnerColonne3.setBackground(Color.RED);
+        if(jComboBoxFormat.getSelectedItem().toString() == "A4" && somme != 210){
+            jSpinnerColonne3.setValue(210-(c1+c2));
         } else {
         }
     }//GEN-LAST:event_verif
 
-    private void jTextFieldNomEntrepriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomEntrepriseActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomEntrepriseActionPerformed
-
     private void JKeyMotCle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JKeyMotCle1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JKeyMotCle1ActionPerformed
+
+    private void jSpinnerColonne2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jSpinnerColonne2FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSpinnerColonne2FocusGained
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     
     /**
