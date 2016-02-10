@@ -2793,6 +2793,9 @@ public class Menu extends javax.swing.JFrame {
                 jSpinnerColonne1.setValue(50);
                 jSpinnerColonne2.setValue(116);
                 jSpinnerColonne3.setValue(44);
+                jSpinnerColonne4.setValue(87);
+                jSpinnerColonne5.setValue(20);
+                jSpinnerColonne6.setValue(190);
                 break;
             case 7://A5
                 jSpinnerColonne1.setValue(50);

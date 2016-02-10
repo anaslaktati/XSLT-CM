@@ -3379,7 +3379,7 @@ public class controleur {
         String path = chooser.getSelectedFile().getAbsolutePath() ;
         File dir = new File(path+"\\content");
         dir.mkdir();
-        
+
     //Methode pour creer des images dans le dossier content   
         Image img = ImageIO.read(new File(path+"/images/caution.png"));//caution.png
         image = new BufferedImage(img.getWidth(null), img.getHeight(null),BufferedImage.TYPE_INT_ARGB);
@@ -3391,7 +3391,7 @@ public class controleur {
                     } catch (IOException ex) {
                         Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
                     }
-        
+
         Image img2 = ImageIO.read(new File(path+"/images/fleche.png"));//fleche.png
         BufferedImage image2 = new BufferedImage(img2.getWidth(null), img2.getHeight(null),BufferedImage.TYPE_INT_ARGB);
         image2.getGraphics().drawImage(img2, 0, 0, null);
