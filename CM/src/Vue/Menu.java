@@ -694,35 +694,36 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel9.setText("Colonne 1 :");
 
-        jSpinnerColonne1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
+        jSpinnerColonne1.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne1.setValue(50);
+        jSpinnerColonne1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinnerColonne1StateChanged(evt);
+            }
+        });
 
         jLabel16.setText("Colonne 2 :");
 
         jLabel17.setText("Colonne 3 :");
 
-        jSpinnerColonne2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
+        jSpinnerColonne2.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne2.setValue(116);
-        jSpinnerColonne2.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jSpinnerColonne2FocusGained(evt);
-                verif(evt);
+        jSpinnerColonne2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinnerColonne2StateChanged(evt);
             }
+        });
+        jSpinnerColonne2.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 verif(evt);
             }
         });
 
-        jSpinnerColonne3.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
+        jSpinnerColonne3.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jSpinnerColonne3.setValue(43);
-        jSpinnerColonne3.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                verif(evt);
-            }
-        });
+        jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
 
         jLabel48.setText("mm");
 
@@ -736,17 +737,27 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel52.setText("Ligne 3 :");
 
-        jSpinnerColonne4.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
+        jSpinnerColonne4.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jSpinnerColonne4.setValue(75);
+        jSpinnerColonne4.setValue(87);
 
-        jSpinnerColonne5.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
+        jSpinnerColonne5.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jSpinnerColonne5.setValue(10);
+        jSpinnerColonne5.setValue(20);
+        jSpinnerColonne5.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinnerColonne5StateChanged(evt);
+            }
+        });
 
-        jSpinnerColonne6.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 1));
+        jSpinnerColonne6.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jSpinnerColonne6.setValue(175);
+        jSpinnerColonne6.setValue(190);
+        jSpinnerColonne6.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinnerColonne6StateChanged(evt);
+            }
+        });
 
         jLabel53.setText("mm");
 
@@ -758,6 +769,11 @@ public class Menu extends javax.swing.JFrame {
 
         jComboBoxFormat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4A0", "2A0", "A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10" }));
         jComboBoxFormat.setSelectedIndex(6);
+        jComboBoxFormat.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxFormatItemStateChanged(evt);
+            }
+        });
         jComboBoxFormat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxFormatActionPerformed(evt);
@@ -812,10 +828,10 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
                             .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(10, 10, 10)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jSpinnerColonne1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSpinnerColonne2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSpinnerColonne3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jSpinnerColonne1, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
+                            .addComponent(jSpinnerColonne2)
+                            .addComponent(jSpinnerColonne3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel12Layout.createSequentialGroup()
@@ -833,10 +849,10 @@ public class Menu extends javax.swing.JFrame {
                                         .addGap(50, 50, 50)
                                         .addComponent(jLabel15)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jSpinnerColonne6, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSpinnerColonne4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSpinnerColonne5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jSpinnerColonne4, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                                    .addComponent(jSpinnerColonne6)
+                                    .addComponent(jSpinnerColonne5))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel55)
@@ -869,7 +885,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(528, Short.MAX_VALUE))
+                .addContainerGap(520, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2439,33 +2455,777 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxFormatActionPerformed
 
     private void verif(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_verif
-        //Recupere la valeur des colonnes
-        Integer c1,c2,c3;
-        c1=(Integer)jSpinnerColonne1.getValue();
-        c2=(Integer)jSpinnerColonne1.getValue();
-        c3=(Integer)jSpinnerColonne1.getValue();
-        int somme=c1+c2+c3;
-        //Renvoie une erreur si format page non respecté
-        if(jComboBoxFormat.getSelectedItem().toString() == "A4" && somme != 210){
-            jSpinnerColonne3.setValue(210-(c1+c2));
-        } else {
-        }
+        
     }//GEN-LAST:event_verif
 
     private void JKeyMotCle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JKeyMotCle1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JKeyMotCle1ActionPerformed
 
-    private void jSpinnerColonne2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jSpinnerColonne2FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jSpinnerColonne2FocusGained
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    
+    private void jSpinnerColonne2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne2StateChanged
+        //Recupere la valeur des Colonnes
+        int sommeColonne=(Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()+
+                            (Integer)jSpinnerColonne3.getValue();
+
+        switch(jComboBoxFormat.getSelectedIndex()){
+            case 0://4A0
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 1682){
+                    jSpinnerColonne3.setValue(1682-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+          
+                break;
+            case 1://2A0
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 1189){
+                    jSpinnerColonne3.setValue(1189-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+      
+                break;
+            case 2://A0
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 841){
+                    jSpinnerColonne3.setValue(841-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+       
+                break;
+            case 3://A1
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 594){
+                    jSpinnerColonne3.setValue(594-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+      
+                break;
+            case 4://A2
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 420){
+                    jSpinnerColonne3.setValue(420-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+     
+                break;
+            case 5:// A3
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 297){
+                    jSpinnerColonne3.setValue(297-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+       
+                break;
+            case 6://A4
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 210){
+                    jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+          
+                break;
+            case 7://A5
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 148){
+                    jSpinnerColonne3.setValue(148-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+            
+                break;
+            case 8://A6
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 105){
+                    jSpinnerColonne3.setValue(105-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+          
+                break;
+            case 9://A7
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 74){
+                    jSpinnerColonne3.setValue(74-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+              
+                break;
+            case 10://A8
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 52){
+                    jSpinnerColonne3.setValue(52-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+             
+                break;
+            case 11://A9
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 37){
+                    jSpinnerColonne3.setValue(37-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+               
+                break;
+            case 12://A10
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 26){
+                    jSpinnerColonne3.setValue(26-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+             
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+            case 20:
+                break;
+            case 21:
+                break;
+            case 22:
+                break;
+            case 23:
+                break;
+            case 24:
+                break;
+            case 25:
+                break;
+            case 26:
+                break;
+            case 27:
+                break;
+            case 28:
+                break;
+            case 29:
+                break;
+            case 30:
+                break;
+            case 31:
+                break;
+            case 32:
+                break;
+            case 33:
+                break;
+            case 34:
+                break;
+        }
+        
+    }//GEN-LAST:event_jSpinnerColonne2StateChanged
+
+    private void jSpinnerColonne1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne1StateChanged
+        //Recupere la valeur des Colonnes
+        int sommeColonne=(Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()+
+                            (Integer)jSpinnerColonne3.getValue();
+
+        switch(jComboBoxFormat.getSelectedIndex()){
+            case 0://4A0
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 1682){
+                    jSpinnerColonne3.setValue(1682-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+          
+                break;
+            case 1://2A0
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 1189){
+                    jSpinnerColonne3.setValue(1189-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+      
+                break;
+            case 2://A0
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 841){
+                    jSpinnerColonne3.setValue(841-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+       
+                break;
+            case 3://A1
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 594){
+                    jSpinnerColonne3.setValue(594-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+      
+                break;
+            case 4://A2
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 420){
+                    jSpinnerColonne3.setValue(420-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+     
+                break;
+            case 5:// A3
+                //Change la valeur de la 3eme colonne
+                if(sommeColonne != (Integer) 297){
+                    jSpinnerColonne3.setValue(297-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+       
+                break;
+            case 6://A4
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 210){
+                    jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+          
+                break;
+            case 7://A5
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 148){
+                    jSpinnerColonne3.setValue(148-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+            
+                break;
+            case 8://A6
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 105){
+                    jSpinnerColonne3.setValue(105-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+          
+                break;
+            case 9://A7
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 74){
+                    jSpinnerColonne3.setValue(74-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+              
+                break;
+            case 10://A8
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 52){
+                    jSpinnerColonne3.setValue(52-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+             
+                break;
+            case 11://A9
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 37){
+                    jSpinnerColonne3.setValue(37-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+               
+                break;
+            case 12://A10
+                //Change la valeur de la 3eme colonne 
+                if(sommeColonne != (Integer) 26){
+                    jSpinnerColonne3.setValue(26-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+                }
+             
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+            case 20:
+                break;
+            case 21:
+                break;
+            case 22:
+                break;
+            case 23:
+                break;
+            case 24:
+                break;
+            case 25:
+                break;
+            case 26:
+                break;
+            case 27:
+                break;
+            case 28:
+                break;
+            case 29:
+                break;
+            case 30:
+                break;
+            case 31:
+                break;
+            case 32:
+                break;
+            case 33:
+                break;
+            case 34:
+                break;
+        }
+    }//GEN-LAST:event_jSpinnerColonne1StateChanged
+
+    private void jComboBoxFormatItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxFormatItemStateChanged
+        // TODO add your handling code here:
+        switch(jComboBoxFormat.getSelectedIndex()){
+            case 0://4A0
+                jSpinnerColonne1.setValue(400);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 1://2A0
+                jSpinnerColonne1.setValue(309);
+                jSpinnerColonne2.setValue(648);
+                jSpinnerColonne3.setValue(232);
+                break;
+            case 2://A0
+                jSpinnerColonne1.setValue(250);
+                jSpinnerColonne2.setValue(459);
+                jSpinnerColonne3.setValue(132);
+                break;
+            case 3://A1
+                jSpinnerColonne1.setValue(150);
+                jSpinnerColonne2.setValue(342);
+                jSpinnerColonne3.setValue(102);
+                break;
+            case 4://A2
+                jSpinnerColonne1.setValue(100);
+                jSpinnerColonne2.setValue(232);
+                jSpinnerColonne3.setValue(88);
+                break;
+            case 5://A3
+                jSpinnerColonne1.setValue(100);
+                jSpinnerColonne2.setValue(150);
+                jSpinnerColonne3.setValue(47);
+                break;
+            case 6://A4
+                jSpinnerColonne1.setValue(50);
+                jSpinnerColonne2.setValue(116);
+                jSpinnerColonne3.setValue(44);
+                break;
+            case 7://A5
+                jSpinnerColonne1.setValue(50);
+                jSpinnerColonne2.setValue(74);
+                jSpinnerColonne3.setValue(24);
+                break;
+            case 8://A6
+                jSpinnerColonne1.setValue(30);
+                jSpinnerColonne2.setValue(55);
+                jSpinnerColonne3.setValue(20);
+                break;
+            case 9://A7
+                jSpinnerColonne1.setValue(20);
+                jSpinnerColonne2.setValue(40);
+                jSpinnerColonne3.setValue(14);
+                break;
+            case 10://A8
+                jSpinnerColonne1.setValue(12);
+                jSpinnerColonne2.setValue(30);
+                jSpinnerColonne3.setValue(10);
+                break;
+            case 11://A9
+                jSpinnerColonne1.setValue(12);
+                jSpinnerColonne2.setValue(15);
+                jSpinnerColonne3.setValue(10);
+                break;
+            case 12://A10
+                jSpinnerColonne1.setValue(8);
+                jSpinnerColonne2.setValue(14);
+                jSpinnerColonne3.setValue(4);
+                break;
+            case 13://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 14://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 15://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 16://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 17://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 18://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 19://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 20://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 21://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 22://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 23://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 24://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 25://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 26://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 27://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 28://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 29://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 30://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 31://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 32://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 33://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+            case 34://modif
+                jSpinnerColonne1.setValue(300);
+                jSpinnerColonne2.setValue(930);
+                jSpinnerColonne3.setValue(352);
+                break;
+        }
+    }//GEN-LAST:event_jComboBoxFormatItemStateChanged
+
+    private void jSpinnerColonne5StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne5StateChanged
+        //Recupere la valeur des Lines
+        int sommeLines=(Integer)jSpinnerColonne5.getValue()+(Integer)jSpinnerColonne4.getValue()+
+                            (Integer)jSpinnerColonne6.getValue();
+        switch(jComboBoxFormat.getSelectedIndex()){
+            case 0://4A0
+               
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 2378){
+                    jSpinnerColonne4.setValue(2378-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 1://2A0
+                
+               
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 1682){
+                    jSpinnerColonne4.setValue(1682-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 2://A0
+                
+               
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 1189){
+                    jSpinnerColonne4.setValue(1189-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 3://A1
+              
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 841){
+                    jSpinnerColonne4.setValue(841-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 4://A2
+             
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 594){
+                    jSpinnerColonne4.setValue(594-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 5:// A3
+          
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 420){
+                    jSpinnerColonne4.setValue(420-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 6://A4
+          
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 297){
+                    jSpinnerColonne4.setValue(297-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 7://A5
+        
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 210){
+                    jSpinnerColonne4.setValue(210-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 8://A6
+         
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 148){
+                    jSpinnerColonne4.setValue(148-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 9://A7
+           
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 105){
+                    jSpinnerColonne4.setValue(105-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 10://A8
+           
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 74){
+                    jSpinnerColonne4.setValue(74-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 11://A9
+              
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 52){
+                    jSpinnerColonne4.setValue(52-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 12://A10
+             
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 37){
+                    jSpinnerColonne4.setValue(37-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+            case 20:
+                break;
+            case 21:
+                break;
+            case 22:
+                break;
+            case 23:
+                break;
+            case 24:
+                break;
+            case 25:
+                break;
+            case 26:
+                break;
+            case 27:
+                break;
+            case 28:
+                break;
+            case 29:
+                break;
+            case 30:
+                break;
+            case 31:
+                break;
+            case 32:
+                break;
+            case 33:
+                break;
+            case 34:
+                break;
+        }
+    }//GEN-LAST:event_jSpinnerColonne5StateChanged
+
+    private void jSpinnerColonne6StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne6StateChanged
+        //Recupere la valeur des Lines
+        int sommeLines=(Integer)jSpinnerColonne5.getValue()+(Integer)jSpinnerColonne4.getValue()+
+                            (Integer)jSpinnerColonne6.getValue();
+        switch(jComboBoxFormat.getSelectedIndex()){
+            case 0://4A0
+               
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 2378){
+                    jSpinnerColonne4.setValue(2378-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 1://2A0
+                
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 1682){
+                    jSpinnerColonne4.setValue(1682-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 2://A0
+               
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 1189){
+                    jSpinnerColonne4.setValue(1189-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 3://A1
+              
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 841){
+                    jSpinnerColonne4.setValue(841-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 4://A2
+             
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 594){
+                    jSpinnerColonne4.setValue(594-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 5:// A3
+          
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 420){
+                    jSpinnerColonne4.setValue(420-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 6://A4
+          
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 297){
+                    jSpinnerColonne4.setValue(297-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 7://A5
+        
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 210){
+                    jSpinnerColonne4.setValue(210-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 8://A6
+         
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 148){
+                    jSpinnerColonne4.setValue(148-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 9://A7
+           
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 105){
+                    jSpinnerColonne4.setValue(105-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 10://A8
+           
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 74){
+                    jSpinnerColonne4.setValue(74-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 11://A9
+              
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 52){
+                    jSpinnerColonne4.setValue(52-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 12://A10
+             
+                //Change la valeur de la 3eme line
+                if(sommeLines != (Integer) 37){
+                    jSpinnerColonne4.setValue(37-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+                }
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+            case 20:
+                break;
+            case 21:
+                break;
+            case 22:
+                break;
+            case 23:
+                break;
+            case 24:
+                break;
+            case 25:
+                break;
+            case 26:
+                break;
+            case 27:
+                break;
+            case 28:
+                break;
+            case 29:
+                break;
+            case 30:
+                break;
+            case 31:
+                break;
+            case 32:
+                break;
+            case 33:
+                break;
+            case 34:
+                break;
+        }
+    }//GEN-LAST:event_jSpinnerColonne6StateChanged
+
+
     /**
      * @param args the command line arguments
      */
