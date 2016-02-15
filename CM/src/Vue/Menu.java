@@ -2,6 +2,8 @@ package Vue;
 
 import controleur.controleur;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 import java.awt.Toolkit;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -164,11 +166,11 @@ public class Menu extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jLabel105 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<String>();
+        jComboBox5 = new javax.swing.JComboBox<>();
         jLabelPolice7 = new javax.swing.JLabel();
-        jComboBoxPolice = new javax.swing.JComboBox<String>();
+        jComboBoxPolice = new javax.swing.JComboBox<>();
         jLabelTaille7 = new javax.swing.JLabel();
-        jComboBoxTaille1 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille1 = new javax.swing.JComboBox<>();
         jLabel106 = new javax.swing.JLabel();
         jTitre5 = new javax.swing.JLabel();
         jButtonCouleur9 = new javax.swing.JButton();
@@ -215,14 +217,15 @@ public class Menu extends javax.swing.JFrame {
         jButtonCouleur = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jTextFieldNomEntreprise = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel95 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<String>();
+        jComboBox3 = new javax.swing.JComboBox<>();
         jLabelPolice5 = new javax.swing.JLabel();
-        jComboBoxPolice2 = new javax.swing.JComboBox<String>();
+        jComboBoxPolice2 = new javax.swing.JComboBox<>();
         jLabelTaille5 = new javax.swing.JLabel();
-        jComboBoxTaille2 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille2 = new javax.swing.JComboBox<>();
         jLabel96 = new javax.swing.JLabel();
         jTitre3 = new javax.swing.JLabel();
         jButtonCouleur7 = new javax.swing.JButton();
@@ -241,11 +244,11 @@ public class Menu extends javax.swing.JFrame {
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
         jLabel100 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<String>();
-        jComboBoxPolice3 = new javax.swing.JComboBox<String>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBoxPolice3 = new javax.swing.JComboBox<>();
         jLabelPolice6 = new javax.swing.JLabel();
         jLabelTaille6 = new javax.swing.JLabel();
-        jComboBoxTaille3 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille3 = new javax.swing.JComboBox<>();
         jButtonCouleur8 = new javax.swing.JButton();
         jTitre4 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
@@ -275,14 +278,14 @@ public class Menu extends javax.swing.JFrame {
         jButtonCouleur10 = new javax.swing.JButton();
         jTitre6 = new javax.swing.JLabel();
         jLabelTaille8 = new javax.swing.JLabel();
-        jComboBoxTaille4 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille4 = new javax.swing.JComboBox<>();
         jLabel113 = new javax.swing.JLabel();
-        jComboBoxPolice4 = new javax.swing.JComboBox<String>();
+        jComboBoxPolice4 = new javax.swing.JComboBox<>();
         jLabelPolice8 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<String>();
+        jComboBox6 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
@@ -290,7 +293,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabelTaille9 = new javax.swing.JLabel();
-        jComboBoxTaille9 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille9 = new javax.swing.JComboBox<>();
         jLabel115 = new javax.swing.JLabel();
         jTitre7 = new javax.swing.JLabel();
         jButtonCouleur11 = new javax.swing.JButton();
@@ -319,9 +322,9 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille10 = new javax.swing.JLabel();
         jLabelPolice9 = new javax.swing.JLabel();
         jLabel117 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox<String>();
-        jComboBoxPolice5 = new javax.swing.JComboBox<String>();
-        jComboBoxTaille5 = new javax.swing.JComboBox<String>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBoxPolice5 = new javax.swing.JComboBox<>();
+        jComboBoxTaille5 = new javax.swing.JComboBox<>();
         jLabel118 = new javax.swing.JLabel();
         jTitre10 = new javax.swing.JLabel();
         jButtonCouleur12 = new javax.swing.JButton();
@@ -344,7 +347,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jCheckBox2 = new javax.swing.JCheckBox();
         jLabelTaille11 = new javax.swing.JLabel();
-        jComboBoxTaille11 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille11 = new javax.swing.JComboBox<>();
         jLabel122 = new javax.swing.JLabel();
         jTitre11 = new javax.swing.JLabel();
         jButtonCouleur13 = new javax.swing.JButton();
@@ -359,7 +362,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabelTaille12 = new javax.swing.JLabel();
-        jComboBoxTaille6 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille6 = new javax.swing.JComboBox<>();
         jLabel124 = new javax.swing.JLabel();
         jTitre12 = new javax.swing.JLabel();
         jButtonCouleur14 = new javax.swing.JButton();
@@ -371,7 +374,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel34 = new javax.swing.JLabel();
         jCheckBox8 = new javax.swing.JCheckBox();
         jLabelTaille13 = new javax.swing.JLabel();
-        jComboBoxTaille13 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille13 = new javax.swing.JComboBox<>();
         jLabel126 = new javax.swing.JLabel();
         jTitre13 = new javax.swing.JLabel();
         jButtonCouleur15 = new javax.swing.JButton();
@@ -440,30 +443,22 @@ public class Menu extends javax.swing.JFrame {
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton8)
+                .addGap(48, 48, 48))
+            .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(jLabel26)
-                        .addGap(18, 18, 18)
-                        .addComponent(JkeyMotCle2))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addComponent(jLabel26)
+                                .addGap(18, 18, 18)
+                                .addComponent(JkeyMotCle2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel13Layout.createSequentialGroup()
                                 .addComponent(jLabel25)
                                 .addGap(18, 18, 18)
-                                .addComponent(JKeyMotCle1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel6))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                                    .addComponent(jTextField9))))))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addComponent(JKeyMotCle1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel23)
                             .addComponent(jLabel22))
@@ -473,62 +468,64 @@ public class Menu extends javax.swing.JFrame {
                                 .addComponent(JproN, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(JPronum, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(53, 53, 53))
+                                .addComponent(JPronum, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField8)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel28)
                             .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Jreleas, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                            .addComponent(Jreleas)
                             .addComponent(JAnno, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                            .addComponent(Jtit))
-                        .addGap(48, 48, 48)))
+                            .addComponent(Jtit, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(53, 53, 53)
                 .addComponent(jLabel19)
-                .addGap(148, 148, 148))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8)
-                .addGap(48, 48, 48))
+                .addContainerGap(1747, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(JKeyMotCle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JproN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(JkeyMotCle2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel23)
-                    .addComponent(JPronum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24)
-                    .addComponent(Jtit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel27)
-                    .addComponent(Jreleas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
-                    .addComponent(JAnno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(99, 99, 99))
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel25)
+                            .addComponent(JKeyMotCle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JproN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JkeyMotCle2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23)
+                            .addComponent(JPronum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26))
+                        .addGap(134, 134, 134)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel24)
+                            .addComponent(Jtit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel27)
+                            .addComponent(Jreleas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel28)
+                            .addComponent(JAnno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(jButton8)
                 .addContainerGap())
         );
@@ -537,17 +534,22 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel105.setText("Nom du style :");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Keyword [1]", "Keyword [2]", "Title\t", "Productname" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Keyword [1]", "Keyword [2]", "Title\t", "Productname" }));
 
         jLabelPolice7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice7.setText("Police :");
 
-        jComboBoxPolice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxPoliceActionPerformed(evt);
+            }
+        });
 
         jLabelTaille7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille7.setText("Taille :");
 
-        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel106.setText("pt");
 
@@ -644,7 +646,7 @@ public class Menu extends javax.swing.JFrame {
                                 .addComponent(jButtonSouligner1)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(787, Short.MAX_VALUE)
+                .addContainerGap(2376, Short.MAX_VALUE)
                 .addComponent(jButton34)
                 .addGap(178, 178, 178))
         );
@@ -694,7 +696,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel9.setText("Colonne 1 :");
 
-        jSpinnerColonne1.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinnerColonne1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         jSpinnerColonne1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne1.setValue(50);
         jSpinnerColonne1.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -707,7 +709,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel17.setText("Colonne 3 :");
 
-        jSpinnerColonne2.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinnerColonne2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         jSpinnerColonne2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne2.setValue(116);
         jSpinnerColonne2.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -721,7 +723,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jSpinnerColonne3.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinnerColonne3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         jSpinnerColonne3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
 
@@ -737,11 +739,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel52.setText("Ligne 3 :");
 
-        jSpinnerColonne4.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinnerColonne4.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         jSpinnerColonne4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne4.setValue(87);
 
-        jSpinnerColonne5.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinnerColonne5.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         jSpinnerColonne5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne5.setValue(20);
         jSpinnerColonne5.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -750,7 +752,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jSpinnerColonne6.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinnerColonne6.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         jSpinnerColonne6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne6.setValue(190);
         jSpinnerColonne6.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -811,14 +813,12 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel5.setText("Nom de l'entreprise :");
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/schema-couverture (2).png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton7)
-                .addGap(27, 27, 27))
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -885,62 +885,70 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(520, Short.MAX_VALUE))
+                .addGap(115, 115, 115)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1408, Short.MAX_VALUE)
+                .addComponent(jButton7))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButtonCouleur, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(jSpinnerColonne1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel48)
-                            .addComponent(jLabel15)
-                            .addComponent(jSpinnerColonne5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel55))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jSpinnerColonne2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel49)
-                            .addComponent(jLabel51)
-                            .addComponent(jLabel16)
-                            .addComponent(jSpinnerColonne6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel54))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel17)
-                                .addComponent(jSpinnerColonne3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel50))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel52)
-                                .addComponent(jSpinnerColonne4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel53)))
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButtonCouleur, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jSpinnerColonne1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel48)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jSpinnerColonne5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel55))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jSpinnerColonne2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel49)
+                                    .addComponent(jLabel51)
+                                    .addComponent(jLabel16)
+                                    .addComponent(jSpinnerColonne6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel54))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel17)
+                                        .addComponent(jSpinnerColonne3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel50))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel52)
+                                        .addComponent(jSpinnerColonne4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel53)))
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jComboBoxOrientation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButton4)
+                                    .addComponent(jLabel57)
+                                    .addComponent(jButton6)
+                                    .addComponent(jLabel56)
+                                    .addComponent(jLabel58))))
                         .addGap(32, 32, 32)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBoxFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18)
-                            .addComponent(jComboBoxOrientation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4)
-                            .addComponent(jLabel57)
-                            .addComponent(jButton6)
-                            .addComponent(jLabel56)
-                            .addComponent(jLabel58))))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addComponent(jButton7)
-                .addGap(98, 98, 98))
+                            .addComponent(jLabel5)
+                            .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton7)
+                        .addGap(98, 98, 98))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         jTabbedPane3.addTab("Général", jPanel12);
@@ -972,7 +980,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonAligneCentre, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(491, 491, 491))
+                .addGap(867, 867, 867))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -994,17 +1002,17 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel95.setText("Nom du style :");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
 
         jLabelPolice5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice5.setText("Police :");
 
-        jComboBoxPolice2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelTaille5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille5.setText("Taille :");
 
-        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel96.setText("pt");
 
@@ -1054,7 +1062,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(191, Short.MAX_VALUE)
+                .addContainerGap(531, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1152,9 +1160,9 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel100.setText("Nom du style :");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
 
-        jComboBoxPolice3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelPolice6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice6.setText("Police :");
@@ -1162,7 +1170,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille6.setText("Taille :");
 
-        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jButtonCouleur8.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCouleur8.setBorder(null);
@@ -1357,22 +1365,22 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille8.setText("Taille :");
 
-        jComboBoxTaille4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel113.setText("pt");
 
-        jComboBoxPolice4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelPolice8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice8.setText("Police :");
 
         jLabel114.setText("Nom du style :");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Para", "Liste", "Guibutton", "Guilabel", "Guimenu", "Keycap", "Note", "Tip", "Warning", "Important", "Caution", " " }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Para", "Liste", "Guibutton", "Guilabel", "Guimenu", "Keycap", "Note", "Tip", "Warning", "Important", "Caution", " " }));
 
         jLabel1.setText("Type de liste :");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Puces", "Numéros", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Puces", "Numéros", " " }));
 
         jLabel2.setText("Niveau :");
 
@@ -1385,7 +1393,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille9.setText("Taille :");
 
-        jComboBoxTaille9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel115.setText("pt");
 
@@ -1723,11 +1731,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel117.setText("Nom du style :");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre du tableau", "En-tête de ligne", "En-tête de colonne" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre du tableau", "En-tête de ligne", "En-tête de colonne" }));
 
-        jComboBoxPolice5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
-        jComboBoxTaille5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel118.setText("pt");
 
@@ -1901,7 +1909,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille11.setText("Taille :");
 
-        jComboBoxTaille11.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel122.setText("pt");
 
@@ -2020,7 +2028,7 @@ public class Menu extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1073, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 131, Short.MAX_VALUE))
+                .addGap(0, 471, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2038,7 +2046,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille12.setText("Taille :");
 
-        jComboBoxTaille6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel124.setText("pt");
 
@@ -2072,7 +2080,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille13.setText("Epaisseur :");
 
-        jComboBoxTaille13.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
 
         jLabel126.setText("pt");
 
@@ -2131,7 +2139,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jTitre13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonCouleur15, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 463, Short.MAX_VALUE)
                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(131, 131, 131))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -2212,14 +2220,14 @@ public class Menu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1)
-                .addGap(1079, 1079, 1079))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1549, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 171, Short.MAX_VALUE))
+                .addGap(0, 16, Short.MAX_VALUE))
         );
 
         pack();
@@ -2440,6 +2448,22 @@ public class Menu extends javax.swing.JFrame {
         jButtonCouleur9.setBackground(sc);
     }//GEN-LAST:event_jButtonCouleur9ActionPerformed
 
+    private void JKeyMotCle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JKeyMotCle1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JKeyMotCle1ActionPerformed
+
+    private void jComboBoxPoliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPoliceActionPerformed
+        //Definition de la combobox police
+        GraphicsEnvironment gEnv = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        String envfonts[] = gEnv.getAvailableFontFamilyNames();
+        for (int i = 1; i < envfonts.length; i++) {
+            jComboBoxPolice.addItem(envfonts[i]);
+        }
+        JComboBox source = (JComboBox) evt.getSource();
+        String item = (String) source.getSelectedItem();
+        jComboBoxPolice.setFont(new Font(item, Font.PLAIN, 12));
+    }//GEN-LAST:event_jComboBoxPoliceActionPerformed
+
     private void jButtonCouleurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCouleurActionPerformed
         //Creation d'un jColorChooser, Panel de couleur
         JColorChooser jc = new JColorChooser();
@@ -2450,783 +2474,777 @@ public class Menu extends javax.swing.JFrame {
         System.out.println(c);
     }//GEN-LAST:event_jButtonCouleurActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     private void jComboBoxFormatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxFormatActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxFormatActionPerformed
-
-    private void verif(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_verif
-        
-    }//GEN-LAST:event_verif
-
-    private void JKeyMotCle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JKeyMotCle1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JKeyMotCle1ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jSpinnerColonne2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne2StateChanged
-        //Recupere la valeur des Colonnes
-        int sommeColonne=(Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()+
-                            (Integer)jSpinnerColonne3.getValue();
-
-        switch(jComboBoxFormat.getSelectedIndex()){
-            case 0://4A0
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 1682){
-                    jSpinnerColonne3.setValue(1682-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-          
-                break;
-            case 1://2A0
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 1189){
-                    jSpinnerColonne3.setValue(1189-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-      
-                break;
-            case 2://A0
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 841){
-                    jSpinnerColonne3.setValue(841-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-       
-                break;
-            case 3://A1
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 594){
-                    jSpinnerColonne3.setValue(594-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-      
-                break;
-            case 4://A2
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 420){
-                    jSpinnerColonne3.setValue(420-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-     
-                break;
-            case 5:// A3
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 297){
-                    jSpinnerColonne3.setValue(297-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-       
-                break;
-            case 6://A4
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 210){
-                    jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-          
-                break;
-            case 7://A5
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 148){
-                    jSpinnerColonne3.setValue(148-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-            
-                break;
-            case 8://A6
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 105){
-                    jSpinnerColonne3.setValue(105-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-          
-                break;
-            case 9://A7
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 74){
-                    jSpinnerColonne3.setValue(74-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-              
-                break;
-            case 10://A8
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 52){
-                    jSpinnerColonne3.setValue(52-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-             
-                break;
-            case 11://A9
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 37){
-                    jSpinnerColonne3.setValue(37-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-               
-                break;
-            case 12://A10
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 26){
-                    jSpinnerColonne3.setValue(26-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-             
-                break;
-            case 13:
-                break;
-            case 14:
-                break;
-            case 15:
-                break;
-            case 16:
-                break;
-            case 17:
-                break;
-            case 18:
-                break;
-            case 19:
-                break;
-            case 20:
-                break;
-            case 21:
-                break;
-            case 22:
-                break;
-            case 23:
-                break;
-            case 24:
-                break;
-            case 25:
-                break;
-            case 26:
-                break;
-            case 27:
-                break;
-            case 28:
-                break;
-            case 29:
-                break;
-            case 30:
-                break;
-            case 31:
-                break;
-            case 32:
-                break;
-            case 33:
-                break;
-            case 34:
-                break;
-        }
-        
-    }//GEN-LAST:event_jSpinnerColonne2StateChanged
-
-    private void jSpinnerColonne1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne1StateChanged
-        //Recupere la valeur des Colonnes
-        int sommeColonne=(Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()+
-                            (Integer)jSpinnerColonne3.getValue();
-
-        switch(jComboBoxFormat.getSelectedIndex()){
-            case 0://4A0
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 1682){
-                    jSpinnerColonne3.setValue(1682-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-          
-                break;
-            case 1://2A0
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 1189){
-                    jSpinnerColonne3.setValue(1189-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-      
-                break;
-            case 2://A0
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 841){
-                    jSpinnerColonne3.setValue(841-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-       
-                break;
-            case 3://A1
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 594){
-                    jSpinnerColonne3.setValue(594-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-      
-                break;
-            case 4://A2
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 420){
-                    jSpinnerColonne3.setValue(420-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-     
-                break;
-            case 5:// A3
-                //Change la valeur de la 3eme colonne
-                if(sommeColonne != (Integer) 297){
-                    jSpinnerColonne3.setValue(297-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-       
-                break;
-            case 6://A4
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 210){
-                    jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-          
-                break;
-            case 7://A5
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 148){
-                    jSpinnerColonne3.setValue(148-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-            
-                break;
-            case 8://A6
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 105){
-                    jSpinnerColonne3.setValue(105-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-          
-                break;
-            case 9://A7
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 74){
-                    jSpinnerColonne3.setValue(74-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-              
-                break;
-            case 10://A8
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 52){
-                    jSpinnerColonne3.setValue(52-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-             
-                break;
-            case 11://A9
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 37){
-                    jSpinnerColonne3.setValue(37-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-               
-                break;
-            case 12://A10
-                //Change la valeur de la 3eme colonne 
-                if(sommeColonne != (Integer) 26){
-                    jSpinnerColonne3.setValue(26-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
-                }
-             
-                break;
-            case 13:
-                break;
-            case 14:
-                break;
-            case 15:
-                break;
-            case 16:
-                break;
-            case 17:
-                break;
-            case 18:
-                break;
-            case 19:
-                break;
-            case 20:
-                break;
-            case 21:
-                break;
-            case 22:
-                break;
-            case 23:
-                break;
-            case 24:
-                break;
-            case 25:
-                break;
-            case 26:
-                break;
-            case 27:
-                break;
-            case 28:
-                break;
-            case 29:
-                break;
-            case 30:
-                break;
-            case 31:
-                break;
-            case 32:
-                break;
-            case 33:
-                break;
-            case 34:
-                break;
-        }
-    }//GEN-LAST:event_jSpinnerColonne1StateChanged
 
     private void jComboBoxFormatItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxFormatItemStateChanged
         // TODO add your handling code here:
         switch(jComboBoxFormat.getSelectedIndex()){
             case 0://4A0
-                jSpinnerColonne1.setValue(400);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(400);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 1://2A0
-                jSpinnerColonne1.setValue(309);
-                jSpinnerColonne2.setValue(648);
-                jSpinnerColonne3.setValue(232);
-                break;
+            jSpinnerColonne1.setValue(309);
+            jSpinnerColonne2.setValue(648);
+            jSpinnerColonne3.setValue(232);
+            break;
             case 2://A0
-                jSpinnerColonne1.setValue(250);
-                jSpinnerColonne2.setValue(459);
-                jSpinnerColonne3.setValue(132);
-                break;
+            jSpinnerColonne1.setValue(250);
+            jSpinnerColonne2.setValue(459);
+            jSpinnerColonne3.setValue(132);
+            break;
             case 3://A1
-                jSpinnerColonne1.setValue(150);
-                jSpinnerColonne2.setValue(342);
-                jSpinnerColonne3.setValue(102);
-                break;
+            jSpinnerColonne1.setValue(150);
+            jSpinnerColonne2.setValue(342);
+            jSpinnerColonne3.setValue(102);
+            break;
             case 4://A2
-                jSpinnerColonne1.setValue(100);
-                jSpinnerColonne2.setValue(232);
-                jSpinnerColonne3.setValue(88);
-                break;
+            jSpinnerColonne1.setValue(100);
+            jSpinnerColonne2.setValue(232);
+            jSpinnerColonne3.setValue(88);
+            break;
             case 5://A3
-                jSpinnerColonne1.setValue(100);
-                jSpinnerColonne2.setValue(150);
-                jSpinnerColonne3.setValue(47);
-                break;
+            jSpinnerColonne1.setValue(100);
+            jSpinnerColonne2.setValue(150);
+            jSpinnerColonne3.setValue(47);
+            break;
             case 6://A4
-                jSpinnerColonne1.setValue(50);
-                jSpinnerColonne2.setValue(116);
-                jSpinnerColonne3.setValue(44);
-                jSpinnerColonne4.setValue(87);
-                jSpinnerColonne5.setValue(20);
-                jSpinnerColonne6.setValue(190);
-                break;
+            jSpinnerColonne1.setValue(50);
+            jSpinnerColonne2.setValue(116);
+            jSpinnerColonne3.setValue(44);
+            jSpinnerColonne4.setValue(87);
+            jSpinnerColonne5.setValue(20);
+            jSpinnerColonne6.setValue(190);
+            break;
             case 7://A5
-                jSpinnerColonne1.setValue(50);
-                jSpinnerColonne2.setValue(74);
-                jSpinnerColonne3.setValue(24);
-                break;
+            jSpinnerColonne1.setValue(50);
+            jSpinnerColonne2.setValue(74);
+            jSpinnerColonne3.setValue(24);
+            break;
             case 8://A6
-                jSpinnerColonne1.setValue(30);
-                jSpinnerColonne2.setValue(55);
-                jSpinnerColonne3.setValue(20);
-                break;
+            jSpinnerColonne1.setValue(30);
+            jSpinnerColonne2.setValue(55);
+            jSpinnerColonne3.setValue(20);
+            break;
             case 9://A7
-                jSpinnerColonne1.setValue(20);
-                jSpinnerColonne2.setValue(40);
-                jSpinnerColonne3.setValue(14);
-                break;
+            jSpinnerColonne1.setValue(20);
+            jSpinnerColonne2.setValue(40);
+            jSpinnerColonne3.setValue(14);
+            break;
             case 10://A8
-                jSpinnerColonne1.setValue(12);
-                jSpinnerColonne2.setValue(30);
-                jSpinnerColonne3.setValue(10);
-                break;
+            jSpinnerColonne1.setValue(12);
+            jSpinnerColonne2.setValue(30);
+            jSpinnerColonne3.setValue(10);
+            break;
             case 11://A9
-                jSpinnerColonne1.setValue(12);
-                jSpinnerColonne2.setValue(15);
-                jSpinnerColonne3.setValue(10);
-                break;
+            jSpinnerColonne1.setValue(12);
+            jSpinnerColonne2.setValue(15);
+            jSpinnerColonne3.setValue(10);
+            break;
             case 12://A10
-                jSpinnerColonne1.setValue(8);
-                jSpinnerColonne2.setValue(14);
-                jSpinnerColonne3.setValue(4);
-                break;
+            jSpinnerColonne1.setValue(8);
+            jSpinnerColonne2.setValue(14);
+            jSpinnerColonne3.setValue(4);
+            break;
             case 13://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 14://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 15://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 16://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 17://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 18://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 19://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 20://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 21://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 22://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 23://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 24://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 25://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 26://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 27://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 28://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 29://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 30://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 31://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 32://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 33://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
             case 34://modif
-                jSpinnerColonne1.setValue(300);
-                jSpinnerColonne2.setValue(930);
-                jSpinnerColonne3.setValue(352);
-                break;
+            jSpinnerColonne1.setValue(300);
+            jSpinnerColonne2.setValue(930);
+            jSpinnerColonne3.setValue(352);
+            break;
         }
     }//GEN-LAST:event_jComboBoxFormatItemStateChanged
-
-    private void jSpinnerColonne5StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne5StateChanged
-        //Recupere la valeur des Lines
-        int sommeLines=(Integer)jSpinnerColonne5.getValue()+(Integer)jSpinnerColonne4.getValue()+
-                            (Integer)jSpinnerColonne6.getValue();
-        switch(jComboBoxFormat.getSelectedIndex()){
-            case 0://4A0
-               
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 2378){
-                    jSpinnerColonne4.setValue(2378-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 1://2A0
-                
-               
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 1682){
-                    jSpinnerColonne4.setValue(1682-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 2://A0
-                
-               
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 1189){
-                    jSpinnerColonne4.setValue(1189-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 3://A1
-              
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 841){
-                    jSpinnerColonne4.setValue(841-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 4://A2
-             
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 594){
-                    jSpinnerColonne4.setValue(594-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 5:// A3
-          
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 420){
-                    jSpinnerColonne4.setValue(420-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 6://A4
-          
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 297){
-                    jSpinnerColonne4.setValue(297-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 7://A5
-        
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 210){
-                    jSpinnerColonne4.setValue(210-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 8://A6
-         
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 148){
-                    jSpinnerColonne4.setValue(148-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 9://A7
-           
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 105){
-                    jSpinnerColonne4.setValue(105-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 10://A8
-           
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 74){
-                    jSpinnerColonne4.setValue(74-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 11://A9
-              
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 52){
-                    jSpinnerColonne4.setValue(52-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 12://A10
-             
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 37){
-                    jSpinnerColonne4.setValue(37-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
-            case 13:
-                break;
-            case 14:
-                break;
-            case 15:
-                break;
-            case 16:
-                break;
-            case 17:
-                break;
-            case 18:
-                break;
-            case 19:
-                break;
-            case 20:
-                break;
-            case 21:
-                break;
-            case 22:
-                break;
-            case 23:
-                break;
-            case 24:
-                break;
-            case 25:
-                break;
-            case 26:
-                break;
-            case 27:
-                break;
-            case 28:
-                break;
-            case 29:
-                break;
-            case 30:
-                break;
-            case 31:
-                break;
-            case 32:
-                break;
-            case 33:
-                break;
-            case 34:
-                break;
-        }
-    }//GEN-LAST:event_jSpinnerColonne5StateChanged
 
     private void jSpinnerColonne6StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne6StateChanged
         //Recupere la valeur des Lines
         int sommeLines=(Integer)jSpinnerColonne5.getValue()+(Integer)jSpinnerColonne4.getValue()+
-                            (Integer)jSpinnerColonne6.getValue();
+        (Integer)jSpinnerColonne6.getValue();
         switch(jComboBoxFormat.getSelectedIndex()){
             case 0://4A0
-               
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 2378){
-                    jSpinnerColonne4.setValue(2378-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 2378){
+                jSpinnerColonne4.setValue(2378-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 1://2A0
-                
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 1682){
-                    jSpinnerColonne4.setValue(1682-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 1682){
+                jSpinnerColonne4.setValue(1682-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 2://A0
-               
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 1189){
-                    jSpinnerColonne4.setValue(1189-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 1189){
+                jSpinnerColonne4.setValue(1189-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 3://A1
-              
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 841){
-                    jSpinnerColonne4.setValue(841-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 841){
+                jSpinnerColonne4.setValue(841-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 4://A2
-             
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 594){
-                    jSpinnerColonne4.setValue(594-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 594){
+                jSpinnerColonne4.setValue(594-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 5:// A3
-          
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 420){
-                    jSpinnerColonne4.setValue(420-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 420){
+                jSpinnerColonne4.setValue(420-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 6://A4
-          
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 297){
-                    jSpinnerColonne4.setValue(297-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 297){
+                jSpinnerColonne4.setValue(297-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 7://A5
-        
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 210){
-                    jSpinnerColonne4.setValue(210-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 210){
+                jSpinnerColonne4.setValue(210-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 8://A6
-         
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 148){
-                    jSpinnerColonne4.setValue(148-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 148){
+                jSpinnerColonne4.setValue(148-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 9://A7
-           
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 105){
-                    jSpinnerColonne4.setValue(105-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 105){
+                jSpinnerColonne4.setValue(105-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 10://A8
-           
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 74){
-                    jSpinnerColonne4.setValue(74-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 74){
+                jSpinnerColonne4.setValue(74-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 11://A9
-              
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 52){
-                    jSpinnerColonne4.setValue(52-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 52){
+                jSpinnerColonne4.setValue(52-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 12://A10
-             
-                //Change la valeur de la 3eme line
-                if(sommeLines != (Integer) 37){
-                    jSpinnerColonne4.setValue(37-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
-                }
-                break;
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 37){
+                jSpinnerColonne4.setValue(37-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
             case 13:
-                break;
+            break;
             case 14:
-                break;
+            break;
             case 15:
-                break;
+            break;
             case 16:
-                break;
+            break;
             case 17:
-                break;
+            break;
             case 18:
-                break;
+            break;
             case 19:
-                break;
+            break;
             case 20:
-                break;
+            break;
             case 21:
-                break;
+            break;
             case 22:
-                break;
+            break;
             case 23:
-                break;
+            break;
             case 24:
-                break;
+            break;
             case 25:
-                break;
+            break;
             case 26:
-                break;
+            break;
             case 27:
-                break;
+            break;
             case 28:
-                break;
+            break;
             case 29:
-                break;
+            break;
             case 30:
-                break;
+            break;
             case 31:
-                break;
+            break;
             case 32:
-                break;
+            break;
             case 33:
-                break;
+            break;
             case 34:
-                break;
+            break;
         }
     }//GEN-LAST:event_jSpinnerColonne6StateChanged
+
+    private void jSpinnerColonne5StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne5StateChanged
+        //Recupere la valeur des Lines
+        int sommeLines=(Integer)jSpinnerColonne5.getValue()+(Integer)jSpinnerColonne4.getValue()+
+        (Integer)jSpinnerColonne6.getValue();
+        switch(jComboBoxFormat.getSelectedIndex()){
+            case 0://4A0
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 2378){
+                jSpinnerColonne4.setValue(2378-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 1://2A0
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 1682){
+                jSpinnerColonne4.setValue(1682-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 2://A0
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 1189){
+                jSpinnerColonne4.setValue(1189-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 3://A1
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 841){
+                jSpinnerColonne4.setValue(841-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 4://A2
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 594){
+                jSpinnerColonne4.setValue(594-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 5:// A3
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 420){
+                jSpinnerColonne4.setValue(420-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 6://A4
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 297){
+                jSpinnerColonne4.setValue(297-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 7://A5
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 210){
+                jSpinnerColonne4.setValue(210-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 8://A6
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 148){
+                jSpinnerColonne4.setValue(148-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 9://A7
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 105){
+                jSpinnerColonne4.setValue(105-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 10://A8
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 74){
+                jSpinnerColonne4.setValue(74-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 11://A9
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 52){
+                jSpinnerColonne4.setValue(52-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 12://A10
+
+            //Change la valeur de la 3eme line
+            if(sommeLines != (Integer) 37){
+                jSpinnerColonne4.setValue(37-((Integer)jSpinnerColonne6.getValue()+(Integer)jSpinnerColonne5.getValue()));
+            }
+            break;
+            case 13:
+            break;
+            case 14:
+            break;
+            case 15:
+            break;
+            case 16:
+            break;
+            case 17:
+            break;
+            case 18:
+            break;
+            case 19:
+            break;
+            case 20:
+            break;
+            case 21:
+            break;
+            case 22:
+            break;
+            case 23:
+            break;
+            case 24:
+            break;
+            case 25:
+            break;
+            case 26:
+            break;
+            case 27:
+            break;
+            case 28:
+            break;
+            case 29:
+            break;
+            case 30:
+            break;
+            case 31:
+            break;
+            case 32:
+            break;
+            case 33:
+            break;
+            case 34:
+            break;
+        }
+    }//GEN-LAST:event_jSpinnerColonne5StateChanged
+
+    private void verif(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_verif
+
+    }//GEN-LAST:event_verif
+
+    private void jSpinnerColonne2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne2StateChanged
+        //Recupere la valeur des Colonnes
+        int sommeColonne=(Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()+
+        (Integer)jSpinnerColonne3.getValue();
+
+        switch(jComboBoxFormat.getSelectedIndex()){
+            case 0://4A0
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 1682){
+                jSpinnerColonne3.setValue(1682-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 1://2A0
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 1189){
+                jSpinnerColonne3.setValue(1189-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 2://A0
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 841){
+                jSpinnerColonne3.setValue(841-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 3://A1
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 594){
+                jSpinnerColonne3.setValue(594-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 4://A2
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 420){
+                jSpinnerColonne3.setValue(420-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 5:// A3
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 297){
+                jSpinnerColonne3.setValue(297-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 6://A4
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 210){
+                jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 7://A5
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 148){
+                jSpinnerColonne3.setValue(148-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 8://A6
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 105){
+                jSpinnerColonne3.setValue(105-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 9://A7
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 74){
+                jSpinnerColonne3.setValue(74-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 10://A8
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 52){
+                jSpinnerColonne3.setValue(52-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 11://A9
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 37){
+                jSpinnerColonne3.setValue(37-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 12://A10
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 26){
+                jSpinnerColonne3.setValue(26-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 13:
+            break;
+            case 14:
+            break;
+            case 15:
+            break;
+            case 16:
+            break;
+            case 17:
+            break;
+            case 18:
+            break;
+            case 19:
+            break;
+            case 20:
+            break;
+            case 21:
+            break;
+            case 22:
+            break;
+            case 23:
+            break;
+            case 24:
+            break;
+            case 25:
+            break;
+            case 26:
+            break;
+            case 27:
+            break;
+            case 28:
+            break;
+            case 29:
+            break;
+            case 30:
+            break;
+            case 31:
+            break;
+            case 32:
+            break;
+            case 33:
+            break;
+            case 34:
+            break;
+        }
+
+    }//GEN-LAST:event_jSpinnerColonne2StateChanged
+
+    private void jSpinnerColonne1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerColonne1StateChanged
+        //Recupere la valeur des Colonnes
+        int sommeColonne=(Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()+
+        (Integer)jSpinnerColonne3.getValue();
+
+        switch(jComboBoxFormat.getSelectedIndex()){
+            case 0://4A0
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 1682){
+                jSpinnerColonne3.setValue(1682-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 1://2A0
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 1189){
+                jSpinnerColonne3.setValue(1189-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 2://A0
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 841){
+                jSpinnerColonne3.setValue(841-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 3://A1
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 594){
+                jSpinnerColonne3.setValue(594-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 4://A2
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 420){
+                jSpinnerColonne3.setValue(420-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 5:// A3
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 297){
+                jSpinnerColonne3.setValue(297-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 6://A4
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 210){
+                jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 7://A5
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 148){
+                jSpinnerColonne3.setValue(148-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 8://A6
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 105){
+                jSpinnerColonne3.setValue(105-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 9://A7
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 74){
+                jSpinnerColonne3.setValue(74-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 10://A8
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 52){
+                jSpinnerColonne3.setValue(52-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 11://A9
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 37){
+                jSpinnerColonne3.setValue(37-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 12://A10
+            //Change la valeur de la 3eme colonne
+            if(sommeColonne != (Integer) 26){
+                jSpinnerColonne3.setValue(26-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
+            }
+
+            break;
+            case 13:
+            break;
+            case 14:
+            break;
+            case 15:
+            break;
+            case 16:
+            break;
+            case 17:
+            break;
+            case 18:
+            break;
+            case 19:
+            break;
+            case 20:
+            break;
+            case 21:
+            break;
+            case 22:
+            break;
+            case 23:
+            break;
+            case 24:
+            break;
+            case 25:
+            break;
+            case 26:
+            break;
+            case 27:
+            break;
+            case 28:
+            break;
+            case 29:
+            break;
+            case 30:
+            break;
+            case 31:
+            break;
+            case 32:
+            break;
+            case 33:
+            break;
+            case 34:
+            break;
+        }
+    }//GEN-LAST:event_jSpinnerColonne1StateChanged
 
 
     /**
@@ -3445,6 +3463,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
