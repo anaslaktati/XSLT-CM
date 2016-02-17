@@ -502,7 +502,7 @@ public class Menu extends javax.swing.JFrame {
                                 .addComponent(JPronum, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(53, 53, 53)
                 .addComponent(jLabel19)
-                .addContainerGap(1747, Short.MAX_VALUE))
+                .addContainerGap(1950, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -673,7 +673,7 @@ public class Menu extends javax.swing.JFrame {
                                 .addComponent(jComboBoxPolice, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(89, 89, 89)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1788, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1991, Short.MAX_VALUE)
                 .addComponent(jButton34))
         );
         jPanel9Layout.setVerticalGroup(
@@ -922,7 +922,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jTextFieldNomEntreprise, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(115, 115, 115)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1408, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1611, Short.MAX_VALUE)
                 .addComponent(jButton7))
         );
         jPanel12Layout.setVerticalGroup(
