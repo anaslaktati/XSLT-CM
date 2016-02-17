@@ -277,7 +277,7 @@ public class controleur {
                 + "<?calenco-dep warning.png?>\n"
                 + "<?calenco-dep caution.png?>\n"
                 + "    \n"
-                + "<?calenco-dep l10n-" + Entreprise() + ".xml?>\n"
+                + "<?calenco-dep l10n-bonnet" + Entreprise() + "*/.xml?>\n"
                 + "\n"
                 + "<xsl:import href=\"http://docbook.sourceforge.net/release/xsl-ns/current/fo/profile-docbook.xsl\" />\n"
                 + "<xsl:import href=\"fo-tricks.xsl\" />\n"
@@ -661,7 +661,7 @@ public class controleur {
                 + "	  </fo:table-cell>\n"
                 + "\n"
                 + "	  <fo:table-cell text-align=\"center\" number-columns-spanned=\"2\" number-rows-spanned=\"3\">\n"
-                + "	    <fo:block color=\"#007ac2\" font-size=\"20pt\" font-weight=\"bold\">\n"
+                + "	    <fo:block color=\"#"+Integer.toHexString(getVue().getCprodname().getRGB()).substring(2, 8)+"\" font-size=\"20pt\" font-weight=\"bold\">\n"
                 + "	      <xsl:value-of select =\"'" + getVue().getJproN().getText() + "'\"/>\n"
                 + "            </fo:block>\n"
                 + "            <fo:block font-size=\"14pt\">\n"
@@ -673,7 +673,7 @@ public class controleur {
                 + "\n"
                 + "        <fo:table-row block-progression-dimension=\"15mm\">          \n"
                 + "          <fo:table-cell text-align=\"center\" border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n"
-                + "	    <fo:block font-size=\"13\" margin-top=\"1mm\">\n"
+                + "	    <fo:block color=\"#"+Integer.toHexString(getVue().getCkey1().getRGB()).substring(2, 8)+"\" font-size=\"13\" margin-top=\"1mm\">\n"
                 + "	      <xsl:value-of select =\"'" + getVue().getJKey1().getText() + "'\"/>\n"
                 + //Valeur du keyword1
                 "	    </fo:block>\n"
@@ -683,7 +683,7 @@ public class controleur {
                 + "\n"
                 + "        <fo:table-row block-progression-dimension=\"15mm\">          \n"
                 + "          <fo:table-cell text-align=\"center\"  border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n"
-                + "	    <fo:block space-before=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n"
+                + "	    <fo:block color=\"#"+Integer.toHexString(getVue().getCkey2().getRGB()).substring(2, 8)+"\" space-before=\"5pt\" font-size=\"11pt\" font-weight=\"bold\">\n"
                 + "	      <xsl:value-of select =\"'" + getVue().getJkey2().getText() + "'\"/>\n"
                 + //Valeur du keyword2
                 "	    </fo:block>\n"
@@ -719,7 +719,7 @@ public class controleur {
                 + "	      </fo:external-graphic>\n"
                 + "	    </fo:block>\n"
                 + "	    <fo:block space-before=\"19pt\" space-after=\"5pt\" font-size=\"16pt\"\n"
-                + "		      color=\"{$main.title.color}\">\n"
+                + "		      color=\"#"+Integer.toHexString(getVue().getCMainTitle().getRGB()).substring(2, 8)+"\">\n"
                 + "	      <xsl:value-of select =\"'" + getVue().getJtit().getText() + "'\"/> \n"
                 + //Valeur du title 
                 "	    </fo:block>\n"
@@ -3574,7 +3574,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcMainTitle().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3582,7 +3581,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcTitleChapter().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3590,7 +3588,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcTitle1().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3598,7 +3595,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcTitle2().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3606,7 +3602,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcTitle3().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3614,7 +3609,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcTitle4().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3622,7 +3616,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcTitle5().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3630,7 +3623,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcTitle6().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3645,7 +3637,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcBorderOut().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 
@@ -3653,7 +3644,6 @@ public class controleur {
         String color;
         color = Integer.toHexString(getVue().getcBorderIn().getRGB());
         color = color.substring(2, 8);
-        System.out.print(color);
         return color;
     }
 

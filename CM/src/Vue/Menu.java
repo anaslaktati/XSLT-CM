@@ -169,11 +169,11 @@ public class Menu extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jLabel105 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<String>();
         jLabelPolice7 = new javax.swing.JLabel();
-        jComboBoxPolice = new javax.swing.JComboBox<>();
+        jComboBoxPolice = new javax.swing.JComboBox<String>();
         jLabelTaille7 = new javax.swing.JLabel();
-        jComboBoxTaille1 = new javax.swing.JComboBox<>();
+        jComboBoxTaille1 = new javax.swing.JComboBox<String>();
         jLabel106 = new javax.swing.JLabel();
         jTitre5 = new javax.swing.JLabel();
         jButtonCouleur9 = new javax.swing.JButton();
@@ -224,11 +224,11 @@ public class Menu extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel95 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<String>();
         jLabelPolice5 = new javax.swing.JLabel();
-        jComboBoxPolice2 = new javax.swing.JComboBox<>();
+        jComboBoxPolice2 = new javax.swing.JComboBox<String>();
         jLabelTaille5 = new javax.swing.JLabel();
-        jComboBoxTaille2 = new javax.swing.JComboBox<>();
+        jComboBoxTaille2 = new javax.swing.JComboBox<String>();
         jLabel96 = new javax.swing.JLabel();
         jTitre3 = new javax.swing.JLabel();
         jButtonCouleur7 = new javax.swing.JButton();
@@ -247,11 +247,11 @@ public class Menu extends javax.swing.JFrame {
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
         jLabel100 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBoxPolice3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<String>();
+        jComboBoxPolice3 = new javax.swing.JComboBox<String>();
         jLabelPolice6 = new javax.swing.JLabel();
         jLabelTaille6 = new javax.swing.JLabel();
-        jComboBoxTaille3 = new javax.swing.JComboBox<>();
+        jComboBoxTaille3 = new javax.swing.JComboBox<String>();
         jButtonCouleur8 = new javax.swing.JButton();
         jTitre4 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
@@ -281,14 +281,14 @@ public class Menu extends javax.swing.JFrame {
         jButtonCouleur10 = new javax.swing.JButton();
         jTitre6 = new javax.swing.JLabel();
         jLabelTaille8 = new javax.swing.JLabel();
-        jComboBoxTaille4 = new javax.swing.JComboBox<>();
+        jComboBoxTaille4 = new javax.swing.JComboBox<String>();
         jLabel113 = new javax.swing.JLabel();
-        jComboBoxPolice4 = new javax.swing.JComboBox<>();
+        jComboBoxPolice4 = new javax.swing.JComboBox<String>();
         jLabelPolice8 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox6 = new javax.swing.JComboBox<String>();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
         jLabel2 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
@@ -296,7 +296,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabelTaille9 = new javax.swing.JLabel();
-        jComboBoxTaille9 = new javax.swing.JComboBox<>();
+        jComboBoxTaille9 = new javax.swing.JComboBox<String>();
         jLabel115 = new javax.swing.JLabel();
         jTitre7 = new javax.swing.JLabel();
         jButtonCouleur11 = new javax.swing.JButton();
@@ -325,9 +325,9 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille10 = new javax.swing.JLabel();
         jLabelPolice9 = new javax.swing.JLabel();
         jLabel117 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBoxPolice5 = new javax.swing.JComboBox<>();
-        jComboBoxTaille5 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<String>();
+        jComboBoxPolice5 = new javax.swing.JComboBox<String>();
+        jComboBoxTaille5 = new javax.swing.JComboBox<String>();
         jLabel118 = new javax.swing.JLabel();
         jTitre10 = new javax.swing.JLabel();
         jButtonCouleur12 = new javax.swing.JButton();
@@ -350,7 +350,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jCheckBox2 = new javax.swing.JCheckBox();
         jLabelTaille11 = new javax.swing.JLabel();
-        jComboBoxTaille11 = new javax.swing.JComboBox<>();
+        jComboBoxTaille11 = new javax.swing.JComboBox<String>();
         jLabel122 = new javax.swing.JLabel();
         jTitre11 = new javax.swing.JLabel();
         jButtonCouleur13 = new javax.swing.JButton();
@@ -365,7 +365,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         JBackDos = new javax.swing.JTextField();
         jLabelTaille12 = new javax.swing.JLabel();
-        jComboBoxTaille6 = new javax.swing.JComboBox<>();
+        jComboBoxTaille6 = new javax.swing.JComboBox<String>();
         jLabel124 = new javax.swing.JLabel();
         jTitre12 = new javax.swing.JLabel();
         jButtonCouleur14 = new javax.swing.JButton();
@@ -377,7 +377,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel34 = new javax.swing.JLabel();
         jCheckBox8 = new javax.swing.JCheckBox();
         jLabelTaille13 = new javax.swing.JLabel();
-        jComboBoxTaille13 = new javax.swing.JComboBox<>();
+        jComboBoxTaille13 = new javax.swing.JComboBox<String>();
         jLabel126 = new javax.swing.JLabel();
         jTitre13 = new javax.swing.JLabel();
         jButtonCouleur15 = new javax.swing.JButton();
@@ -536,7 +536,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel105.setText("Nom du style :");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Keyword [1]", "Keyword [2]", "Title\t", "Productname" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Keyword [1]", "Keyword [2]", "Title\t", "Productname" }));
         jComboBox5.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBox5ItemStateChanged(evt);
@@ -546,7 +546,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelPolice7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice7.setText("Police :");
 
-        jComboBoxPolice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
         jComboBoxPolice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxPoliceActionPerformed(evt);
@@ -556,7 +556,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille7.setText("Taille :");
 
-        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabel106.setText("pt");
 
@@ -704,7 +704,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel9.setText("Colonne 1 :");
 
-        jSpinnerColonne1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerColonne1.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne1.setValue(50);
         jSpinnerColonne1.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -717,7 +717,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel17.setText("Colonne 3 :");
 
-        jSpinnerColonne2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerColonne2.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne2.setValue(116);
         jSpinnerColonne2.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -731,7 +731,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jSpinnerColonne3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerColonne3.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne3.setValue(210-((Integer)jSpinnerColonne1.getValue()+(Integer)jSpinnerColonne2.getValue()));
 
@@ -747,11 +747,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel52.setText("Ligne 3 :");
 
-        jSpinnerColonne4.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerColonne4.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne4.setValue(87);
 
-        jSpinnerColonne5.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerColonne5.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne5.setValue(20);
         jSpinnerColonne5.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -760,7 +760,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jSpinnerColonne6.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerColonne6.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinnerColonne6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jSpinnerColonne6.setValue(190);
         jSpinnerColonne6.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -1015,17 +1015,17 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel95.setText("Nom du style :");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
 
         jLabelPolice5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice5.setText("Police :");
 
-        jComboBoxPolice2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelTaille5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille5.setText("Taille :");
 
-        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabel96.setText("pt");
 
@@ -1172,9 +1172,9 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel100.setText("Nom du style :");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
 
-        jComboBoxPolice3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelPolice6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice6.setText("Police :");
@@ -1182,7 +1182,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille6.setText("Taille :");
 
-        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jButtonCouleur8.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCouleur8.setBorder(null);
@@ -1377,22 +1377,22 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille8.setText("Taille :");
 
-        jComboBoxTaille4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabel113.setText("pt");
 
-        jComboBoxPolice4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
         jLabelPolice8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice8.setText("Police :");
 
         jLabel114.setText("Nom du style :");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Para", "Liste", "Guibutton", "Guilabel", "Guimenu", "Keycap", "Note", "Tip", "Warning", "Important", "Caution", " " }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Para", "Liste", "Guibutton", "Guilabel", "Guimenu", "Keycap", "Note", "Tip", "Warning", "Important", "Caution", " " }));
 
         jLabel1.setText("Type de liste :");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Puces", "Numéros", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Puces", "Numéros", " " }));
 
         jLabel2.setText("Niveau :");
 
@@ -1405,7 +1405,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille9.setText("Taille :");
 
-        jComboBoxTaille9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabel115.setText("pt");
 
@@ -1595,6 +1595,9 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel13.setText("Epaisseur :");
 
+        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(0.5f), Float.valueOf(0.0f), null, Float.valueOf(0.5f)));
+        jSpinner2.setValue(0.5);
+
         jLabel29.setText("pt");
 
         cBordureInt.setBackground(new java.awt.Color(0, 0, 0));
@@ -1743,11 +1746,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel117.setText("Nom du style :");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Titre du tableau", "En-tête de ligne", "En-tête de colonne" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre du tableau", "En-tête de ligne", "En-tête de colonne" }));
 
-        jComboBoxPolice5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arial", "Comic sans MS", "Calibri" }));
+        jComboBoxPolice5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
-        jComboBoxTaille5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabel118.setText("pt");
 
@@ -1921,7 +1924,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille11.setText("Taille :");
 
-        jComboBoxTaille11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille11.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabel122.setText("pt");
 
@@ -2060,7 +2063,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille12.setText("Taille :");
 
-        jComboBoxTaille6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabel124.setText("pt");
 
@@ -2094,7 +2097,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille13.setText("Epaisseur :");
 
-        jComboBoxTaille13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille13.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
 
         jLabel126.setText("pt");
 
@@ -3804,6 +3807,22 @@ public class Menu extends javax.swing.JFrame {
 
     public javax.swing.JMenu getjMenu1() {
         return jMenu1;
+    }
+
+    public Color getCMainTitle() {
+        return CMainTitle;
+    }
+
+    public Color getCprodname() {
+        return Cprodname;
+    }
+
+    public Color getCkey1() {
+        return Ckey1;
+    }
+
+    public Color getCkey2() {
+        return Ckey2;
     }
 
     public javax.swing.JMenuBar getjMenuBar1() {

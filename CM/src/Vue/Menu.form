@@ -2360,6 +2360,14 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="jSpinner2">
+                          <Properties>
+                            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                              <SpinnerModel initial="0.5" minimum="0.0" numberType="java.lang.Float" stepSize="0.5" type="number"/>
+                            </Property>
+                            <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="0.5" type="code"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel29">
                           <Properties>
