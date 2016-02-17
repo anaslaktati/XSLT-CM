@@ -30,8 +30,6 @@ public class Menu extends javax.swing.JFrame {
     private Color sc = Color.BLACK;
     private Color cTabLine = Color.BLACK;    
     private Color cTDM = Color.BLACK;
-    private Color cBorderInt = Color.BLACK;
-    private Color cBorderExt = Color.BLACK;
     private Color cBackgroundHeaderCol = Color.BLACK;
     private Color cBackgroundHeaderLine = Color.BLACK;
     private Color cBorderBackground = Color.BLACK;
@@ -49,6 +47,10 @@ public class Menu extends javax.swing.JFrame {
     private Color Cprodname = Color.BLACK;
     private Color Ckey1=Color.BLACK;
     private Color Ckey2=Color.BLACK;
+    private String Tkey1="13";
+    private String Tkey2="11";
+    private String Ttitle="16";
+    private String Tprodname="20";
 
     /**
      * Creates new form Menu
@@ -556,7 +558,13 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille7.setText("Taille :");
 
-        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille1.setEditable(true);
+        jComboBoxTaille1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8", "10", "11", "12", "14", "16", "18", "20" }));
+        jComboBoxTaille1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxTaille1ItemStateChanged(evt);
+            }
+        });
 
         jLabel106.setText("pt");
 
@@ -1015,7 +1023,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel95.setText("Nom du style :");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6" }));
 
         jLabelPolice5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelPolice5.setText("Police :");
@@ -1025,7 +1033,8 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille5.setText("Taille :");
 
-        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille2.setEditable(true);
+        jComboBoxTaille2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8", "10", "11", "12", "14", "16", "18", "20" }));
 
         jLabel96.setText("pt");
 
@@ -1172,7 +1181,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel100.setText("Nom du style :");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6" }));
         jComboBox4.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBox4ItemStateChanged(evt);
@@ -1187,7 +1196,8 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille6.setText("Taille :");
 
-        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille3.setEditable(true);
+        jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8", "10", "11", "12", "14", "16", "18", "20" }));
 
         jButtonCouleur8.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCouleur8.setBorder(null);
@@ -1382,7 +1392,8 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille8.setText("Taille :");
 
-        jComboBoxTaille4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille4.setEditable(true);
+        jComboBoxTaille4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8", "10", "11", "12", "14", "16", "18", "20" }));
 
         jLabel113.setText("pt");
 
@@ -1393,11 +1404,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel114.setText("Nom du style :");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Para", "Liste", "Guibutton", "Guilabel", "Guimenu", "Keycap", "Note", "Tip", "Warning", "Important", "Caution", " " }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Para", "Liste", "Guibutton", "Guilabel", "Guimenu", "Keycap", "Note", "Tip", "Warning", "Important", "Caution" }));
 
         jLabel1.setText("Type de liste :");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Puces", "Numéros", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Puces", "Numéros" }));
 
         jLabel2.setText("Niveau :");
 
@@ -1410,7 +1421,8 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille9.setText("Taille :");
 
-        jComboBoxTaille9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille9.setEditable(true);
+        jComboBoxTaille9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8", "10", "11", "12", "14", "16", "18", "20" }));
 
         jLabel115.setText("pt");
 
@@ -1520,7 +1532,7 @@ public class Menu extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jButton2))))
-                .addContainerGap(406, Short.MAX_VALUE))
+                .addContainerGap(345, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
@@ -1755,7 +1767,8 @@ public class Menu extends javax.swing.JFrame {
 
         jComboBoxPolice5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
-        jComboBoxTaille5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille5.setEditable(true);
+        jComboBoxTaille5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8", "10", "11", "12", "14", "16", "18", "20" }));
 
         jLabel118.setText("pt");
 
@@ -2068,7 +2081,8 @@ public class Menu extends javax.swing.JFrame {
         jLabelTaille12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelTaille12.setText("Taille :");
 
-        jComboBoxTaille6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "14" }));
+        jComboBoxTaille6.setEditable(true);
+        jComboBoxTaille6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8", "10", "11", "12", "14", "16", "18", "20" }));
 
         jLabel124.setText("pt");
 
@@ -2163,7 +2177,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jButtonCouleur15, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(83, 83, 83)
                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(511, Short.MAX_VALUE))
+                .addContainerGap(450, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton5)
@@ -2358,20 +2372,20 @@ public class Menu extends javax.swing.JFrame {
     private void cBordureExtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureExtActionPerformed
         // TODO add your handling code here:
         JColorChooser jc = new JColorChooser();
-        cBorderExt = jc.showDialog(null, "Choisissez une couleur", cBorderExt);
+        cBorderOut = jc.showDialog(null, "Choisissez une couleur", cBorderOut);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
         cBordureExt.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        cBordureExt.setBackground(cBorderExt);
+        cBordureExt.setBackground(cBorderOut);
     }//GEN-LAST:event_cBordureExtActionPerformed
 
     private void cBordureIntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBordureIntActionPerformed
         // TODO add your handling code here:
         JColorChooser jc = new JColorChooser();
-        cBorderInt = jc.showDialog(null, "Choisissez une couleur", cBorderInt);
+        cBorderIn = jc.showDialog(null, "Choisissez une couleur", cBorderIn);
         //Bouton du panel de couleur affiche la couleur choisie actuellement
         cBordureInt.setFocusPainted(false);
         //cBordureInt.setBorder(/*BorderFactory.createLineBorder(Color.black)*/);
-        cBordureInt.setBackground(cBorderInt);   
+        cBordureInt.setBackground(cBorderIn);   
     }//GEN-LAST:event_cBordureIntActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -3325,15 +3339,19 @@ public class Menu extends javax.swing.JFrame {
     private void jComboBox5ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox5ItemStateChanged
         switch(jComboBox5.getSelectedIndex()){
             case 0:
+                jComboBoxTaille1.setSelectedItem(Tkey1);
                 jButtonCouleur9.setBackground(Ckey1);
                 break;
             case 1:
+                jComboBoxTaille1.setSelectedItem(Tkey2);
                 jButtonCouleur9.setBackground(Ckey2);
                 break;
             case 2:
+                jComboBoxTaille1.setSelectedItem(Ttitle);
                 jButtonCouleur9.setBackground(CMainTitle);
                 break;
             case 3:
+                jComboBoxTaille1.setSelectedItem(Tprodname);
                 jButtonCouleur9.setBackground(Cprodname);
                 break;
                 
@@ -3373,6 +3391,23 @@ public class Menu extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_jComboBox4ItemStateChanged
+
+    private void jComboBoxTaille1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxTaille1ItemStateChanged
+        switch(jComboBox5.getSelectedIndex()){
+            case 0:
+                Tkey1=jComboBoxTaille1.getSelectedItem().toString();
+                break;
+            case 1:
+                Tkey2=jComboBoxTaille1.getSelectedItem().toString();
+                break;
+            case 2:
+                Ttitle=jComboBoxTaille1.getSelectedItem().toString();
+                break;
+            case 3:
+                Tprodname=jComboBoxTaille1.getSelectedItem().toString();
+                break;
+        }
+    }//GEN-LAST:event_jComboBoxTaille1ItemStateChanged
 
 
     /**
@@ -3728,6 +3763,24 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JButton getjButtonAliDroitImages() {
         return jButtonAliDroitImages;
     }
+
+    public String getTkey1() {
+        return Tkey1;
+    }
+
+    public String getTkey2() {
+        return Tkey2;
+    }
+
+    public String getTtitle() {
+        return Ttitle;
+    }
+
+    public String getTprodname() {
+        return Tprodname;
+    }
+
+ 
 
     public javax.swing.JButton getjButtonAliDroitTab() {
         return jButtonAliDroitTab;
