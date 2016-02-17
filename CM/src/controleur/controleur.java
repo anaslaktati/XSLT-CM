@@ -673,7 +673,7 @@ public class controleur {
                 + "\n"
                 + "        <fo:table-row block-progression-dimension=\"15mm\">          \n"
                 + "          <fo:table-cell text-align=\"center\" border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n"
-                + "	    <fo:block color=\"#"+Integer.toHexString(getVue().getCkey1().getRGB()).substring(2, 8)+"\" font-size=\""+getVue().getTkey1().toString()+"\" margin-top=\"1mm\">\n"
+                + "	    <fo:block color=\"#"+Integer.toHexString(getVue().getCkey1().getRGB()).substring(2, 8)+"\" font-size=\""+getVue().getTkey1()+"\" margin-top=\"1mm\">\n"
                 + "	      <xsl:value-of select =\"'" + getVue().getJKey1().getText() + "'\"/>\n"
                 + //Valeur du keyword1
                 "	    </fo:block>\n"
@@ -683,7 +683,7 @@ public class controleur {
                 + "\n"
                 + "        <fo:table-row block-progression-dimension=\"15mm\">          \n"
                 + "          <fo:table-cell text-align=\"center\"  border-bottom=\"1pt solid #007ac2\" border-right=\"1pt solid #007ac2\" width=\"50mm\">\n"
-                + "	    <fo:block color=\"#"+Integer.toHexString(getVue().getCkey2().getRGB()).substring(2, 8)+"\" space-before=\"5pt\" font-size=\""+getVue().getTkey2().toString()+"pt\" font-weight=\"bold\">\n"
+                + "	    <fo:block color=\"#"+Integer.toHexString(getVue().getCkey2().getRGB()).substring(2, 8)+"\" space-before=\"5pt\" font-size=\""+getVue().getTkey2()+"pt\" font-weight=\"bold\">\n"
                 + "	      <xsl:value-of select =\"'" + getVue().getJkey2().getText() + "'\"/>\n"
                 + //Valeur du keyword2
                 "	    </fo:block>\n"
@@ -718,7 +718,7 @@ public class controleur {
                 + "		</xsl:attribute>\n"
                 + "	      </fo:external-graphic>\n"
                 + "	    </fo:block>\n"
-                + "	    <fo:block space-before=\"19pt\" space-after=\"5pt\" font-size=\""+getVue().getTtitle().toString()+"pt\"\n"
+                + "	    <fo:block space-before=\"19pt\" space-after=\"5pt\" font-size=\""+getVue().getTtitle()+"pt\"\n"
                 + "		      color=\"#"+Integer.toHexString(getVue().getCMainTitle().getRGB()).substring(2, 8)+"\">\n"
                 + "	      <xsl:value-of select =\"'" + getVue().getJtit().getText() + "'\"/> \n"
                 + //Valeur du title 
