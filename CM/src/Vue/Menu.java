@@ -1173,6 +1173,11 @@ public class Menu extends javax.swing.JFrame {
         jLabel100.setText("Nom du style :");
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Titre", "Titre1", "Titre2", "Titre3", "Titre4", "Titre5", "Titre6", " " }));
+        jComboBox4.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox4ItemStateChanged(evt);
+            }
+        });
 
         jComboBoxPolice3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Arial", "Comic sans MS", "Calibri" }));
 
@@ -2418,13 +2423,45 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonGras3ActionPerformed
 
     private void jButtonCouleur8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCouleur8ActionPerformed
-        // TODO add your handling code here:
-        JColorChooser jc = new JColorChooser();
-        c = jc.showDialog(null, "Choisissez une couleur", c);
-        //Bouton du panel de couleur affiche la couleur choisie actuellement
-        jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        jButtonCouleur8.setBackground(c);
-        System.out.println(c);
+        JColorChooser jc=new JColorChooser();
+        //Couleur des titres
+        switch(jComboBox4.getSelectedIndex()){
+            case 0:
+                cTitleChapter=jc.showDialog(null,"choisir une couleur",cTitleChapter);
+                jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+                jButtonCouleur8.setBackground(cTitleChapter);
+                break;
+            case 1:
+                cTitle1=jc.showDialog(null,"choisir une couleur",cTitle1);
+                jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+                jButtonCouleur8.setBackground(cTitle1);
+                break;
+            case 2:
+                cTitle2=jc.showDialog(null,"choisir une couleur",cTitle2);
+                jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+                jButtonCouleur8.setBackground(cTitle2);
+                break;
+            case 3:
+                cTitle3=jc.showDialog(null,"choisir une couleur",cTitle3);
+                jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+                jButtonCouleur8.setBackground(cTitle3);
+                break;
+            case 4:
+                cTitle4=jc.showDialog(null,"choisir une couleur",cTitle4);
+                jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+                jButtonCouleur8.setBackground(cTitle4);
+                break;
+            case 5:
+                cTitle5=jc.showDialog(null,"choisir une couleur",cTitle5);
+                jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+                jButtonCouleur8.setBackground(cTitle5);
+                break;
+            case 6:
+                cTitle6=jc.showDialog(null,"choisir une couleur",cTitle6);
+                jButtonCouleur8.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+                jButtonCouleur8.setBackground(cTitle6);
+                break;
+        }
     }//GEN-LAST:event_jButtonCouleur8ActionPerformed
 
     private void jButtonGras2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGras2ActionPerformed
@@ -3310,6 +3347,32 @@ public class Menu extends javax.swing.JFrame {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jComboBox4ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox4ItemStateChanged
+        switch(jComboBox4.getSelectedIndex()){
+            case 0:
+                jButtonCouleur8.setBackground(cTitleChapter);
+                break;
+            case 1:
+                jButtonCouleur8.setBackground(cTitle1);
+                break;
+            case 2:
+                jButtonCouleur8.setBackground(cTitle2);
+                break;
+            case 3:
+                jButtonCouleur8.setBackground(cTitle3);
+                break;
+            case 4:
+                jButtonCouleur8.setBackground(cTitle4);
+                break;
+            case 5:
+                jButtonCouleur8.setBackground(cTitle5);
+                break;
+            case 6:
+                jButtonCouleur8.setBackground(cTitle6);
+                break;
+        }
+    }//GEN-LAST:event_jComboBox4ItemStateChanged
 
 
     /**
