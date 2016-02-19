@@ -3385,11 +3385,12 @@ public class controleur {
         chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int retrival = chooser.showSaveDialog(null);
         String path = chooser.getSelectedFile().getAbsolutePath();
+        String ImagePath = "C:\\Program Files (x86)\\CM";
         File dir = new File(path + "\\content");
         dir.mkdir();
 
         //Methode pour creer des images dans le dossier content   
-        Image img = ImageIO.read(new File(path + "/images/caution.png"));//caution.png
+        Image img = ImageIO.read(new File(ImagePath + "/caution.png"));//caution.png
         image = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
         image.getGraphics().drawImage(img, 0, 0, null);
         BufferedImage caution = image;
@@ -3400,7 +3401,7 @@ public class controleur {
             Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Image img2 = ImageIO.read(new File(path + "/images/fleche.png"));//fleche.png
+        Image img2 = ImageIO.read(new File(ImagePath + "\\fleche.png"));//fleche.png
         BufferedImage image2 = new BufferedImage(img2.getWidth(null), img2.getHeight(null), BufferedImage.TYPE_INT_ARGB);
         image2.getGraphics().drawImage(img2, 0, 0, null);
         BufferedImage fleche = image2;
@@ -3411,7 +3412,7 @@ public class controleur {
             Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Image img3 = ImageIO.read(new File(path + "/images/important.png"));//important.png
+        Image img3 = ImageIO.read(new File(ImagePath + "\\important.png"));//important.png
         BufferedImage image3 = new BufferedImage(img3.getWidth(null), img3.getHeight(null), BufferedImage.TYPE_INT_ARGB);
         image3.getGraphics().drawImage(img3, 0, 0, null);
         BufferedImage important = image3;
@@ -3422,7 +3423,7 @@ public class controleur {
             Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Image img4 = ImageIO.read(new File(path + "/images/note.png"));//note.png
+        Image img4 = ImageIO.read(new File(ImagePath + "\\note.png"));//note.png
         BufferedImage image4 = new BufferedImage(img4.getWidth(null), img4.getHeight(null), BufferedImage.TYPE_INT_ARGB);
         image4.getGraphics().drawImage(img4, 0, 0, null);
         BufferedImage note = image4;
@@ -3433,7 +3434,7 @@ public class controleur {
             Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Image img5 = ImageIO.read(new File(path + "/images/tip.png"));//tip.png
+        Image img5 = ImageIO.read(new File(ImagePath + "\\tip.png"));//tip.png
         BufferedImage image5 = new BufferedImage(img5.getWidth(null), img5.getHeight(null), BufferedImage.TYPE_INT_ARGB);
         image5.getGraphics().drawImage(img5, 0, 0, null);
         BufferedImage tip = image5;
@@ -3444,7 +3445,7 @@ public class controleur {
             Logger.getLogger(FlipImage.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Image img6 = ImageIO.read(new File(path + "/images/warning.png"));//warning.png
+        Image img6 = ImageIO.read(new File(ImagePath + "\\warning.png"));//warning.png
         BufferedImage image6 = new BufferedImage(img6.getWidth(null), img6.getHeight(null), BufferedImage.TYPE_INT_ARGB);
         image6.getGraphics().drawImage(img6, 0, 0, null);
         BufferedImage warning = image6;

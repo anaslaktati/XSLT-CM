@@ -12,7 +12,7 @@ public class NewMain {
      */
     public static void main(String[] args) {
         /* Pour le path vers programmeFiles Windows */
-        System.out.println(System.getenv("ProgramFiles"));
+        System.out.println(System.getenv("programfiles")); 
         
     }
     

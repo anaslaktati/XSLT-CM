@@ -51,13 +51,13 @@ public class Menu extends javax.swing.JFrame {
     private String Tkey2="11";
     private String Ttitle="16";
     private String Tprodname="20";
-    private String Ttitre1="";
-    private String Ttitre2="";
-    private String Ttitre3="";
-    private String Ttitre4="";
-    private String Ttitre5="";
-    private String Ttitre6="";
-    private String Ttitre="";
+    private String Ttitre1="8";
+    private String Ttitre2="8";
+    private String Ttitre3="8";
+    private String Ttitre4="8";
+    private String Ttitre5="8";
+    private String Ttitre6="8";
+    private String Ttitre="8";
     
 
     /**
@@ -1212,6 +1212,11 @@ public class Menu extends javax.swing.JFrame {
 
         jComboBoxTaille3.setEditable(true);
         jComboBoxTaille3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8", "10", "11", "12", "14", "16", "18", "20" }));
+        jComboBoxTaille3.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxTaille3ItemStateChanged(evt);
+            }
+        });
 
         jButtonCouleur8.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCouleur8.setBorder(null);
@@ -3383,24 +3388,31 @@ public class Menu extends javax.swing.JFrame {
     private void jComboBox4ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox4ItemStateChanged
         switch(jComboBox4.getSelectedIndex()){
             case 0:
+                jComboBoxTaille3.setSelectedItem(Ttitre);
                 jButtonCouleur8.setBackground(cTitleChapter);
                 break;
             case 1:
+                jComboBoxTaille3.setSelectedItem(Ttitre1);
                 jButtonCouleur8.setBackground(cTitle1);
                 break;
             case 2:
+                jComboBoxTaille3.setSelectedItem(Ttitre2);
                 jButtonCouleur8.setBackground(cTitle2);
                 break;
             case 3:
+                jComboBoxTaille3.setSelectedItem(Ttitre3);
                 jButtonCouleur8.setBackground(cTitle3);
                 break;
             case 4:
+                jComboBoxTaille3.setSelectedItem(Ttitre4);
                 jButtonCouleur8.setBackground(cTitle4);
                 break;
             case 5:
+                jComboBoxTaille3.setSelectedItem(Ttitre5);
                 jButtonCouleur8.setBackground(cTitle5);
                 break;
             case 6:
+                jComboBoxTaille3.setSelectedItem(Ttitre6);
                 jButtonCouleur8.setBackground(cTitle6);
                 break;
         }
@@ -3422,6 +3434,32 @@ public class Menu extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_jComboBoxTaille1ItemStateChanged
+
+    private void jComboBoxTaille3ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxTaille3ItemStateChanged
+        switch(jComboBox4.getSelectedIndex()){
+            case 0:
+                Ttitre=jComboBoxTaille3.getSelectedItem().toString();
+                break;
+            case 1:
+                Ttitre1=jComboBoxTaille3.getSelectedItem().toString();
+                break;
+            case 2:
+                Ttitre2=jComboBoxTaille3.getSelectedItem().toString();
+                break;
+            case 3:
+                Ttitre3=jComboBoxTaille3.getSelectedItem().toString();
+                break;
+            case 4:
+                Ttitre4=jComboBoxTaille3.getSelectedItem().toString();
+                break;
+            case 5:
+                Ttitre5=jComboBoxTaille3.getSelectedItem().toString();
+                break;
+            case 6:
+                Ttitre6=jComboBoxTaille3.getSelectedItem().toString();
+                break;
+        }
+    }//GEN-LAST:event_jComboBoxTaille3ItemStateChanged
 
 
     /**
